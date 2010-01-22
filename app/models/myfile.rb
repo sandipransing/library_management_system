@@ -117,11 +117,17 @@ class Myfile < ActiveRecord::Base
     @text = Myfile.ferret_index[self.document_number][:text] if @text.blank?
   end
 
-  after_create :rename_newfile
+  after_create :rename_newfile, :notify_users
   # The file in the uploads folder has the same name as the id of the file.
   # This must be done after_create, because the id won't be available any earlier.
   def rename_newfile
     File.rename self.temp_path, self.path
+  end
+
+  def notify_users
+    User.all.each { |user|
+    NotificationMailer.deliver_file_notification( self, user )
+    }
   end
 
   before_destroy :delete_file_on_disk, :delete_tags

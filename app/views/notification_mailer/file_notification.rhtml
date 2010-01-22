@@ -1,0 +1,16 @@
+Hi <%= @name %>,
+
+A new <%= CONFIG['app_name'] %> file has been added for you.
+Use the following URL to log in to Library:
+
+<%= CONFIG['url'] %>
+   
+Title: <%= @title %>
+Description: <%= @description %>
+<% unless @filetags.blank? %>
+Tags: <%= @filetags %>
+<% end %>
+
+
+---
+<%= CONFIG['site_title'] %>
