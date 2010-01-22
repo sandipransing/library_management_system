@@ -1,0 +1,27 @@
+<% if (params[:controller] == 'folder' or params[:controller] == 'file') && params[:action] != "list_tags" %>
+<%= link_to 'Folders', { :controller => 'folder', :action => 'list', :id => nil }, { :class => 'activeLink' } %>
+<% else %>
+<%= link_to 'Folders', { :controller => 'folder', :action => 'list', :id => nil } %>
+<% end %>
+<% if @logged_in_user.is_admin? %>
+    <% if params[:controller] == 'user' %>
+    	<%= link_to 'Users', { :controller => 'user', :action => 'list' }, { :class => 'activeLink' } %>
+    <% else %>
+    	<%= link_to 'Users', { :controller => 'user', :action => 'list' } %>
+    <% end %>
+    <% if params[:controller] == 'group' %>
+    	<%= link_to 'Groups', { :controller => 'group', :action => 'list' }, { :class => 'activeLink' } %>
+    <% else %>
+  	  <%= link_to 'Groups', { :controller => 'group', :action => 'list' } %>
+    <% end %>
+    <% if params[:controller] == 'settings' %>
+    	<%= link_to 'Settings', { :controller => 'settings', :action => 'index' }, { :class => 'activeLink' } %>
+    <% else %>
+  	  <%= link_to 'Settings', { :controller => 'settings', :action => 'index' } %>
+    <% end %>	
+<% end %>
+<% if (params[:controller] == 'search' && params[:action] == 'tag') || (params[:controller] == 'folder' && params[:action] == 'list_tags') %>
+<%= link_to 'Tags', { :controller => 'folder', :action => 'list_tags', :id => nil }, { :class => 'activeLink' } %>
+<% else %>
+<%= link_to 'Tags', { :controller => 'folder', :action => 'list_tags', :id => nil } %>
+<% end %>

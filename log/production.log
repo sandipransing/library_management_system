@@ -1,0 +1,3260 @@
+# Logfile created on Thu Jan 21 14:41:38 +0530 2010
+
+Processing FolderController#index (for 192.168.1.81 at 2010-01-21 14:46:36) [GET]
+  Session ID: 2526fce221136dae91d150804921030e
+Redirected to controllerauthenticationactionlogin
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 1ms (DB: 1) | 302 Found [http://server/]
+
+
+Processing AuthenticationController#login (for 192.168.1.81 at 2010-01-21 14:46:36) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+Rendering template within layouts/authentication
+Rendering authentication/login
+Completed in 4ms (View: 2, DB: 41) | 200 OK [http://server/authentication/login]
+
+
+Processing AuthenticationController#login (for 192.168.1.81 at 2010-01-21 14:46:41) [POST]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"commit"=>"Login", "user"=>{"name"=>"admin"}, "login"=>{"password"=>"admin"}}
+Redirected to actionindexcontrollerfolder
+Completed in 3ms (DB: 2) | 302 Found [http://server/authentication/login]
+
+
+Processing FolderController#index (for 192.168.1.81 at 2010-01-21 14:46:41) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+User: admin - Thu Jan 21 14:46:41 +0530 2010 - params: {"action"=>"index", "controller"=>"folder"}
+Redirected to actionlist
+Completed in 2ms (DB: 19) | 302 Found [http://server/]
+
+
+Processing FolderController#list (for 192.168.1.81 at 2010-01-21 14:46:41) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+User: admin - Thu Jan 21 14:46:41 +0530 2010 - params: {"action"=>"list", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 20ms (View: 12, DB: 3) | 200 OK [http://server/folder/list]
+
+
+Processing UserController#list (for 192.168.1.81 at 2010-01-21 14:47:03) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+User: admin - Thu Jan 21 14:47:03 +0530 2010 - params: {"action"=>"list", "controller"=>"user"}
+Rendering template within layouts/user
+Rendering user/list
+Completed in 7ms (View: 4, DB: 1) | 200 OK [http://server/user/list]
+
+
+Processing UserController#edit (for 192.168.1.81 at 2010-01-21 14:47:05) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"id"=>"1"}
+User: admin - Thu Jan 21 14:47:05 +0530 2010 - params: {"action"=>"edit", "id"=>"1", "controller"=>"user"}
+Rendering template within layouts/user
+Rendering user/edit
+Completed in 8ms (View: 6, DB: 1) | 200 OK [http://server/user/edit/1]
+
+
+Processing UserController#update (for 192.168.1.81 at 2010-01-21 14:47:45) [POST]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"commit"=>"Save", "id"=>"1", "belongs_to_group"=>{"1"=>"yes"}, "user"=>{"name"=>"admin", "default_folder_id"=>"1", "password_confirmation"=>"sandip123", "password"=>"sandip123", "email"=>"sandip@joshsoftware.com"}}
+User: admin - Thu Jan 21 14:47:45 +0530 2010 - params: {"commit"=>"Save", "action"=>"update", "id"=>"1", "belongs_to_group"=>{"1"=>"yes"}, "controller"=>"user", "user"=>{"name"=>"admin", "password_confirmation"=>"sandip123", "default_folder_id"=>"1", "password"=>"sandip123", "email"=>"sandip@joshsoftware.com"}}
+Redirected to actioneditid1
+Completed in 61ms (DB: 55) | 302 Found [http://server/user/update/1]
+
+
+Processing UserController#edit (for 192.168.1.81 at 2010-01-21 14:47:45) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"id"=>"1"}
+User: admin - Thu Jan 21 14:47:45 +0530 2010 - params: {"action"=>"edit", "id"=>"1", "controller"=>"user"}
+Rendering template within layouts/user
+Rendering user/edit
+Completed in 76ms (View: 7, DB: 3) | 200 OK [http://server/user/edit/1]
+
+
+Processing UserController#new (for 192.168.1.81 at 2010-01-21 14:47:48) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+User: admin - Thu Jan 21 14:47:48 +0530 2010 - params: {"action"=>"new", "controller"=>"user"}
+Rendering template within layouts/user
+Rendering user/new
+Completed in 9ms (View: 6, DB: 6) | 200 OK [http://server/user/new]
+
+
+Processing UserController#create (for 192.168.1.81 at 2010-01-21 14:48:38) [POST]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"commit"=>"Create", "belongs_to_group"=>{"1"=>"no"}, "user"=>{"name"=>"josh", "default_folder_id"=>"1", "password_confirmation"=>"josh123", "password"=>"josh123", "email"=>""}}
+User: admin - Thu Jan 21 14:48:38 +0530 2010 - params: {"commit"=>"Create", "action"=>"create", "belongs_to_group"=>{"1"=>"no"}, "controller"=>"user", "user"=>{"name"=>"josh", "password_confirmation"=>"josh123", "default_folder_id"=>"1", "password"=>"josh123", "email"=>""}}
+Rendering template within layouts/user
+Rendering user/new
+Completed in 12ms (View: 6, DB: 37) | 200 OK [http://server/user/create]
+
+
+Processing UserController#create (for 192.168.1.81 at 2010-01-21 14:49:00) [POST]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"commit"=>"Create", "belongs_to_group"=>{"1"=>"no"}, "user"=>{"name"=>"josh", "password_confirmation"=>"josh123", "password"=>"josh123", "email"=>"info@joshsoftware.com"}}
+User: admin - Thu Jan 21 14:49:00 +0530 2010 - params: {"commit"=>"Create", "action"=>"create", "belongs_to_group"=>{"1"=>"no"}, "controller"=>"user", "user"=>{"name"=>"josh", "password_confirmation"=>"josh123", "password"=>"josh123", "email"=>"info@joshsoftware.com"}}
+Sent mail to info@joshsoftware.com
+Redirected to actionlist
+Completed in 113ms (DB: 42) | 302 Found [http://server/user/create]
+
+
+Processing UserController#list (for 192.168.1.81 at 2010-01-21 14:49:00) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+User: admin - Thu Jan 21 14:49:00 +0530 2010 - params: {"action"=>"list", "controller"=>"user"}
+Rendering template within layouts/user
+Rendering user/list
+Completed in 7ms (View: 5, DB: 2) | 200 OK [http://server/user/list]
+
+
+Processing GroupController#list (for 192.168.1.81 at 2010-01-21 14:49:06) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+User: admin - Thu Jan 21 14:49:06 +0530 2010 - params: {"action"=>"list", "controller"=>"group"}
+Rendering template within layouts/group
+Rendering group/list
+Completed in 7ms (View: 4, DB: 85) | 200 OK [http://server/group/list]
+
+
+Processing SettingsController#index (for 192.168.1.81 at 2010-01-21 14:49:07) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+User: admin - Thu Jan 21 14:49:07 +0530 2010 - params: {"action"=>"index", "controller"=>"settings"}
+Rendering template within layouts/settings
+Rendering settings/index
+Completed in 9ms (View: 6, DB: 46) | 200 OK [http://server/settings]
+
+
+Processing SettingsController#update_settings (for 192.168.1.81 at 2010-01-21 14:50:31) [POST]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"commit"=>"Update Settings", "setting"=>{"overwrite_existing_files"=>"0", "let_users_change_default_folder"=>"0", "site_keywords"=>"josh, library", "site_title"=>"Josh Library System", "site_description"=>"Easy way to manage books", "use_ferret"=>"0"}}
+User: admin - Thu Jan 21 14:50:31 +0530 2010 - params: {"commit"=>"Update Settings", "action"=>"update_settings", "setting"=>{"overwrite_existing_files"=>"0", "site_keywords"=>"josh, library", "let_users_change_default_folder"=>"0", "site_title"=>"Josh Library System", "site_description"=>"Easy way to manage books", "use_ferret"=>"0"}, "controller"=>"settings"}
+Redirected to actionindex
+Completed in 42ms (DB: 38) | 302 Found [http://server/settings/update_settings]
+
+
+Processing SettingsController#index (for 192.168.1.81 at 2010-01-21 14:50:31) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+User: admin - Thu Jan 21 14:50:31 +0530 2010 - params: {"action"=>"index", "controller"=>"settings"}
+Rendering template within layouts/settings
+Rendering settings/index
+Completed in 7ms (View: 5, DB: 2) | 200 OK [http://server/settings]
+
+
+Processing SettingsController#index (for 192.168.1.81 at 2010-01-21 14:50:36) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+User: admin - Thu Jan 21 14:50:36 +0530 2010 - params: {"action"=>"index", "controller"=>"settings"}
+Rendering template within layouts/settings
+Rendering settings/index
+Completed in 6ms (View: 4, DB: 2) | 200 OK [http://server/settings]
+
+
+Processing GroupController#list (for 192.168.1.81 at 2010-01-21 14:50:42) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+User: admin - Thu Jan 21 14:50:42 +0530 2010 - params: {"action"=>"list", "controller"=>"group"}
+Rendering template within layouts/group
+Rendering group/list
+Completed in 5ms (View: 3, DB: 24) | 200 OK [http://server/group/list]
+
+
+Processing UserController#list (for 192.168.1.81 at 2010-01-21 14:50:44) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+User: admin - Thu Jan 21 14:50:44 +0530 2010 - params: {"action"=>"list", "controller"=>"user"}
+Rendering template within layouts/user
+Rendering user/list
+Completed in 6ms (View: 4, DB: 1) | 200 OK [http://server/user/list]
+
+
+Processing FolderController#list (for 192.168.1.81 at 2010-01-21 14:50:45) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+User: admin - Thu Jan 21 14:50:45 +0530 2010 - params: {"action"=>"list", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 13ms (View: 8, DB: 2) | 200 OK [http://server/folder/list]
+
+
+Processing FolderController#new (for 192.168.1.81 at 2010-01-21 14:50:47) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"id"=>"1"}
+User: admin - Thu Jan 21 14:50:47 +0530 2010 - params: {"action"=>"new", "id"=>"1", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/new
+Completed in 7ms (View: 4, DB: 1) | 200 OK [http://server/folder/new/1]
+
+
+Processing FolderController#create (for 192.168.1.81 at 2010-01-21 14:50:58) [POST]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"commit"=>"Create", "folder"=>{"name"=>"Ruby On Rails"}, "id"=>"1"}
+User: admin - Thu Jan 21 14:50:58 +0530 2010 - params: {"commit"=>"Create", "folder"=>{"name"=>"Ruby On Rails"}, "action"=>"create", "id"=>"1", "controller"=>"folder"}
+Redirected to actionlistid1
+Completed in 59ms (DB: 54) | 302 Found [http://server/folder/create/1]
+
+
+Processing FolderController#list (for 192.168.1.81 at 2010-01-21 14:50:58) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"id"=>"1"}
+User: admin - Thu Jan 21 14:50:58 +0530 2010 - params: {"action"=>"list", "id"=>"1", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 15ms (View: 9, DB: 2) | 200 OK [http://server/folder/list/1]
+
+
+Processing FolderController#new (for 192.168.1.81 at 2010-01-21 14:50:59) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"id"=>"1"}
+User: admin - Thu Jan 21 14:50:59 +0530 2010 - params: {"action"=>"new", "id"=>"1", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/new
+Completed in 90ms (View: 87, DB: 1) | 200 OK [http://server/folder/new/1]
+
+
+Processing FolderController#create (for 192.168.1.81 at 2010-01-21 14:51:14) [POST]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"commit"=>"Create", "folder"=>{"name"=>"Development Environment"}, "id"=>"1"}
+User: admin - Thu Jan 21 14:51:14 +0530 2010 - params: {"commit"=>"Create", "folder"=>{"name"=>"Development Environment"}, "action"=>"create", "id"=>"1", "controller"=>"folder"}
+Redirected to actionlistid1
+Completed in 46ms (DB: 41) | 302 Found [http://server/folder/create/1]
+
+
+Processing FolderController#list (for 192.168.1.81 at 2010-01-21 14:51:15) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"id"=>"1"}
+User: admin - Thu Jan 21 14:51:15 +0530 2010 - params: {"action"=>"list", "id"=>"1", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 18ms (View: 10, DB: 3) | 200 OK [http://server/folder/list/1]
+
+
+Processing FolderController#new (for 192.168.1.81 at 2010-01-21 14:51:16) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"id"=>"1"}
+User: admin - Thu Jan 21 14:51:16 +0530 2010 - params: {"action"=>"new", "id"=>"1", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/new
+Completed in 7ms (View: 4, DB: 2) | 200 OK [http://server/folder/new/1]
+
+
+Processing FolderController#create (for 192.168.1.81 at 2010-01-21 14:51:20) [POST]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"commit"=>"Create", "folder"=>{"name"=>"Database"}, "id"=>"1"}
+User: admin - Thu Jan 21 14:51:20 +0530 2010 - params: {"commit"=>"Create", "folder"=>{"name"=>"Database"}, "action"=>"create", "id"=>"1", "controller"=>"folder"}
+Redirected to actionlistid1
+Completed in 50ms (DB: 45) | 302 Found [http://server/folder/create/1]
+
+
+Processing FolderController#list (for 192.168.1.81 at 2010-01-21 14:51:20) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"id"=>"1"}
+User: admin - Thu Jan 21 14:51:20 +0530 2010 - params: {"action"=>"list", "id"=>"1", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 16ms (View: 9, DB: 2) | 200 OK [http://server/folder/list/1]
+
+
+Processing FolderController#new (for 192.168.1.81 at 2010-01-21 14:51:22) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"id"=>"1"}
+User: admin - Thu Jan 21 14:51:22 +0530 2010 - params: {"action"=>"new", "id"=>"1", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/new
+Completed in 8ms (View: 4, DB: 2) | 200 OK [http://server/folder/new/1]
+
+
+Processing FolderController#create (for 192.168.1.81 at 2010-01-21 14:51:27) [POST]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"commit"=>"Create", "folder"=>{"name"=>"Java"}, "id"=>"1"}
+User: admin - Thu Jan 21 14:51:27 +0530 2010 - params: {"commit"=>"Create", "folder"=>{"name"=>"Java"}, "action"=>"create", "id"=>"1", "controller"=>"folder"}
+Redirected to actionlistid1
+Completed in 55ms (DB: 50) | 302 Found [http://server/folder/create/1]
+
+
+Processing FolderController#list (for 192.168.1.81 at 2010-01-21 14:51:27) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"id"=>"1"}
+User: admin - Thu Jan 21 14:51:27 +0530 2010 - params: {"action"=>"list", "id"=>"1", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 16ms (View: 9, DB: 2) | 200 OK [http://server/folder/list/1]
+
+
+Processing FolderController#new (for 192.168.1.81 at 2010-01-21 14:51:28) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"id"=>"1"}
+User: admin - Thu Jan 21 14:51:28 +0530 2010 - params: {"action"=>"new", "id"=>"1", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/new
+Completed in 7ms (View: 4, DB: 2) | 200 OK [http://server/folder/new/1]
+
+
+Processing FolderController#create (for 192.168.1.81 at 2010-01-21 14:51:34) [POST]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"commit"=>"Create", "folder"=>{"name"=>"Testing"}, "id"=>"1"}
+User: admin - Thu Jan 21 14:51:34 +0530 2010 - params: {"commit"=>"Create", "folder"=>{"name"=>"Testing"}, "action"=>"create", "id"=>"1", "controller"=>"folder"}
+Redirected to actionlistid1
+Completed in 42ms (DB: 37) | 302 Found [http://server/folder/create/1]
+
+
+Processing FolderController#list (for 192.168.1.81 at 2010-01-21 14:51:34) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"id"=>"1"}
+User: admin - Thu Jan 21 14:51:34 +0530 2010 - params: {"action"=>"list", "id"=>"1", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 18ms (View: 10, DB: 3) | 200 OK [http://server/folder/list/1]
+
+
+Processing FileController#upload (for 192.168.1.81 at 2010-01-21 14:51:51) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"id"=>"1"}
+User: admin - Thu Jan 21 14:51:51 +0530 2010 - params: {"action"=>"upload", "id"=>"1", "controller"=>"file"}
+Rendering template within layouts/file
+Rendering file/upload
+Completed in 11ms (View: 6, DB: 2) | 200 OK [http://server/file/upload/1]
+
+
+Processing FileController#upload_multi (for 192.168.1.81 at 2010-01-21 14:52:05) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"id"=>"1"}
+User: admin - Thu Jan 21 14:52:05 +0530 2010 - params: {"action"=>"upload_multi", "id"=>"1", "controller"=>"file"}
+Rendering template within layouts/file
+Rendering file/upload_multi
+Completed in 7ms (View: 4, DB: 1) | 200 OK [http://server/file/upload_multi/1]
+
+
+Processing FileController#upload_multi (for 192.168.1.81 at 2010-01-21 14:52:57) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"id"=>"1"}
+User: admin - Thu Jan 21 14:52:57 +0530 2010 - params: {"action"=>"upload_multi", "id"=>"1", "controller"=>"file"}
+Rendering template within layouts/file
+Rendering file/upload_multi
+Completed in 7ms (View: 4, DB: 1) | 200 OK [http://server/file/upload_multi/1]
+
+
+Processing FolderController#list (for 192.168.1.81 at 2010-01-21 14:53:12) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"id"=>"1"}
+User: admin - Thu Jan 21 14:53:12 +0530 2010 - params: {"action"=>"list", "id"=>"1", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 18ms (View: 10, DB: 2) | 200 OK [http://server/folder/list/1]
+
+
+Processing FolderController#list (for 192.168.1.81 at 2010-01-21 14:53:17) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"id"=>"2"}
+User: admin - Thu Jan 21 14:53:17 +0530 2010 - params: {"action"=>"list", "id"=>"2", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 14ms (View: 8, DB: 2) | 200 OK [http://server/folder/list/2]
+
+
+Processing FolderController#list (for 192.168.1.81 at 2010-01-21 14:53:20) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"id"=>"1"}
+User: admin - Thu Jan 21 14:53:20 +0530 2010 - params: {"action"=>"list", "id"=>"1", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 17ms (View: 10, DB: 2) | 200 OK [http://server/folder/list/1]
+
+
+Processing FolderController#list (for 192.168.1.81 at 2010-01-21 14:53:22) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"id"=>"4"}
+User: admin - Thu Jan 21 14:53:22 +0530 2010 - params: {"action"=>"list", "id"=>"4", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 14ms (View: 8, DB: 2) | 200 OK [http://server/folder/list/4]
+
+
+Processing FolderController#list (for 192.168.1.81 at 2010-01-21 14:53:24) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"id"=>"1"}
+User: admin - Thu Jan 21 14:53:24 +0530 2010 - params: {"action"=>"list", "id"=>"1", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 17ms (View: 9, DB: 2) | 200 OK [http://server/folder/list/1]
+
+
+Processing FolderController#list (for 192.168.1.81 at 2010-01-21 14:53:26) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"id"=>"2"}
+User: admin - Thu Jan 21 14:53:26 +0530 2010 - params: {"action"=>"list", "id"=>"2", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 13ms (View: 8, DB: 2) | 200 OK [http://server/folder/list/2]
+
+
+Processing FileController#upload (for 192.168.1.81 at 2010-01-21 14:53:28) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"id"=>"2"}
+User: admin - Thu Jan 21 14:53:28 +0530 2010 - params: {"action"=>"upload", "id"=>"2", "controller"=>"file"}
+Rendering template within layouts/file
+Rendering file/upload
+Completed in 7ms (View: 4, DB: 1) | 200 OK [http://server/file/upload/2]
+
+
+Processing FileController#do_the_upload (for 192.168.1.81 at 2010-01-21 14:53:53) [POST]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"commit"=>"Upload", "folder_id"=>"2", "tag_1"=>"", "tag_2"=>"", "file_1"=>#<File:/tmp/CGI20100121-21845-17cc8y0-0>, "tag_3"=>"", "file_2"=>"", "description"=>"Ruby Book"}
+User: admin - Thu Jan 21 14:53:53 +0530 2010 - params: {"commit"=>"Upload", "tag_1"=>"", "folder_id"=>"2", "tag_2"=>"", "action"=>"do_the_upload", "tag_3"=>"", "file_1"=>#<File:/tmp/CGI20100121-21845-17cc8y0-0>, "file_2"=>"", "description"=>"Ruby Book", "controller"=>"file"}
+Redirected to controllerfolderactionlistid2
+Completed in 615ms (DB: 506) | 302 Found [http://server/file/do_the_upload?folder_id=2]
+
+
+Processing FolderController#list (for 192.168.1.81 at 2010-01-21 14:53:54) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"id"=>"2"}
+User: admin - Thu Jan 21 14:53:54 +0530 2010 - params: {"action"=>"list", "id"=>"2", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_rhtml_app47views47folder47list46rhtml at /home/demo/library/app/views/folder/list.rhtml:67)
+Completed in 16ms (View: 10, DB: 2) | 200 OK [http://server/folder/list/2]
+
+
+Processing FileController#download (for 192.168.1.81 at 2010-01-21 14:53:58) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"id"=>"1"}
+User: admin - Thu Jan 21 14:53:58 +0530 2010 - params: {"action"=>"download", "id"=>"1", "controller"=>"file"}
+Completed in 40ms (View: 0, DB: 37) | 200 OK [http://server/file/download/1]
+Streaming file /home/demo/library/uploads/1
+
+
+Processing UserController#list (for 192.168.1.81 at 2010-01-21 14:54:18) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+User: admin - Thu Jan 21 14:54:18 +0530 2010 - params: {"action"=>"list", "controller"=>"user"}
+Rendering template within layouts/user
+Rendering user/list
+Completed in 6ms (View: 4, DB: 1) | 200 OK [http://server/user/list]
+
+
+Processing UserController#edit (for 192.168.1.81 at 2010-01-21 14:54:20) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"id"=>"1"}
+User: admin - Thu Jan 21 14:54:20 +0530 2010 - params: {"action"=>"edit", "id"=>"1", "controller"=>"user"}
+Rendering template within layouts/user
+Rendering user/edit
+Completed in 9ms (View: 7, DB: 1) | 200 OK [http://server/user/edit/1]
+
+
+Processing UserController#update (for 192.168.1.81 at 2010-01-21 14:54:31) [POST]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"commit"=>"Save", "id"=>"1", "belongs_to_group"=>{"1"=>"yes"}, "user"=>{"name"=>"admin", "default_folder_id"=>"1", "password_confirmation"=>"josh123", "password"=>"josh123", "email"=>"sandip@joshsoftware.com"}}
+User: admin - Thu Jan 21 14:54:31 +0530 2010 - params: {"commit"=>"Save", "action"=>"update", "id"=>"1", "belongs_to_group"=>{"1"=>"yes"}, "controller"=>"user", "user"=>{"name"=>"admin", "password_confirmation"=>"josh123", "default_folder_id"=>"1", "password"=>"josh123", "email"=>"sandip@joshsoftware.com"}}
+Redirected to actioneditid1
+Completed in 51ms (DB: 46) | 302 Found [http://server/user/update/1]
+
+
+Processing UserController#edit (for 192.168.1.81 at 2010-01-21 14:54:31) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"id"=>"1"}
+User: admin - Thu Jan 21 14:54:31 +0530 2010 - params: {"action"=>"edit", "id"=>"1", "controller"=>"user"}
+Rendering template within layouts/user
+Rendering user/edit
+Completed in 10ms (View: 8, DB: 2) | 200 OK [http://server/user/edit/1]
+
+
+Processing FolderController#list (for 192.168.1.81 at 2010-01-21 14:54:36) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+User: admin - Thu Jan 21 14:54:36 +0530 2010 - params: {"action"=>"list", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 19ms (View: 11, DB: 4) | 200 OK [http://server/folder/list]
+
+
+Processing FolderController#list (for 192.168.1.81 at 2010-01-21 14:54:38) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"id"=>"2"}
+User: admin - Thu Jan 21 14:54:38 +0530 2010 - params: {"action"=>"list", "id"=>"2", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_rhtml_app47views47folder47list46rhtml at /home/demo/library/app/views/folder/list.rhtml:67)
+Completed in 15ms (View: 9, DB: 36) | 200 OK [http://server/folder/list/2]
+
+
+Processing FileController#upload_multi (for 192.168.1.81 at 2010-01-21 14:54:40) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"id"=>"2"}
+User: admin - Thu Jan 21 14:54:40 +0530 2010 - params: {"action"=>"upload_multi", "id"=>"2", "controller"=>"file"}
+Rendering template within layouts/file
+Rendering file/upload_multi
+Completed in 7ms (View: 4, DB: 1) | 200 OK [http://server/file/upload_multi/2]
+
+
+Processing UserController#list (for 192.168.1.81 at 2010-01-21 14:55:29) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+User: admin - Thu Jan 21 14:55:29 +0530 2010 - params: {"action"=>"list", "controller"=>"user"}
+Rendering template within layouts/user
+Rendering user/list
+Completed in 5ms (View: 3, DB: 1) | 200 OK [http://server/user/list]
+
+
+Processing UserController#new (for 192.168.1.81 at 2010-01-21 14:55:33) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+User: admin - Thu Jan 21 14:55:33 +0530 2010 - params: {"action"=>"new", "controller"=>"user"}
+Rendering template within layouts/user
+Rendering user/new
+Completed in 8ms (View: 7, DB: 1) | 200 OK [http://server/user/new]
+
+
+Processing UserController#create (for 192.168.1.81 at 2010-01-21 14:55:50) [POST]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"commit"=>"Create", "belongs_to_group"=>{"1"=>"no"}, "user"=>{"name"=>"amit", "default_folder_id"=>"1", "password_confirmation"=>"amit", "password"=>"amit", "email"=>"amit@joshsoftware.com"}}
+User: admin - Thu Jan 21 14:55:50 +0530 2010 - params: {"commit"=>"Create", "action"=>"create", "belongs_to_group"=>{"1"=>"no"}, "controller"=>"user", "user"=>{"name"=>"amit", "password_confirmation"=>"amit", "default_folder_id"=>"1", "password"=>"amit", "email"=>"amit@joshsoftware.com"}}
+Sent mail to amit@joshsoftware.com
+Redirected to actionlist
+Completed in 102ms (DB: 33) | 302 Found [http://server/user/create]
+
+
+Processing UserController#list (for 192.168.1.81 at 2010-01-21 14:55:50) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+User: admin - Thu Jan 21 14:55:50 +0530 2010 - params: {"action"=>"list", "controller"=>"user"}
+Rendering template within layouts/user
+Rendering user/list
+Completed in 6ms (View: 4, DB: 38) | 200 OK [http://server/user/list]
+
+
+Processing UserController#new (for 192.168.1.81 at 2010-01-21 14:55:56) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+User: admin - Thu Jan 21 14:55:56 +0530 2010 - params: {"action"=>"new", "controller"=>"user"}
+Rendering template within layouts/user
+Rendering user/new
+Completed in 9ms (View: 7, DB: 1) | 200 OK [http://server/user/new]
+
+
+Processing UserController#create (for 192.168.1.81 at 2010-01-21 14:56:17) [POST]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"commit"=>"Create", "belongs_to_group"=>{"1"=>"no"}, "user"=>{"name"=>"shailesh", "default_folder_id"=>"1", "password_confirmation"=>"shailesh", "password"=>"shailesh", "email"=>"shailesh@joshsoftware.com"}}
+User: admin - Thu Jan 21 14:56:17 +0530 2010 - params: {"commit"=>"Create", "action"=>"create", "belongs_to_group"=>{"1"=>"no"}, "controller"=>"user", "user"=>{"name"=>"shailesh", "password_confirmation"=>"shailesh", "default_folder_id"=>"1", "password"=>"shailesh", "email"=>"shailesh@joshsoftware.com"}}
+Sent mail to shailesh@joshsoftware.com
+Redirected to actionlist
+Completed in 143ms (DB: 60) | 302 Found [http://server/user/create]
+
+
+Processing UserController#list (for 192.168.1.81 at 2010-01-21 14:56:17) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+User: admin - Thu Jan 21 14:56:17 +0530 2010 - params: {"action"=>"list", "controller"=>"user"}
+Rendering template within layouts/user
+Rendering user/list
+Completed in 90ms (View: 88, DB: 2) | 200 OK [http://server/user/list]
+
+
+Processing UserController#new (for 192.168.1.81 at 2010-01-21 14:56:19) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+User: admin - Thu Jan 21 14:56:19 +0530 2010 - params: {"action"=>"new", "controller"=>"user"}
+Rendering template within layouts/user
+Rendering user/new
+Completed in 9ms (View: 7, DB: 1) | 200 OK [http://server/user/new]
+
+
+Processing UserController#create (for 192.168.1.81 at 2010-01-21 14:56:44) [POST]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"commit"=>"Create", "belongs_to_group"=>{"1"=>"no"}, "user"=>{"name"=>"gautam", "default_folder_id"=>"1", "password_confirmation"=>"gautam", "password"=>"gautam", "email"=>"gautam@joshsoftware.com"}}
+User: admin - Thu Jan 21 14:56:44 +0530 2010 - params: {"commit"=>"Create", "action"=>"create", "belongs_to_group"=>{"1"=>"no"}, "controller"=>"user", "user"=>{"name"=>"gautam", "password_confirmation"=>"gautam", "default_folder_id"=>"1", "password"=>"gautam", "email"=>"gautam@joshsoftware.com"}}
+Sent mail to gautam@joshsoftware.com
+Redirected to actionlist
+Completed in 115ms (DB: 61) | 302 Found [http://server/user/create]
+
+
+Processing UserController#list (for 192.168.1.81 at 2010-01-21 14:56:44) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+User: admin - Thu Jan 21 14:56:44 +0530 2010 - params: {"action"=>"list", "controller"=>"user"}
+Rendering template within layouts/user
+Rendering user/list
+Completed in 10ms (View: 7, DB: 67) | 200 OK [http://server/user/list]
+
+
+Processing UserController#new (for 192.168.1.81 at 2010-01-21 14:56:46) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+User: admin - Thu Jan 21 14:56:46 +0530 2010 - params: {"action"=>"new", "controller"=>"user"}
+Rendering template within layouts/user
+Rendering user/new
+Completed in 11ms (View: 8, DB: 2) | 200 OK [http://server/user/new]
+
+
+Processing UserController#create (for 192.168.1.81 at 2010-01-21 14:57:06) [POST]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"commit"=>"Create", "belongs_to_group"=>{"1"=>"no"}, "user"=>{"name"=>"sethu", "default_folder_id"=>"1", "password_confirmation"=>"sethu", "password"=>"sethu", "email"=>"sethu@joshsoftware.com"}}
+User: admin - Thu Jan 21 14:57:06 +0530 2010 - params: {"commit"=>"Create", "action"=>"create", "belongs_to_group"=>{"1"=>"no"}, "controller"=>"user", "user"=>{"name"=>"sethu", "password_confirmation"=>"sethu", "default_folder_id"=>"1", "password"=>"sethu", "email"=>"sethu@joshsoftware.com"}}
+Sent mail to sethu@joshsoftware.com
+Redirected to actionlist
+Completed in 163ms (DB: 127) | 302 Found [http://server/user/create]
+
+
+Processing UserController#list (for 192.168.1.81 at 2010-01-21 14:57:06) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+User: admin - Thu Jan 21 14:57:06 +0530 2010 - params: {"action"=>"list", "controller"=>"user"}
+Rendering template within layouts/user
+Rendering user/list
+Completed in 10ms (View: 7, DB: 50) | 200 OK [http://server/user/list]
+
+
+Processing UserController#new (for 192.168.1.81 at 2010-01-21 14:57:41) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+User: admin - Thu Jan 21 14:57:41 +0530 2010 - params: {"action"=>"new", "controller"=>"user"}
+Rendering template within layouts/user
+Rendering user/new
+Completed in 9ms (View: 7, DB: 2) | 200 OK [http://server/user/new]
+
+
+Processing UserController#create (for 192.168.1.81 at 2010-01-21 14:58:03) [POST]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"commit"=>"Create", "belongs_to_group"=>{"1"=>"no"}, "user"=>{"name"=>"kiran", "default_folder_id"=>"1", "password_confirmation"=>"kiran", "password"=>"kiran", "email"=>"kiran@joshsoftware.com"}}
+User: admin - Thu Jan 21 14:58:03 +0530 2010 - params: {"commit"=>"Create", "action"=>"create", "belongs_to_group"=>{"1"=>"no"}, "controller"=>"user", "user"=>{"name"=>"kiran", "password_confirmation"=>"kiran", "default_folder_id"=>"1", "password"=>"kiran", "email"=>"kiran@joshsoftware.com"}}
+Sent mail to kiran@joshsoftware.com
+Redirected to actionlist
+Completed in 104ms (DB: 77) | 302 Found [http://server/user/create]
+
+
+Processing UserController#list (for 192.168.1.81 at 2010-01-21 14:58:03) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+User: admin - Thu Jan 21 14:58:03 +0530 2010 - params: {"action"=>"list", "controller"=>"user"}
+Rendering template within layouts/user
+Rendering user/list
+Completed in 8ms (View: 5, DB: 55) | 200 OK [http://server/user/list]
+
+
+Processing UserController#new (for 192.168.1.81 at 2010-01-21 14:58:05) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+User: admin - Thu Jan 21 14:58:05 +0530 2010 - params: {"action"=>"new", "controller"=>"user"}
+Rendering template within layouts/user
+Rendering user/new
+Completed in 10ms (View: 8, DB: 2) | 200 OK [http://server/user/new]
+
+
+Processing UserController#create (for 192.168.1.81 at 2010-01-21 14:58:25) [POST]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"commit"=>"Create", "belongs_to_group"=>{"1"=>"no"}, "user"=>{"name"=>"jiren", "default_folder_id"=>"1", "password_confirmation"=>"jiren", "password"=>"jiren", "email"=>"jiren@joshsoftware.com"}}
+User: admin - Thu Jan 21 14:58:25 +0530 2010 - params: {"commit"=>"Create", "action"=>"create", "belongs_to_group"=>{"1"=>"no"}, "controller"=>"user", "user"=>{"name"=>"jiren", "password_confirmation"=>"jiren", "default_folder_id"=>"1", "password"=>"jiren", "email"=>"jiren@joshsoftware.com"}}
+Sent mail to jiren@joshsoftware.com
+Redirected to actionlist
+Completed in 112ms (DB: 71) | 302 Found [http://server/user/create]
+
+
+Processing UserController#list (for 192.168.1.81 at 2010-01-21 14:58:26) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+User: admin - Thu Jan 21 14:58:26 +0530 2010 - params: {"action"=>"list", "controller"=>"user"}
+Rendering template within layouts/user
+Rendering user/list
+Completed in 8ms (View: 6, DB: 36) | 200 OK [http://server/user/list]
+
+
+Processing FolderController#index (for 192.168.1.8 at 2010-01-21 15:22:28) [GET]
+  Session ID: f69aa23cf478fd7b78177e35af357dd1
+Redirected to controllerauthenticationactionlogin
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 1ms (DB: 1) | 302 Found [http://192.168.1.100/]
+
+
+Processing AuthenticationController#login (for 192.168.1.8 at 2010-01-21 15:22:28) [GET]
+  Session ID: 94c962c1790dd6b46efea9d920832dae
+Rendering template within layouts/authentication
+Rendering authentication/login
+Completed in 2ms (View: 1, DB: 18) | 200 OK [http://192.168.1.100/authentication/login]
+
+
+Processing AuthenticationController#login (for 192.168.1.8 at 2010-01-21 15:22:34) [POST]
+  Session ID: 94c962c1790dd6b46efea9d920832dae
+  Parameters: {"commit"=>"Login", "user"=>{"name"=>"amit"}, "login"=>{"password"=>"amit"}}
+Redirected to actionindexcontrollerfolder
+Completed in 1ms (DB: 2) | 302 Found [http://192.168.1.100/authentication/login]
+
+
+Processing FolderController#index (for 192.168.1.8 at 2010-01-21 15:22:34) [GET]
+  Session ID: 94c962c1790dd6b46efea9d920832dae
+User: amit - Thu Jan 21 15:22:34 +0530 2010 - params: {"action"=>"index", "controller"=>"folder"}
+Redirected to actionlist
+Completed in 1ms (DB: 44) | 302 Found [http://192.168.1.100/]
+
+
+Processing FolderController#list (for 192.168.1.8 at 2010-01-21 15:22:34) [GET]
+  Session ID: 94c962c1790dd6b46efea9d920832dae
+User: amit - Thu Jan 21 15:22:34 +0530 2010 - params: {"action"=>"list", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 8ms (View: 5, DB: 1) | 200 OK [http://192.168.1.100/folder/list]
+
+
+Processing FolderController#list_tags (for 192.168.1.8 at 2010-01-21 15:22:43) [GET]
+  Session ID: 94c962c1790dd6b46efea9d920832dae
+User: amit - Thu Jan 21 15:22:43 +0530 2010 - params: {"action"=>"list_tags", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list_tags
+Completed in 5ms (View: 4, DB: 1) | 200 OK [http://192.168.1.100/folder/list_tags]
+
+
+Processing FolderController#list (for 192.168.1.8 at 2010-01-21 15:22:45) [GET]
+  Session ID: 94c962c1790dd6b46efea9d920832dae
+User: amit - Thu Jan 21 15:22:45 +0530 2010 - params: {"action"=>"list", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 8ms (View: 5, DB: 1) | 200 OK [http://192.168.1.100/folder/list]
+
+
+Processing UserController#edit (for 192.168.1.8 at 2010-01-21 15:22:46) [GET]
+  Session ID: 94c962c1790dd6b46efea9d920832dae
+  Parameters: {"id"=>"3"}
+User: amit - Thu Jan 21 15:22:46 +0530 2010 - params: {"action"=>"edit", "id"=>"3", "controller"=>"user"}
+Rendering template within layouts/user
+Rendering user/edit
+Completed in 6ms (View: 4, DB: 1) | 200 OK [http://192.168.1.100/user/edit/3]
+
+
+Processing UserController#edit (for 192.168.1.8 at 2010-01-21 15:22:54) [GET]
+  Session ID: 94c962c1790dd6b46efea9d920832dae
+  Parameters: {"id"=>"3"}
+User: amit - Thu Jan 21 15:22:54 +0530 2010 - params: {"action"=>"edit", "id"=>"3", "controller"=>"user"}
+Rendering template within layouts/user
+Rendering user/edit
+Completed in 94ms (View: 92, DB: 1) | 200 OK [http://192.168.1.100/user/edit/3]
+
+
+Processing SearchController#show_results (for 192.168.1.8 at 2010-01-21 15:22:56) [POST]
+  Session ID: 94c962c1790dd6b46efea9d920832dae
+  Parameters: {"commit"=>"Find!", "search_type"=>"filename", "search"=>{"query"=>""}}
+User: amit - Thu Jan 21 15:22:56 +0530 2010 - params: {"commit"=>"Find!", "action"=>"show_results", "search_type"=>"filename", "controller"=>"search", "search"=>{"query"=>""}}
+Rendering template within layouts/search
+Rendering search/show_results
+Completed in 7ms (View: 5, DB: 1) | 200 OK [http://192.168.1.100/search/show_results]
+
+
+Processing SearchController#show_results (for 192.168.1.8 at 2010-01-21 15:23:01) [POST]
+  Session ID: 94c962c1790dd6b46efea9d920832dae
+  Parameters: {"commit"=>"Find!", "search_type"=>"filename", "search"=>{"query"=>""}}
+User: amit - Thu Jan 21 15:23:01 +0530 2010 - params: {"commit"=>"Find!", "action"=>"show_results", "search_type"=>"filename", "controller"=>"search", "search"=>{"query"=>""}}
+Rendering template within layouts/search
+Rendering search/show_results
+Completed in 5ms (View: 4, DB: 1) | 200 OK [http://192.168.1.100/search/show_results]
+
+
+Processing SearchController#show_results (for 192.168.1.8 at 2010-01-21 15:23:02) [POST]
+  Session ID: 94c962c1790dd6b46efea9d920832dae
+  Parameters: {"commit"=>"Find!", "search_type"=>"filename", "search"=>{"query"=>""}}
+User: amit - Thu Jan 21 15:23:02 +0530 2010 - params: {"commit"=>"Find!", "action"=>"show_results", "search_type"=>"filename", "controller"=>"search", "search"=>{"query"=>""}}
+Rendering template within layouts/search
+Rendering search/show_results
+Completed in 5ms (View: 4, DB: 1) | 200 OK [http://192.168.1.100/search/show_results]
+
+
+Processing SearchController#show_results (for 192.168.1.8 at 2010-01-21 15:23:03) [POST]
+  Session ID: 94c962c1790dd6b46efea9d920832dae
+  Parameters: {"commit"=>"Find!", "search_type"=>"filename", "search"=>{"query"=>""}}
+User: amit - Thu Jan 21 15:23:03 +0530 2010 - params: {"commit"=>"Find!", "action"=>"show_results", "search_type"=>"filename", "controller"=>"search", "search"=>{"query"=>""}}
+Rendering template within layouts/search
+Rendering search/show_results
+Completed in 6ms (View: 5, DB: 1) | 200 OK [http://192.168.1.100/search/show_results]
+
+
+Processing SearchController#show_results (for 192.168.1.8 at 2010-01-21 15:23:09) [POST]
+  Session ID: 94c962c1790dd6b46efea9d920832dae
+  Parameters: {"commit"=>"Find!", "search_type"=>"filename", "search"=>{"query"=>"sdwsdsds"}}
+User: amit - Thu Jan 21 15:23:09 +0530 2010 - params: {"commit"=>"Find!", "action"=>"show_results", "search_type"=>"filename", "controller"=>"search", "search"=>{"query"=>"sdwsdsds"}}
+Rendering template within layouts/search
+Rendering search/show_results
+Completed in 4ms (View: 3, DB: 1) | 200 OK [http://192.168.1.100/search/show_results]
+
+
+Processing FolderController#list (for 192.168.1.8 at 2010-01-21 15:23:14) [GET]
+  Session ID: 94c962c1790dd6b46efea9d920832dae
+User: amit - Thu Jan 21 15:23:14 +0530 2010 - params: {"action"=>"list", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 8ms (View: 5, DB: 1) | 200 OK [http://192.168.1.100/folder/list]
+
+
+Processing FolderController#list (for 192.168.1.8 at 2010-01-21 15:23:20) [GET]
+  Session ID: 94c962c1790dd6b46efea9d920832dae
+  Parameters: {"order_by"=>"name"}
+User: amit - Thu Jan 21 15:23:20 +0530 2010 - params: {"action"=>"list", "controller"=>"folder", "order_by"=>"name"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 8ms (View: 5, DB: 1) | 200 OK [http://192.168.1.100/folder/list?order_by=name]
+
+
+Processing FolderController#list (for 192.168.1.8 at 2010-01-21 15:23:21) [GET]
+  Session ID: 94c962c1790dd6b46efea9d920832dae
+  Parameters: {"order"=>"DESC", "order_by"=>"name"}
+User: amit - Thu Jan 21 15:23:21 +0530 2010 - params: {"action"=>"list", "order"=>"DESC", "controller"=>"folder", "order_by"=>"name"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 8ms (View: 5, DB: 1) | 200 OK [http://192.168.1.100/folder/list?order=DESC&order_by=name]
+
+
+Processing FolderController#list_tags (for 192.168.1.8 at 2010-01-21 15:23:29) [GET]
+  Session ID: 94c962c1790dd6b46efea9d920832dae
+User: amit - Thu Jan 21 15:23:29 +0530 2010 - params: {"action"=>"list_tags", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list_tags
+Completed in 5ms (View: 3, DB: 1) | 200 OK [http://192.168.1.100/folder/list_tags]
+
+
+Processing SearchController#show_results (for 192.168.1.8 at 2010-01-21 15:23:33) [POST]
+  Session ID: 94c962c1790dd6b46efea9d920832dae
+  Parameters: {"commit"=>"Find!", "search_type"=>"filename", "search"=>{"query"=>""}}
+User: amit - Thu Jan 21 15:23:33 +0530 2010 - params: {"commit"=>"Find!", "action"=>"show_results", "search_type"=>"filename", "controller"=>"search", "search"=>{"query"=>""}}
+Rendering template within layouts/search
+Rendering search/show_results
+Completed in 5ms (View: 4, DB: 1) | 200 OK [http://192.168.1.100/search/show_results]
+
+
+Processing FileController#download (for 192.168.1.8 at 2010-01-21 15:23:41) [GET]
+  Session ID: 94c962c1790dd6b46efea9d920832dae
+  Parameters: {"id"=>"1"}
+User: amit - Thu Jan 21 15:23:41 +0530 2010 - params: {"action"=>"download", "id"=>"1", "controller"=>"file"}
+Redirected to controllerfolderactionlistid
+Filter chain halted as [:authorize_reading] rendered_or_redirected.
+Completed in 3ms (DB: 1) | 302 Found [http://192.168.1.100/file/download/1]
+
+
+Processing FolderController#list (for 192.168.1.8 at 2010-01-21 15:23:41) [GET]
+  Session ID: 94c962c1790dd6b46efea9d920832dae
+User: amit - Thu Jan 21 15:23:41 +0530 2010 - params: {"action"=>"list", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 8ms (View: 5, DB: 20) | 200 OK [http://192.168.1.100/folder/list]
+
+
+Processing FolderController#feed (for 192.168.1.8 at 2010-01-21 15:23:48) [GET]
+  Parameters: {"id"=>"1", "access_key"=>"S5sAtrO63ZrGcOCj6LTPRuKv3ezVLHVhiBLH"}
+Rendering folder/feed
+Completed in 4ms (View: 1, DB: 23) | 200 OK [http://192.168.1.100/folder/feed/1?access_key=S5sAtrO63ZrGcOCj6LTPRuKv3ezVLHVhiBLH]
+
+
+Processing AuthenticationController#logout (for 192.168.1.8 at 2010-01-21 15:23:57) [GET]
+  Session ID: 94c962c1790dd6b46efea9d920832dae
+Redirected to actionlogin
+Completed in 46ms (DB: 44) | 302 Found [http://192.168.1.100/authentication/logout]
+
+
+Processing AuthenticationController#login (for 192.168.1.8 at 2010-01-21 15:23:57) [GET]
+  Session ID: 6f3af8e33a7c86c5e1a3423f00aa5c6e
+Rendering template within layouts/authentication
+Rendering authentication/login
+Completed in 2ms (View: 1, DB: 1) | 200 OK [http://192.168.1.100/authentication/login]
+
+
+Processing SettingsController#index (for 192.168.1.81 at 2010-01-21 15:28:04) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+User: admin - Thu Jan 21 15:28:04 +0530 2010 - params: {"action"=>"index", "controller"=>"settings"}
+Rendering template within layouts/settings
+Rendering settings/index
+Completed in 6ms (View: 4, DB: 2) | 200 OK [http://server/settings]
+
+
+Processing SettingsController#update_settings (for 192.168.1.81 at 2010-01-21 15:28:28) [POST]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"commit"=>"Update Settings", "setting"=>{"overwrite_existing_files"=>"0", "let_users_change_default_folder"=>"1", "site_keywords"=>"josh, library", "site_title"=>"Josh Library System", "site_description"=>"Easy way to manage books", "use_ferret"=>"0"}}
+User: admin - Thu Jan 21 15:28:28 +0530 2010 - params: {"commit"=>"Update Settings", "action"=>"update_settings", "setting"=>{"overwrite_existing_files"=>"0", "site_keywords"=>"josh, library", "let_users_change_default_folder"=>"1", "site_title"=>"Josh Library System", "site_description"=>"Easy way to manage books", "use_ferret"=>"0"}, "controller"=>"settings"}
+Redirected to actionindex
+Completed in 78ms (DB: 91) | 302 Found [http://server/settings/update_settings]
+
+
+Processing SettingsController#index (for 192.168.1.81 at 2010-01-21 15:28:28) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+User: admin - Thu Jan 21 15:28:28 +0530 2010 - params: {"action"=>"index", "controller"=>"settings"}
+Rendering template within layouts/settings
+Rendering settings/index
+Completed in 6ms (View: 4, DB: 2) | 200 OK [http://server/settings]
+
+
+Processing FolderController#list_tags (for 192.168.1.81 at 2010-01-21 15:28:37) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+User: admin - Thu Jan 21 15:28:37 +0530 2010 - params: {"action"=>"list_tags", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list_tags
+Completed in 6ms (View: 4, DB: 2) | 200 OK [http://server/folder/list_tags]
+
+
+Processing SettingsController#index (for 192.168.1.81 at 2010-01-21 15:28:40) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+User: admin - Thu Jan 21 15:28:40 +0530 2010 - params: {"action"=>"index", "controller"=>"settings"}
+Rendering template within layouts/settings
+Rendering settings/index
+Completed in 6ms (View: 4, DB: 2) | 200 OK [http://server/settings]
+
+
+Processing FolderController#list_tags (for 192.168.1.81 at 2010-01-21 15:28:41) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+User: admin - Thu Jan 21 15:28:41 +0530 2010 - params: {"action"=>"list_tags", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list_tags
+Completed in 5ms (View: 4, DB: 1) | 200 OK [http://server/folder/list_tags]
+
+
+Processing SettingsController#index (for 192.168.1.81 at 2010-01-21 15:28:42) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+User: admin - Thu Jan 21 15:28:42 +0530 2010 - params: {"action"=>"index", "controller"=>"settings"}
+Rendering template within layouts/settings
+Rendering settings/index
+Completed in 6ms (View: 4, DB: 1) | 200 OK [http://server/settings]
+
+
+Processing GroupController#list (for 192.168.1.81 at 2010-01-21 15:28:43) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+User: admin - Thu Jan 21 15:28:43 +0530 2010 - params: {"action"=>"list", "controller"=>"group"}
+Rendering template within layouts/group
+Rendering group/list
+Completed in 5ms (View: 3, DB: 1) | 200 OK [http://server/group/list]
+
+
+Processing UserController#list (for 192.168.1.81 at 2010-01-21 15:28:44) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+User: admin - Thu Jan 21 15:28:44 +0530 2010 - params: {"action"=>"list", "controller"=>"user"}
+Rendering template within layouts/user
+Rendering user/list
+Completed in 7ms (View: 5, DB: 1) | 200 OK [http://server/user/list]
+
+
+Processing UserController#edit (for 192.168.1.81 at 2010-01-21 15:28:52) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"id"=>"1"}
+User: admin - Thu Jan 21 15:28:52 +0530 2010 - params: {"action"=>"edit", "id"=>"1", "controller"=>"user"}
+Rendering template within layouts/user
+Rendering user/edit
+Completed in 9ms (View: 7, DB: 1) | 200 OK [http://server/user/edit/1]
+
+
+Processing UserController#update (for 192.168.1.81 at 2010-01-21 15:29:10) [POST]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"commit"=>"Save", "id"=>"1", "belongs_to_group"=>{"1"=>"yes"}, "user"=>{"name"=>"admin", "default_folder_id"=>"2", "password_confirmation"=>"", "password"=>"admin", "email"=>"sandip@joshsoftware.com"}}
+User: admin - Thu Jan 21 15:29:10 +0530 2010 - params: {"commit"=>"Save", "action"=>"update", "id"=>"1", "belongs_to_group"=>{"1"=>"yes"}, "controller"=>"user", "user"=>{"name"=>"admin", "password_confirmation"=>"", "default_folder_id"=>"2", "password"=>"admin", "email"=>"sandip@joshsoftware.com"}}
+Rendering template within layouts/user
+Rendering user/edit
+Completed in 60ms (View: 6, DB: 48) | 200 OK [http://server/user/update/1]
+
+
+Processing UserController#update (for 192.168.1.81 at 2010-01-21 15:29:26) [POST]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"commit"=>"Save", "id"=>"1", "belongs_to_group"=>{"1"=>"yes"}, "user"=>{"name"=>"admin", "default_folder_id"=>"2", "password_confirmation"=>"josh123", "password"=>"josh123", "email"=>"sandip@joshsoftware.com"}}
+User: admin - Thu Jan 21 15:29:26 +0530 2010 - params: {"commit"=>"Save", "action"=>"update", "id"=>"1", "belongs_to_group"=>{"1"=>"yes"}, "controller"=>"user", "user"=>{"name"=>"admin", "password_confirmation"=>"josh123", "default_folder_id"=>"2", "password"=>"josh123", "email"=>"sandip@joshsoftware.com"}}
+Redirected to actioneditid1
+Completed in 56ms (DB: 51) | 302 Found [http://server/user/update/1]
+
+
+Processing UserController#edit (for 192.168.1.81 at 2010-01-21 15:29:26) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"id"=>"1"}
+User: admin - Thu Jan 21 15:29:26 +0530 2010 - params: {"action"=>"edit", "id"=>"1", "controller"=>"user"}
+Rendering template within layouts/user
+Rendering user/edit
+Completed in 9ms (View: 7, DB: 2) | 200 OK [http://server/user/edit/1]
+
+
+Processing GroupController#list (for 192.168.1.81 at 2010-01-21 15:29:31) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+User: admin - Thu Jan 21 15:29:31 +0530 2010 - params: {"action"=>"list", "controller"=>"group"}
+Rendering template within layouts/group
+Rendering group/list
+Completed in 5ms (View: 3, DB: 2) | 200 OK [http://server/group/list]
+
+
+Processing SettingsController#index (for 192.168.1.81 at 2010-01-21 15:29:38) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+User: admin - Thu Jan 21 15:29:38 +0530 2010 - params: {"action"=>"index", "controller"=>"settings"}
+Rendering template within layouts/settings
+Rendering settings/index
+Completed in 7ms (View: 5, DB: 65) | 200 OK [http://server/settings]
+
+
+Processing GroupController#list (for 192.168.1.81 at 2010-01-21 15:29:39) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+User: admin - Thu Jan 21 15:29:39 +0530 2010 - params: {"action"=>"list", "controller"=>"group"}
+Rendering template within layouts/group
+Rendering group/list
+Completed in 6ms (View: 3, DB: 1) | 200 OK [http://server/group/list]
+
+
+Processing GroupController#new (for 192.168.1.81 at 2010-01-21 15:29:40) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+User: admin - Thu Jan 21 15:29:40 +0530 2010 - params: {"action"=>"new", "controller"=>"group"}
+Rendering template within layouts/group
+Rendering group/new
+Completed in 6ms (View: 4, DB: 1) | 200 OK [http://server/group/new]
+
+
+Processing UserController#list (for 192.168.1.81 at 2010-01-21 15:29:45) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+User: admin - Thu Jan 21 15:29:45 +0530 2010 - params: {"action"=>"list", "controller"=>"user"}
+Rendering template within layouts/user
+Rendering user/list
+Completed in 8ms (View: 6, DB: 1) | 200 OK [http://server/user/list]
+
+
+Processing UserController#edit (for 192.168.1.81 at 2010-01-21 15:29:49) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"id"=>"3"}
+User: admin - Thu Jan 21 15:29:49 +0530 2010 - params: {"action"=>"edit", "id"=>"3", "controller"=>"user"}
+Rendering template within layouts/user
+Rendering user/edit
+Completed in 10ms (View: 7, DB: 1) | 200 OK [http://server/user/edit/3]
+
+
+Processing UserController#update (for 192.168.1.81 at 2010-01-21 15:30:03) [POST]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"commit"=>"Save", "id"=>"3", "belongs_to_group"=>{"1"=>"no"}, "user"=>{"name"=>"amit", "default_folder_id"=>"2", "password_confirmation"=>"amit", "password"=>"amit", "email"=>"amit@joshsoftware.com"}}
+User: admin - Thu Jan 21 15:30:03 +0530 2010 - params: {"commit"=>"Save", "action"=>"update", "id"=>"3", "belongs_to_group"=>{"1"=>"no"}, "controller"=>"user", "user"=>{"name"=>"amit", "password_confirmation"=>"amit", "default_folder_id"=>"2", "password"=>"amit", "email"=>"amit@joshsoftware.com"}}
+Redirected to actionlist
+Completed in 55ms (DB: 51) | 302 Found [http://server/user/update/3]
+
+
+Processing UserController#list (for 192.168.1.81 at 2010-01-21 15:30:03) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+User: admin - Thu Jan 21 15:30:03 +0530 2010 - params: {"action"=>"list", "controller"=>"user"}
+Rendering template within layouts/user
+Rendering user/list
+Completed in 8ms (View: 5, DB: 1) | 200 OK [http://server/user/list]
+
+
+Processing UserController#edit (for 192.168.1.81 at 2010-01-21 15:30:10) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"id"=>"6"}
+User: admin - Thu Jan 21 15:30:10 +0530 2010 - params: {"action"=>"edit", "id"=>"6", "controller"=>"user"}
+Rendering template within layouts/user
+Rendering user/edit
+Completed in 9ms (View: 7, DB: 1) | 200 OK [http://server/user/edit/6]
+
+
+Processing UserController#update (for 192.168.1.81 at 2010-01-21 15:30:20) [POST]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"commit"=>"Save", "id"=>"6", "belongs_to_group"=>{"1"=>"no"}, "user"=>{"name"=>"sethu", "default_folder_id"=>"2", "password_confirmation"=>"sethu", "password"=>"sethu", "email"=>"sethu@joshsoftware.com"}}
+User: admin - Thu Jan 21 15:30:20 +0530 2010 - params: {"commit"=>"Save", "action"=>"update", "id"=>"6", "belongs_to_group"=>{"1"=>"no"}, "controller"=>"user", "user"=>{"name"=>"sethu", "password_confirmation"=>"sethu", "default_folder_id"=>"2", "password"=>"sethu", "email"=>"sethu@joshsoftware.com"}}
+Redirected to actionlist
+Completed in 51ms (DB: 47) | 302 Found [http://server/user/update/6]
+
+
+Processing UserController#list (for 192.168.1.81 at 2010-01-21 15:30:20) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+User: admin - Thu Jan 21 15:30:20 +0530 2010 - params: {"action"=>"list", "controller"=>"user"}
+Rendering template within layouts/user
+Rendering user/list
+Completed in 8ms (View: 5, DB: 1) | 200 OK [http://server/user/list]
+
+
+Processing GroupController#list (for 192.168.1.81 at 2010-01-21 15:30:22) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+User: admin - Thu Jan 21 15:30:22 +0530 2010 - params: {"action"=>"list", "controller"=>"group"}
+Rendering template within layouts/group
+Rendering group/list
+Completed in 5ms (View: 3, DB: 1) | 200 OK [http://server/group/list]
+
+
+Processing FolderController#list_tags (for 192.168.1.81 at 2010-01-21 15:30:27) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+User: admin - Thu Jan 21 15:30:27 +0530 2010 - params: {"action"=>"list_tags", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list_tags
+Completed in 6ms (View: 4, DB: 1) | 200 OK [http://server/folder/list_tags]
+
+
+Processing FolderController#list (for 192.168.1.81 at 2010-01-21 15:30:28) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+User: admin - Thu Jan 21 15:30:28 +0530 2010 - params: {"action"=>"list", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 18ms (View: 10, DB: 3) | 200 OK [http://server/folder/list]
+
+
+Processing GroupController#list (for 192.168.1.81 at 2010-01-21 15:30:45) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+User: admin - Thu Jan 21 15:30:45 +0530 2010 - params: {"action"=>"list", "controller"=>"group"}
+Rendering template within layouts/group
+Rendering group/list
+Completed in 5ms (View: 3, DB: 1) | 200 OK [http://server/group/list]
+
+
+Processing GroupController#new (for 192.168.1.81 at 2010-01-21 15:30:46) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+User: admin - Thu Jan 21 15:30:46 +0530 2010 - params: {"action"=>"new", "controller"=>"group"}
+Rendering template within layouts/group
+Rendering group/new
+Completed in 6ms (View: 4, DB: 1) | 200 OK [http://server/group/new]
+
+
+Processing GroupController#create (for 192.168.1.81 at 2010-01-21 15:32:49) [POST]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"group"=>{"name"=>"users"}, "commit"=>"Create", "permission_to_everything"=>{"checked"=>"yes"}}
+User: admin - Thu Jan 21 15:32:49 +0530 2010 - params: {"group"=>{"name"=>"users"}, "commit"=>"Create", "action"=>"create", "controller"=>"group", "permission_to_everything"=>{"checked"=>"yes"}}
+Redirected to actionlist
+Completed in 71ms (DB: 64) | 302 Found [http://server/group/create]
+
+
+Processing GroupController#list (for 192.168.1.81 at 2010-01-21 15:32:49) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+User: admin - Thu Jan 21 15:32:49 +0530 2010 - params: {"action"=>"list", "controller"=>"group"}
+Rendering template within layouts/group
+Rendering group/list
+Completed in 5ms (View: 3, DB: 1) | 200 OK [http://server/group/list]
+
+
+Processing UserController#list (for 192.168.1.81 at 2010-01-21 15:32:53) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+User: admin - Thu Jan 21 15:32:53 +0530 2010 - params: {"action"=>"list", "controller"=>"user"}
+Rendering template within layouts/user
+Rendering user/list
+Completed in 7ms (View: 5, DB: 1) | 200 OK [http://server/user/list]
+
+
+Processing FolderController#list (for 192.168.1.81 at 2010-01-21 15:32:54) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+User: admin - Thu Jan 21 15:32:54 +0530 2010 - params: {"action"=>"list", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 18ms (View: 11, DB: 2) | 200 OK [http://server/folder/list]
+
+
+Processing FolderController#update_permissions (for 192.168.1.81 at 2010-01-21 15:33:11) [POST]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"delete_check_box"=>{"1"=>"1", "2"=>"0"}, "update_recursively"=>{"checked"=>"yes"}, "commit"=>"Save", "read_check_box"=>{"1"=>"1", "2"=>"1"}, "create_check_box"=>{"1"=>"1", "2"=>"1"}, "update_check_box"=>{"1"=>"1", "2"=>"0"}}
+User: admin - Thu Jan 21 15:33:11 +0530 2010 - params: {"update_recursively"=>{"checked"=>"yes"}, "delete_check_box"=>{"1"=>"1", "2"=>"0"}, "commit"=>"Save", "read_check_box"=>{"1"=>"1", "2"=>"1"}, "action"=>"update_permissions", "create_check_box"=>{"1"=>"1", "2"=>"1"}, "controller"=>"folder", "update_check_box"=>{"1"=>"1", "2"=>"0"}}
+Redirected to actionlistid1
+Completed in 155ms (DB: 43) | 302 Found [http://server/folder/update_permissions]
+
+
+Processing FolderController#list (for 192.168.1.81 at 2010-01-21 15:33:11) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"id"=>"1"}
+User: admin - Thu Jan 21 15:33:11 +0530 2010 - params: {"action"=>"list", "id"=>"1", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 21ms (View: 12, DB: 3) | 200 OK [http://server/folder/list/1]
+
+
+Processing UserController#list (for 192.168.1.81 at 2010-01-21 15:33:15) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+User: admin - Thu Jan 21 15:33:15 +0530 2010 - params: {"action"=>"list", "controller"=>"user"}
+Rendering template within layouts/user
+Rendering user/list
+Completed in 7ms (View: 5, DB: 1) | 200 OK [http://server/user/list]
+
+
+Processing UserController#edit (for 192.168.1.81 at 2010-01-21 15:33:17) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"id"=>"3"}
+User: admin - Thu Jan 21 15:33:17 +0530 2010 - params: {"action"=>"edit", "id"=>"3", "controller"=>"user"}
+Rendering template within layouts/user
+Rendering user/edit
+Completed in 9ms (View: 7, DB: 1) | 200 OK [http://server/user/edit/3]
+
+
+Processing UserController#update (for 192.168.1.81 at 2010-01-21 15:33:26) [POST]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"commit"=>"Save", "id"=>"3", "belongs_to_group"=>{"1"=>"no", "2"=>"yes"}, "user"=>{"name"=>"amit", "default_folder_id"=>"2", "password_confirmation"=>"amit", "password"=>"amit", "email"=>"amit@joshsoftware.com"}}
+User: admin - Thu Jan 21 15:33:26 +0530 2010 - params: {"commit"=>"Save", "action"=>"update", "id"=>"3", "belongs_to_group"=>{"1"=>"no", "2"=>"yes"}, "controller"=>"user", "user"=>{"name"=>"amit", "password_confirmation"=>"amit", "default_folder_id"=>"2", "password"=>"amit", "email"=>"amit@joshsoftware.com"}}
+Redirected to actionlist
+Completed in 26ms (DB: 22) | 302 Found [http://server/user/update/3]
+
+
+Processing UserController#list (for 192.168.1.81 at 2010-01-21 15:33:26) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+User: admin - Thu Jan 21 15:33:26 +0530 2010 - params: {"action"=>"list", "controller"=>"user"}
+Rendering template within layouts/user
+Rendering user/list
+Completed in 7ms (View: 5, DB: 1) | 200 OK [http://server/user/list]
+
+
+Processing ApplicationController#index (for 192.168.1.16 at 2010-01-21 15:34:53) [GET]
+  Session ID: 5c44c838cf4913fdb88587fc1cd4a82d
+
+
+ActionController::RoutingError (No route matches "/session" with {:method=>:get}):
+    /vendor/rails/actionpack/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:386:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:182:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-0.3.13.4/lib/mongrel/rails.rb:84:in `process'
+    /usr/local/lib/ruby/1.8/sync.rb:229:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-0.3.13.4/lib/mongrel/rails.rb:83:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-0.3.13.4/lib/mongrel.rb:580:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-0.3.13.4/lib/mongrel.rb:579:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-0.3.13.4/lib/mongrel.rb:579:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-0.3.13.4/lib/mongrel.rb:686:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-0.3.13.4/lib/mongrel.rb:686:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-0.3.13.4/lib/mongrel.rb:686:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-0.3.13.4/lib/mongrel.rb:686:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-0.3.13.4/lib/mongrel.rb:673:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-0.3.13.4/lib/mongrel.rb:673:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-0.3.13.4/lib/mongrel.rb:673:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-0.3.13.4/lib/mongrel/configurator.rb:267:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-0.3.13.4/lib/mongrel/configurator.rb:266:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-0.3.13.4/lib/mongrel/configurator.rb:266:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-0.3.13.4/bin/mongrel_rails:127:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-0.3.13.4/lib/mongrel/command.rb:211:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-0.3.13.4/bin/mongrel_rails:231
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+
+
+Processing UserController#edit (for 192.168.1.81 at 2010-01-21 15:34:56) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"id"=>"8"}
+User: admin - Thu Jan 21 15:34:56 +0530 2010 - params: {"action"=>"edit", "id"=>"8", "controller"=>"user"}
+Rendering template within layouts/user
+Rendering user/edit
+Completed in 10ms (View: 8, DB: 44) | 200 OK [http://server/user/edit/8]
+
+
+Processing FolderController#index (for 192.168.1.221 at 2010-01-21 15:34:59) [GET]
+  Session ID: e9927f57ca042e762ba6cfbebfcf1e24
+Redirected to controllerauthenticationactionlogin
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 1ms (DB: 1) | 302 Found [http://192.168.1.100/]
+
+
+Processing AuthenticationController#login (for 192.168.1.221 at 2010-01-21 15:34:59) [GET]
+  Session ID: 7ad00b2287df0e67cf0987aafcbfd15f
+Rendering template within layouts/authentication
+Rendering authentication/login
+Completed in 2ms (View: 1, DB: 48) | 200 OK [http://192.168.1.100/authentication/login]
+
+
+Processing FolderController#index (for 192.168.1.16 at 2010-01-21 15:34:59) [GET]
+  Session ID: 5c44c838cf4913fdb88587fc1cd4a82d
+Redirected to controllerauthenticationactionlogin
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 3ms (DB: 2) | 302 Found [http://192.168.1.100/]
+
+
+Processing AuthenticationController#login (for 192.168.1.16 at 2010-01-21 15:35:00) [GET]
+  Session ID: 85a9059130a76cde18ffa58b9a34f9d8
+Rendering template within layouts/authentication
+Rendering authentication/login
+Completed in 2ms (View: 1, DB: 2) | 200 OK [http://192.168.1.100/authentication/login]
+
+
+Processing UserController#update (for 192.168.1.81 at 2010-01-21 15:35:03) [POST]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"commit"=>"Save", "id"=>"8", "belongs_to_group"=>{"1"=>"no", "2"=>"yes"}, "user"=>{"name"=>"jiren", "default_folder_id"=>"2", "password_confirmation"=>"", "password"=>"amit", "email"=>"jiren@joshsoftware.com"}}
+User: admin - Thu Jan 21 15:35:03 +0530 2010 - params: {"commit"=>"Save", "action"=>"update", "id"=>"8", "belongs_to_group"=>{"1"=>"no", "2"=>"yes"}, "controller"=>"user", "user"=>{"name"=>"jiren", "password_confirmation"=>"", "default_folder_id"=>"2", "password"=>"amit", "email"=>"jiren@joshsoftware.com"}}
+Rendering template within layouts/user
+Rendering user/edit
+Completed in 30ms (View: 6, DB: 50) | 200 OK [http://server/user/update/8]
+
+
+Processing AuthenticationController#login (for 192.168.1.221 at 2010-01-21 15:35:06) [POST]
+  Session ID: 7ad00b2287df0e67cf0987aafcbfd15f
+  Parameters: {"commit"=>"Login", "user"=>{"name"=>"jiren"}, "login"=>{"password"=>"jiren"}}
+Redirected to actionindexcontrollerfolder
+Completed in 1ms (DB: 1) | 302 Found [http://192.168.1.100/authentication/login]
+
+
+Processing FolderController#index (for 192.168.1.221 at 2010-01-21 15:35:06) [GET]
+  Session ID: 7ad00b2287df0e67cf0987aafcbfd15f
+User: jiren - Thu Jan 21 15:35:06 +0530 2010 - params: {"action"=>"index", "controller"=>"folder"}
+Redirected to actionlist
+Completed in 1ms (DB: 42) | 302 Found [http://192.168.1.100/]
+
+
+Processing FolderController#list (for 192.168.1.221 at 2010-01-21 15:35:06) [GET]
+  Session ID: 7ad00b2287df0e67cf0987aafcbfd15f
+User: jiren - Thu Jan 21 15:35:06 +0530 2010 - params: {"action"=>"list", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 14ms (View: 6, DB: 3) | 200 OK [http://192.168.1.100/folder/list]
+
+
+Processing ApplicationController#index (for 192.168.1.34 at 2010-01-21 15:35:07) [GET]
+  Session ID: e47727f34d58d62f6b622fb193393290
+
+
+ActionController::RoutingError (No route matches "/session/new" with {:method=>:get}):
+    /vendor/rails/actionpack/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:386:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:182:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-0.3.13.4/lib/mongrel/rails.rb:84:in `process'
+    /usr/local/lib/ruby/1.8/sync.rb:229:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-0.3.13.4/lib/mongrel/rails.rb:83:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-0.3.13.4/lib/mongrel.rb:580:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-0.3.13.4/lib/mongrel.rb:579:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-0.3.13.4/lib/mongrel.rb:579:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-0.3.13.4/lib/mongrel.rb:686:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-0.3.13.4/lib/mongrel.rb:686:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-0.3.13.4/lib/mongrel.rb:686:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-0.3.13.4/lib/mongrel.rb:686:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-0.3.13.4/lib/mongrel.rb:673:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-0.3.13.4/lib/mongrel.rb:673:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-0.3.13.4/lib/mongrel.rb:673:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-0.3.13.4/lib/mongrel/configurator.rb:267:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-0.3.13.4/lib/mongrel/configurator.rb:266:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-0.3.13.4/lib/mongrel/configurator.rb:266:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-0.3.13.4/bin/mongrel_rails:127:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-0.3.13.4/lib/mongrel/command.rb:211:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-0.3.13.4/bin/mongrel_rails:231
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+
+
+Processing AuthenticationController#login (for 192.168.1.16 at 2010-01-21 15:35:08) [POST]
+  Session ID: 85a9059130a76cde18ffa58b9a34f9d8
+  Parameters: {"commit"=>"Login", "user"=>{"name"=>"kiran"}, "login"=>{"password"=>"kiran"}}
+Redirected to actionindexcontrollerfolder
+Completed in 1ms (DB: 1) | 302 Found [http://192.168.1.100/authentication/login]
+
+
+Processing FolderController#index (for 192.168.1.16 at 2010-01-21 15:35:08) [GET]
+  Session ID: 85a9059130a76cde18ffa58b9a34f9d8
+User: kiran - Thu Jan 21 15:35:08 +0530 2010 - params: {"action"=>"index", "controller"=>"folder"}
+Redirected to actionlist
+Completed in 1ms (DB: 64) | 302 Found [http://192.168.1.100/]
+
+
+Processing FolderController#list (for 192.168.1.16 at 2010-01-21 15:35:08) [GET]
+  Session ID: 85a9059130a76cde18ffa58b9a34f9d8
+User: kiran - Thu Jan 21 15:35:08 +0530 2010 - params: {"action"=>"list", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 7ms (View: 4, DB: 1) | 200 OK [http://192.168.1.100/folder/list]
+
+
+Processing UserController#update (for 192.168.1.81 at 2010-01-21 15:35:11) [POST]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"commit"=>"Save", "id"=>"8", "belongs_to_group"=>{"1"=>"no", "2"=>"yes"}, "user"=>{"name"=>"jiren", "password_confirmation"=>"jiren", "password"=>"jiren", "email"=>"jiren@joshsoftware.com"}}
+User: admin - Thu Jan 21 15:35:11 +0530 2010 - params: {"commit"=>"Save", "action"=>"update", "id"=>"8", "belongs_to_group"=>{"1"=>"no", "2"=>"yes"}, "controller"=>"user", "user"=>{"name"=>"jiren", "password_confirmation"=>"jiren", "password"=>"jiren", "email"=>"jiren@joshsoftware.com"}}
+Redirected to actionlist
+Completed in 27ms (DB: 22) | 302 Found [http://server/user/update/8]
+
+
+Processing UserController#list (for 192.168.1.81 at 2010-01-21 15:35:11) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+User: admin - Thu Jan 21 15:35:11 +0530 2010 - params: {"action"=>"list", "controller"=>"user"}
+Rendering template within layouts/user
+Rendering user/list
+Completed in 8ms (View: 5, DB: 1) | 200 OK [http://server/user/list]
+
+
+Processing FolderController#index (for 192.168.1.34 at 2010-01-21 15:35:11) [GET]
+  Session ID: e47727f34d58d62f6b622fb193393290
+Redirected to controllerauthenticationactionlogin
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 2ms (DB: 1) | 302 Found [http://192.168.1.100/]
+
+
+Processing AuthenticationController#login (for 192.168.1.34 at 2010-01-21 15:35:11) [GET]
+  Session ID: 02611846ac0f4ffc747f8b06abb19819
+Rendering template within layouts/authentication
+Rendering authentication/login
+Completed in 2ms (View: 1, DB: 1) | 200 OK [http://192.168.1.100/authentication/login]
+
+
+Processing FolderController#list (for 192.168.1.221 at 2010-01-21 15:35:13) [GET]
+  Session ID: 7ad00b2287df0e67cf0987aafcbfd15f
+  Parameters: {"id"=>"4"}
+User: jiren - Thu Jan 21 15:35:13 +0530 2010 - params: {"action"=>"list", "id"=>"4", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 11ms (View: 6, DB: 2) | 200 OK [http://192.168.1.100/folder/list/4]
+
+
+Processing UserController#edit (for 192.168.1.81 at 2010-01-21 15:35:15) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"id"=>"4"}
+User: admin - Thu Jan 21 15:35:15 +0530 2010 - params: {"action"=>"edit", "id"=>"4", "controller"=>"user"}
+Rendering template within layouts/user
+Rendering user/edit
+Completed in 9ms (View: 7, DB: 1) | 200 OK [http://server/user/edit/4]
+
+
+Processing AuthenticationController#login (for 192.168.1.34 at 2010-01-21 15:35:19) [POST]
+  Session ID: 02611846ac0f4ffc747f8b06abb19819
+  Parameters: {"commit"=>"Login", "user"=>{"name"=>"Shailesh"}, "login"=>{"password"=>"shailesh"}}
+Redirected to actionindexcontrollerfolder
+Completed in 1ms (DB: 1) | 302 Found [http://192.168.1.100/authentication/login]
+
+
+Processing FolderController#index (for 192.168.1.34 at 2010-01-21 15:35:19) [GET]
+  Session ID: 02611846ac0f4ffc747f8b06abb19819
+User: shailesh - Thu Jan 21 15:35:19 +0530 2010 - params: {"action"=>"index", "controller"=>"folder"}
+Redirected to actionlist
+Completed in 1ms (DB: 24) | 302 Found [http://192.168.1.100/]
+
+
+Processing FolderController#list (for 192.168.1.34 at 2010-01-21 15:35:19) [GET]
+  Session ID: 02611846ac0f4ffc747f8b06abb19819
+User: shailesh - Thu Jan 21 15:35:19 +0530 2010 - params: {"action"=>"list", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 8ms (View: 5, DB: 1) | 200 OK [http://192.168.1.100/folder/list]
+
+
+Processing UserController#update (for 192.168.1.81 at 2010-01-21 15:35:26) [POST]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"commit"=>"Save", "id"=>"4", "belongs_to_group"=>{"1"=>"no", "2"=>"yes"}, "user"=>{"name"=>"shailesh", "default_folder_id"=>"1", "password_confirmation"=>"shailesh", "password"=>"shailesh", "email"=>"shailesh@joshsoftware.com"}}
+User: admin - Thu Jan 21 15:35:26 +0530 2010 - params: {"commit"=>"Save", "action"=>"update", "id"=>"4", "belongs_to_group"=>{"1"=>"no", "2"=>"yes"}, "controller"=>"user", "user"=>{"name"=>"shailesh", "password_confirmation"=>"shailesh", "default_folder_id"=>"1", "password"=>"shailesh", "email"=>"shailesh@joshsoftware.com"}}
+Redirected to actionlist
+Completed in 49ms (DB: 45) | 302 Found [http://server/user/update/4]
+
+
+Processing UserController#list (for 192.168.1.81 at 2010-01-21 15:35:26) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+User: admin - Thu Jan 21 15:35:26 +0530 2010 - params: {"action"=>"list", "controller"=>"user"}
+Rendering template within layouts/user
+Rendering user/list
+Completed in 7ms (View: 5, DB: 1) | 200 OK [http://server/user/list]
+
+
+Processing FolderController#list_tags (for 192.168.1.34 at 2010-01-21 15:35:29) [GET]
+  Session ID: 02611846ac0f4ffc747f8b06abb19819
+User: shailesh - Thu Jan 21 15:35:29 +0530 2010 - params: {"action"=>"list_tags", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list_tags
+Completed in 4ms (View: 3, DB: 1) | 200 OK [http://192.168.1.100/folder/list_tags]
+
+
+Processing FolderController#list_tags (for 192.168.1.221 at 2010-01-21 15:35:29) [GET]
+  Session ID: 7ad00b2287df0e67cf0987aafcbfd15f
+User: jiren - Thu Jan 21 15:35:29 +0530 2010 - params: {"action"=>"list_tags", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list_tags
+Completed in 5ms (View: 3, DB: 1) | 200 OK [http://192.168.1.100/folder/list_tags]
+
+
+Processing FolderController#list (for 192.168.1.34 at 2010-01-21 15:35:30) [GET]
+  Session ID: 02611846ac0f4ffc747f8b06abb19819
+User: shailesh - Thu Jan 21 15:35:30 +0530 2010 - params: {"action"=>"list", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 13ms (View: 6, DB: 2) | 200 OK [http://192.168.1.100/folder/list]
+
+
+Processing FolderController#list (for 192.168.1.221 at 2010-01-21 15:35:31) [GET]
+  Session ID: 7ad00b2287df0e67cf0987aafcbfd15f
+User: jiren - Thu Jan 21 15:35:31 +0530 2010 - params: {"action"=>"list", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 13ms (View: 6, DB: 2) | 200 OK [http://192.168.1.100/folder/list]
+
+
+Processing FolderController#list (for 192.168.1.16 at 2010-01-21 15:35:37) [GET]
+  Session ID: 85a9059130a76cde18ffa58b9a34f9d8
+  Parameters: {"order_by"=>"name"}
+User: kiran - Thu Jan 21 15:35:37 +0530 2010 - params: {"action"=>"list", "controller"=>"folder", "order_by"=>"name"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 8ms (View: 5, DB: 1) | 200 OK [http://192.168.1.100/folder/list?order_by=name]
+
+
+Processing AuthenticationController#logout (for 192.168.1.221 at 2010-01-21 15:35:37) [GET]
+  Session ID: 7ad00b2287df0e67cf0987aafcbfd15f
+Redirected to actionlogin
+Completed in 25ms (DB: 23) | 302 Found [http://192.168.1.100/authentication/logout]
+
+
+Processing AuthenticationController#login (for 192.168.1.221 at 2010-01-21 15:35:37) [GET]
+  Session ID: 5c864c019ed9542dfb3cb418968d031a
+Rendering template within layouts/authentication
+Rendering authentication/login
+Completed in 2ms (View: 1, DB: 2) | 200 OK [http://192.168.1.100/authentication/login]
+
+
+Processing FolderController#list (for 192.168.1.34 at 2010-01-21 15:35:38) [GET]
+  Session ID: 02611846ac0f4ffc747f8b06abb19819
+  Parameters: {"id"=>"4"}
+User: shailesh - Thu Jan 21 15:35:38 +0530 2010 - params: {"action"=>"list", "id"=>"4", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 14ms (View: 7, DB: 3) | 200 OK [http://192.168.1.100/folder/list/4]
+
+
+Processing FolderController#list (for 192.168.1.34 at 2010-01-21 15:35:38) [GET]
+  Session ID: 02611846ac0f4ffc747f8b06abb19819
+  Parameters: {"id"=>"4"}
+User: shailesh - Thu Jan 21 15:35:38 +0530 2010 - params: {"action"=>"list", "id"=>"4", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 12ms (View: 6, DB: 2) | 200 OK [http://192.168.1.100/folder/list/4]
+
+
+Processing FolderController#new (for 192.168.1.34 at 2010-01-21 15:35:41) [GET]
+  Session ID: 02611846ac0f4ffc747f8b06abb19819
+  Parameters: {"id"=>"4"}
+User: shailesh - Thu Jan 21 15:35:41 +0530 2010 - params: {"action"=>"new", "id"=>"4", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/new
+Completed in 77ms (View: 74, DB: 1) | 200 OK [http://192.168.1.100/folder/new/4]
+
+
+Processing FolderController#list (for 192.168.1.34 at 2010-01-21 15:35:42) [GET]
+  Session ID: 02611846ac0f4ffc747f8b06abb19819
+  Parameters: {"id"=>"4"}
+User: shailesh - Thu Jan 21 15:35:42 +0530 2010 - params: {"action"=>"list", "id"=>"4", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 12ms (View: 6, DB: 2) | 200 OK [http://192.168.1.100/folder/list/4]
+
+
+Processing FolderController#list_tags (for 192.168.1.34 at 2010-01-21 15:35:44) [GET]
+  Session ID: 02611846ac0f4ffc747f8b06abb19819
+User: shailesh - Thu Jan 21 15:35:44 +0530 2010 - params: {"action"=>"list_tags", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list_tags
+Completed in 5ms (View: 3, DB: 1) | 200 OK [http://192.168.1.100/folder/list_tags]
+
+
+Processing FolderController#list (for 192.168.1.34 at 2010-01-21 15:35:45) [GET]
+  Session ID: 02611846ac0f4ffc747f8b06abb19819
+User: shailesh - Thu Jan 21 15:35:45 +0530 2010 - params: {"action"=>"list", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 14ms (View: 6, DB: 2) | 200 OK [http://192.168.1.100/folder/list]
+
+
+Processing FolderController#list (for 192.168.1.34 at 2010-01-21 15:35:46) [GET]
+  Session ID: 02611846ac0f4ffc747f8b06abb19819
+  Parameters: {"id"=>"2"}
+User: shailesh - Thu Jan 21 15:35:46 +0530 2010 - params: {"action"=>"list", "id"=>"2", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_rhtml_app47views47folder47list46rhtml at /home/demo/library/app/views/folder/list.rhtml:67)
+Completed in 12ms (View: 6, DB: 2) | 200 OK [http://192.168.1.100/folder/list/2]
+
+
+Processing UserController#edit (for 192.168.1.16 at 2010-01-21 15:35:47) [GET]
+  Session ID: 85a9059130a76cde18ffa58b9a34f9d8
+  Parameters: {"id"=>"7"}
+User: kiran - Thu Jan 21 15:35:47 +0530 2010 - params: {"action"=>"edit", "id"=>"7", "controller"=>"user"}
+Rendering template within layouts/user
+Rendering user/edit
+Completed in 5ms (View: 4, DB: 1) | 200 OK [http://192.168.1.100/user/edit/7]
+
+
+Processing FileController#download (for 192.168.1.34 at 2010-01-21 15:35:49) [GET]
+  Session ID: 02611846ac0f4ffc747f8b06abb19819
+  Parameters: {"id"=>"1"}
+User: shailesh - Thu Jan 21 15:35:49 +0530 2010 - params: {"action"=>"download", "id"=>"1", "controller"=>"file"}
+Completed in 53ms (View: 0, DB: 50) | 200 OK [http://192.168.1.100/file/download/1]
+Streaming file /home/demo/library/uploads/1
+
+
+Processing FolderController#list (for 192.168.1.16 at 2010-01-21 15:35:50) [GET]
+  Session ID: 85a9059130a76cde18ffa58b9a34f9d8
+User: kiran - Thu Jan 21 15:35:50 +0530 2010 - params: {"action"=>"list", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 9ms (View: 6, DB: 1) | 200 OK [http://192.168.1.100/folder/list]
+
+
+Processing FileController#upload_multi (for 192.168.1.34 at 2010-01-21 15:35:55) [GET]
+  Session ID: 02611846ac0f4ffc747f8b06abb19819
+  Parameters: {"id"=>"2"}
+User: shailesh - Thu Jan 21 15:35:55 +0530 2010 - params: {"action"=>"upload_multi", "id"=>"2", "controller"=>"file"}
+Rendering template within layouts/file
+Rendering file/upload_multi
+Completed in 7ms (View: 4, DB: 1) | 200 OK [http://192.168.1.100/file/upload_multi/2]
+
+
+Processing FolderController#list (for 192.168.1.16 at 2010-01-21 15:35:55) [GET]
+  Session ID: 85a9059130a76cde18ffa58b9a34f9d8
+User: kiran - Thu Jan 21 15:35:55 +0530 2010 - params: {"action"=>"list", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 8ms (View: 5, DB: 1) | 200 OK [http://192.168.1.100/folder/list]
+
+
+Processing FolderController#list_tags (for 192.168.1.16 at 2010-01-21 15:35:58) [GET]
+  Session ID: 85a9059130a76cde18ffa58b9a34f9d8
+User: kiran - Thu Jan 21 15:35:58 +0530 2010 - params: {"action"=>"list_tags", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list_tags
+Completed in 5ms (View: 3, DB: 1) | 200 OK [http://192.168.1.100/folder/list_tags]
+
+
+Processing FolderController#list (for 192.168.1.16 at 2010-01-21 15:35:59) [GET]
+  Session ID: 85a9059130a76cde18ffa58b9a34f9d8
+User: kiran - Thu Jan 21 15:35:59 +0530 2010 - params: {"action"=>"list", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 8ms (View: 5, DB: 1) | 200 OK [http://192.168.1.100/folder/list]
+
+
+Processing FolderController#list (for 192.168.1.34 at 2010-01-21 15:36:00) [GET]
+  Session ID: 02611846ac0f4ffc747f8b06abb19819
+  Parameters: {"id"=>"2"}
+User: shailesh - Thu Jan 21 15:36:00 +0530 2010 - params: {"action"=>"list", "id"=>"2", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_rhtml_app47views47folder47list46rhtml at /home/demo/library/app/views/folder/list.rhtml:67)
+Completed in 12ms (View: 6, DB: 2) | 200 OK [http://192.168.1.100/folder/list/2]
+
+
+Processing FileController#upload (for 192.168.1.34 at 2010-01-21 15:36:04) [GET]
+  Session ID: 02611846ac0f4ffc747f8b06abb19819
+  Parameters: {"id"=>"2"}
+User: shailesh - Thu Jan 21 15:36:04 +0530 2010 - params: {"action"=>"upload", "id"=>"2", "controller"=>"file"}
+Rendering template within layouts/file
+Rendering file/upload
+Completed in 7ms (View: 4, DB: 1) | 200 OK [http://192.168.1.100/file/upload/2]
+
+
+Processing AuthenticationController#logout (for 192.168.1.16 at 2010-01-21 15:36:05) [GET]
+  Session ID: 85a9059130a76cde18ffa58b9a34f9d8
+Redirected to actionlogin
+Completed in 45ms (DB: 44) | 302 Found [http://192.168.1.100/authentication/logout]
+
+
+Processing AuthenticationController#login (for 192.168.1.16 at 2010-01-21 15:36:05) [GET]
+  Session ID: 783092be8fd00962e20eed8400d2afef
+Rendering template within layouts/authentication
+Rendering authentication/login
+Completed in 2ms (View: 1, DB: 1) | 200 OK [http://192.168.1.100/authentication/login]
+
+
+Processing FileController#upload_multi (for 192.168.1.34 at 2010-01-21 15:36:06) [GET]
+  Session ID: 02611846ac0f4ffc747f8b06abb19819
+  Parameters: {"id"=>"2"}
+User: shailesh - Thu Jan 21 15:36:06 +0530 2010 - params: {"action"=>"upload_multi", "id"=>"2", "controller"=>"file"}
+Rendering template within layouts/file
+Rendering file/upload_multi
+Completed in 8ms (View: 4, DB: 3) | 200 OK [http://192.168.1.100/file/upload_multi/2]
+
+
+Processing FolderController#list_tags (for 192.168.1.34 at 2010-01-21 15:36:07) [GET]
+  Session ID: 02611846ac0f4ffc747f8b06abb19819
+User: shailesh - Thu Jan 21 15:36:07 +0530 2010 - params: {"action"=>"list_tags", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list_tags
+Completed in 7ms (View: 5, DB: 1) | 200 OK [http://192.168.1.100/folder/list_tags]
+
+
+Processing UserController#edit (for 192.168.1.81 at 2010-01-21 15:36:08) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"id"=>"7"}
+User: admin - Thu Jan 21 15:36:08 +0530 2010 - params: {"action"=>"edit", "id"=>"7", "controller"=>"user"}
+Rendering template within layouts/user
+Rendering user/edit
+Completed in 11ms (View: 8, DB: 1) | 200 OK [http://server/user/edit/7]
+
+
+Processing FolderController#list (for 192.168.1.34 at 2010-01-21 15:36:08) [GET]
+  Session ID: 02611846ac0f4ffc747f8b06abb19819
+User: shailesh - Thu Jan 21 15:36:08 +0530 2010 - params: {"action"=>"list", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 14ms (View: 6, DB: 3) | 200 OK [http://192.168.1.100/folder/list]
+
+
+Processing AuthenticationController#logout (for 192.168.1.34 at 2010-01-21 15:36:14) [GET]
+  Session ID: 02611846ac0f4ffc747f8b06abb19819
+Redirected to actionlogin
+Completed in 65ms (DB: 64) | 302 Found [http://192.168.1.100/authentication/logout]
+
+
+Processing AuthenticationController#login (for 192.168.1.34 at 2010-01-21 15:36:14) [GET]
+  Session ID: f55b4c9fc0d9432a67fb1df29fe79255
+Rendering template within layouts/authentication
+Rendering authentication/login
+Completed in 2ms (View: 1, DB: 1) | 200 OK [http://192.168.1.100/authentication/login]
+
+
+Processing UserController#update (for 192.168.1.81 at 2010-01-21 15:36:18) [POST]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"commit"=>"Save", "id"=>"7", "belongs_to_group"=>{"1"=>"no", "2"=>"yes"}, "user"=>{"name"=>"kiran", "default_folder_id"=>"1", "password_confirmation"=>"kiran", "password"=>"kiran", "email"=>"kiran@joshsoftware.com"}}
+User: admin - Thu Jan 21 15:36:18 +0530 2010 - params: {"commit"=>"Save", "action"=>"update", "id"=>"7", "belongs_to_group"=>{"1"=>"no", "2"=>"yes"}, "controller"=>"user", "user"=>{"name"=>"kiran", "password_confirmation"=>"kiran", "default_folder_id"=>"1", "password"=>"kiran", "email"=>"kiran@joshsoftware.com"}}
+Redirected to actionlist
+Completed in 26ms (DB: 23) | 302 Found [http://server/user/update/7]
+
+
+Processing UserController#list (for 192.168.1.81 at 2010-01-21 15:36:18) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+User: admin - Thu Jan 21 15:36:18 +0530 2010 - params: {"action"=>"list", "controller"=>"user"}
+Rendering template within layouts/user
+Rendering user/list
+Completed in 7ms (View: 5, DB: 1) | 200 OK [http://server/user/list]
+
+
+Processing UserController#edit (for 192.168.1.81 at 2010-01-21 15:36:21) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"id"=>"6"}
+User: admin - Thu Jan 21 15:36:21 +0530 2010 - params: {"action"=>"edit", "id"=>"6", "controller"=>"user"}
+Rendering template within layouts/user
+Rendering user/edit
+Completed in 9ms (View: 7, DB: 1) | 200 OK [http://server/user/edit/6]
+
+
+Processing UserController#update (for 192.168.1.81 at 2010-01-21 15:36:28) [POST]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"commit"=>"Save", "id"=>"6", "belongs_to_group"=>{"1"=>"no", "2"=>"yes"}, "user"=>{"name"=>"sethu", "default_folder_id"=>"2", "password_confirmation"=>"sethu", "password"=>"sethu", "email"=>"sethu@joshsoftware.com"}}
+User: admin - Thu Jan 21 15:36:28 +0530 2010 - params: {"commit"=>"Save", "action"=>"update", "id"=>"6", "belongs_to_group"=>{"1"=>"no", "2"=>"yes"}, "controller"=>"user", "user"=>{"name"=>"sethu", "password_confirmation"=>"sethu", "default_folder_id"=>"2", "password"=>"sethu", "email"=>"sethu@joshsoftware.com"}}
+Redirected to actionlist
+Completed in 43ms (DB: 39) | 302 Found [http://server/user/update/6]
+
+
+Processing UserController#list (for 192.168.1.81 at 2010-01-21 15:36:28) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+User: admin - Thu Jan 21 15:36:28 +0530 2010 - params: {"action"=>"list", "controller"=>"user"}
+Rendering template within layouts/user
+Rendering user/list
+Completed in 8ms (View: 5, DB: 1) | 200 OK [http://server/user/list]
+
+
+Processing UserController#edit (for 192.168.1.81 at 2010-01-21 15:36:31) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"id"=>"5"}
+User: admin - Thu Jan 21 15:36:31 +0530 2010 - params: {"action"=>"edit", "id"=>"5", "controller"=>"user"}
+Rendering template within layouts/user
+Rendering user/edit
+Completed in 10ms (View: 8, DB: 1) | 200 OK [http://server/user/edit/5]
+
+
+Processing UserController#update (for 192.168.1.81 at 2010-01-21 15:36:40) [POST]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"commit"=>"Save", "id"=>"5", "belongs_to_group"=>{"1"=>"no", "2"=>"yes"}, "user"=>{"name"=>"gautam", "default_folder_id"=>"2", "password_confirmation"=>"sethu", "password"=>"sethu", "email"=>"gautam@joshsoftware.com"}}
+User: admin - Thu Jan 21 15:36:40 +0530 2010 - params: {"commit"=>"Save", "action"=>"update", "id"=>"5", "belongs_to_group"=>{"1"=>"no", "2"=>"yes"}, "controller"=>"user", "user"=>{"name"=>"gautam", "password_confirmation"=>"sethu", "default_folder_id"=>"2", "password"=>"sethu", "email"=>"gautam@joshsoftware.com"}}
+Redirected to actionlist
+Completed in 53ms (DB: 49) | 302 Found [http://server/user/update/5]
+
+
+Processing UserController#list (for 192.168.1.81 at 2010-01-21 15:36:40) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+User: admin - Thu Jan 21 15:36:40 +0530 2010 - params: {"action"=>"list", "controller"=>"user"}
+Rendering template within layouts/user
+Rendering user/list
+Completed in 8ms (View: 6, DB: 1) | 200 OK [http://server/user/list]
+
+
+Processing UserController#new (for 192.168.1.81 at 2010-01-21 15:36:50) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+User: admin - Thu Jan 21 15:36:50 +0530 2010 - params: {"action"=>"new", "controller"=>"user"}
+Rendering template within layouts/user
+Rendering user/new
+Completed in 11ms (View: 8, DB: 1) | 200 OK [http://server/user/new]
+
+
+Processing UserController#create (for 192.168.1.81 at 2010-01-21 15:37:09) [POST]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"commit"=>"Create", "belongs_to_group"=>{"1"=>"no", "2"=>"yes"}, "user"=>{"name"=>"divya", "default_folder_id"=>"2", "password_confirmation"=>"divya", "password"=>"divya", "email"=>"amit@joshsoftware.com"}}
+User: admin - Thu Jan 21 15:37:09 +0530 2010 - params: {"commit"=>"Create", "action"=>"create", "belongs_to_group"=>{"1"=>"no", "2"=>"yes"}, "controller"=>"user", "user"=>{"name"=>"divya", "password_confirmation"=>"divya", "default_folder_id"=>"2", "password"=>"divya", "email"=>"amit@joshsoftware.com"}}
+Rendering template within layouts/user
+Rendering user/new
+Completed in 14ms (View: 7, DB: 3) | 200 OK [http://server/user/create]
+
+
+Processing UserController#create (for 192.168.1.81 at 2010-01-21 15:37:24) [POST]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"commit"=>"Create", "belongs_to_group"=>{"1"=>"no", "2"=>"yes"}, "user"=>{"name"=>"divya", "password_confirmation"=>"divya", "password"=>"divya", "email"=>"divya@joshsoftware.com"}}
+User: admin - Thu Jan 21 15:37:24 +0530 2010 - params: {"commit"=>"Create", "action"=>"create", "belongs_to_group"=>{"1"=>"no", "2"=>"yes"}, "controller"=>"user", "user"=>{"name"=>"divya", "password_confirmation"=>"divya", "password"=>"divya", "email"=>"divya@joshsoftware.com"}}
+Sent mail to divya@joshsoftware.com
+Redirected to actionlist
+Completed in 175ms (DB: 38) | 302 Found [http://server/user/create]
+
+
+Processing UserController#list (for 192.168.1.81 at 2010-01-21 15:37:24) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+User: admin - Thu Jan 21 15:37:24 +0530 2010 - params: {"action"=>"list", "controller"=>"user"}
+Rendering template within layouts/user
+Rendering user/list
+Completed in 9ms (View: 6, DB: 17) | 200 OK [http://server/user/list]
+
+
+Processing FolderController#index (for 192.168.1.18 at 2010-01-21 15:38:59) [GET]
+  Session ID: 98b8f774b19d31e731d2a7063d1a0956
+Redirected to controllerauthenticationactionlogin
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 2ms (DB: 1) | 302 Found [http://192.168.1.100/]
+
+
+Processing AuthenticationController#login (for 192.168.1.18 at 2010-01-21 15:38:59) [GET]
+  Session ID: e33b5b22452eb50f19d3d583ac1c8fc2
+Rendering template within layouts/authentication
+Rendering authentication/login
+Completed in 2ms (View: 1, DB: 55) | 200 OK [http://192.168.1.100/authentication/login]
+
+
+Processing UserController#edit (for 192.168.1.81 at 2010-01-21 15:39:16) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"id"=>"4"}
+User: admin - Thu Jan 21 15:39:16 +0530 2010 - params: {"action"=>"edit", "id"=>"4", "controller"=>"user"}
+Rendering template within layouts/user
+Rendering user/edit
+Completed in 10ms (View: 8, DB: 22) | 200 OK [http://server/user/edit/4]
+
+
+Processing UserController#list (for 192.168.1.81 at 2010-01-21 15:39:20) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+User: admin - Thu Jan 21 15:39:20 +0530 2010 - params: {"action"=>"list", "controller"=>"user"}
+Rendering template within layouts/user
+Rendering user/list
+Completed in 8ms (View: 6, DB: 27) | 200 OK [http://server/user/list]
+
+
+Processing UserController#edit (for 192.168.1.81 at 2010-01-21 15:39:23) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"id"=>"4"}
+User: admin - Thu Jan 21 15:39:23 +0530 2010 - params: {"action"=>"edit", "id"=>"4", "controller"=>"user"}
+Rendering template within layouts/user
+Rendering user/edit
+Completed in 10ms (View: 8, DB: 1) | 200 OK [http://server/user/edit/4]
+
+
+Processing UserController#list (for 192.168.1.81 at 2010-01-21 15:39:29) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+User: admin - Thu Jan 21 15:39:29 +0530 2010 - params: {"action"=>"list", "controller"=>"user"}
+Rendering template within layouts/user
+Rendering user/list
+Completed in 8ms (View: 6, DB: 1) | 200 OK [http://server/user/list]
+
+
+Processing UserController#new (for 192.168.1.81 at 2010-01-21 15:39:45) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+User: admin - Thu Jan 21 15:39:45 +0530 2010 - params: {"action"=>"new", "controller"=>"user"}
+Rendering template within layouts/user
+Rendering user/new
+Completed in 9ms (View: 8, DB: 1) | 200 OK [http://server/user/new]
+
+
+Processing UserController#create (for 192.168.1.81 at 2010-01-21 15:40:06) [POST]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"commit"=>"Create", "belongs_to_group"=>{"1"=>"no", "2"=>"yes"}, "user"=>{"name"=>"sourabh", "default_folder_id"=>"2", "password_confirmation"=>"sourabh", "password"=>"sourabh", "email"=>"sourabh@joshsoftware.com"}}
+User: admin - Thu Jan 21 15:40:06 +0530 2010 - params: {"commit"=>"Create", "action"=>"create", "belongs_to_group"=>{"1"=>"no", "2"=>"yes"}, "controller"=>"user", "user"=>{"name"=>"sourabh", "password_confirmation"=>"sourabh", "default_folder_id"=>"2", "password"=>"sourabh", "email"=>"sourabh@joshsoftware.com"}}
+Sent mail to sourabh@joshsoftware.com
+Redirected to actionlist
+Completed in 154ms (DB: 22) | 302 Found [http://server/user/create]
+
+
+Processing UserController#list (for 192.168.1.81 at 2010-01-21 15:40:06) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+User: admin - Thu Jan 21 15:40:06 +0530 2010 - params: {"action"=>"list", "controller"=>"user"}
+Rendering template within layouts/user
+Rendering user/list
+Completed in 9ms (View: 6, DB: 23) | 200 OK [http://server/user/list]
+
+
+Processing SearchController#show_results (for 192.168.1.81 at 2010-01-21 15:40:14) [POST]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"commit"=>"Find!", "search_type"=>"filename", "search"=>{"query"=>"amit"}}
+User: admin - Thu Jan 21 15:40:14 +0530 2010 - params: {"commit"=>"Find!", "action"=>"show_results", "search_type"=>"filename", "controller"=>"search", "search"=>{"query"=>"amit"}}
+Rendering template within layouts/search
+Rendering search/show_results
+Completed in 5ms (View: 3, DB: 15) | 200 OK [http://server/search/show_results]
+
+
+Processing SearchController#show_results (for 192.168.1.81 at 2010-01-21 15:40:21) [POST]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"commit"=>"Find!", "search_type"=>"filename", "search"=>{"query"=>"ruby"}}
+User: admin - Thu Jan 21 15:40:21 +0530 2010 - params: {"commit"=>"Find!", "action"=>"show_results", "search_type"=>"filename", "controller"=>"search", "search"=>{"query"=>"ruby"}}
+Rendering template within layouts/search
+Rendering search/show_results
+Completed in 5ms (View: 4, DB: 33) | 200 OK [http://server/search/show_results]
+
+
+Processing SearchController#show_results (for 192.168.1.81 at 2010-01-21 15:40:26) [POST]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"commit"=>"Find!", "search_type"=>"filename", "search"=>{"query"=>""}}
+User: admin - Thu Jan 21 15:40:26 +0530 2010 - params: {"commit"=>"Find!", "action"=>"show_results", "search_type"=>"filename", "controller"=>"search", "search"=>{"query"=>""}}
+Rendering template within layouts/search
+Rendering search/show_results
+Completed in 6ms (View: 4, DB: 1) | 200 OK [http://server/search/show_results]
+
+
+Processing FolderController#list (for 192.168.1.81 at 2010-01-21 15:40:28) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+User: admin - Thu Jan 21 15:40:28 +0530 2010 - params: {"action"=>"list", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 19ms (View: 12, DB: 2) | 200 OK [http://server/folder/list]
+
+
+Processing FolderController#feed (for 192.168.1.81 at 2010-01-21 15:40:36) [GET]
+  Parameters: {"id"=>"1", "access_key"=>"6ZPC6BIZlpFtUd6tiffUNLNpq3n6O5aBBKSm"}
+Rendering folder/feed
+Completed in 11ms (View: 5, DB: 2) | 200 OK [http://server/folder/feed/1?access_key=6ZPC6BIZlpFtUd6tiffUNLNpq3n6O5aBBKSm]
+
+
+Processing SettingsController#index (for 192.168.1.81 at 2010-01-21 15:40:40) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+User: admin - Thu Jan 21 15:40:40 +0530 2010 - params: {"action"=>"index", "controller"=>"settings"}
+Rendering template within layouts/settings
+Rendering settings/index
+Completed in 6ms (View: 4, DB: 1) | 200 OK [http://server/settings]
+
+
+Processing GroupController#list (for 192.168.1.81 at 2010-01-21 15:40:47) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+User: admin - Thu Jan 21 15:40:47 +0530 2010 - params: {"action"=>"list", "controller"=>"group"}
+Rendering template within layouts/group
+Rendering group/list
+Completed in 5ms (View: 3, DB: 1) | 200 OK [http://server/group/list]
+
+
+Processing UserController#list (for 192.168.1.81 at 2010-01-21 15:40:48) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+User: admin - Thu Jan 21 15:40:48 +0530 2010 - params: {"action"=>"list", "controller"=>"user"}
+Rendering template within layouts/user
+Rendering user/list
+Completed in 8ms (View: 6, DB: 1) | 200 OK [http://server/user/list]
+
+
+Processing FolderController#list (for 192.168.1.81 at 2010-01-21 15:40:49) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+User: admin - Thu Jan 21 15:40:49 +0530 2010 - params: {"action"=>"list", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 129ms (View: 122, DB: 3) | 200 OK [http://server/folder/list]
+
+
+Processing FolderController#index (for 192.168.1.36 at 2010-01-21 15:41:35) [GET]
+  Session ID: 0f542b52bf691f9ce548f47a3b1f8ef1
+Redirected to controllerauthenticationactionlogin
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 1ms (DB: 1) | 302 Found [http://192.168.1.100/]
+
+
+Processing AuthenticationController#login (for 192.168.1.36 at 2010-01-21 15:41:35) [GET]
+  Session ID: 27f80567074caf0c5b27bcb99e98b8d7
+Rendering template within layouts/authentication
+Rendering authentication/login
+Completed in 2ms (View: 1, DB: 49) | 200 OK [http://192.168.1.100/authentication/login]
+
+
+Processing AuthenticationController#login (for 192.168.1.36 at 2010-01-21 15:41:52) [POST]
+  Session ID: 27f80567074caf0c5b27bcb99e98b8d7
+  Parameters: {"commit"=>"Login", "user"=>{"name"=>"divya"}, "login"=>{"password"=>"divya"}}
+Redirected to actionindexcontrollerfolder
+Completed in 2ms (DB: 2) | 302 Found [http://192.168.1.100/authentication/login]
+
+
+Processing FolderController#index (for 192.168.1.36 at 2010-01-21 15:41:52) [GET]
+  Session ID: 27f80567074caf0c5b27bcb99e98b8d7
+User: divya - Thu Jan 21 15:41:52 +0530 2010 - params: {"action"=>"index", "controller"=>"folder"}
+Redirected to actionlist
+Completed in 2ms (DB: 23) | 302 Found [http://192.168.1.100/]
+
+
+Processing FolderController#list (for 192.168.1.36 at 2010-01-21 15:41:52) [GET]
+  Session ID: 27f80567074caf0c5b27bcb99e98b8d7
+User: divya - Thu Jan 21 15:41:52 +0530 2010 - params: {"action"=>"list", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 15ms (View: 7, DB: 3) | 200 OK [http://192.168.1.100/folder/list]
+
+
+Processing FolderController#index (for 192.168.1.17 at 2010-01-21 15:41:55) [GET]
+  Session ID: 35497a768815a19fa64bd136f2a0d53b
+Redirected to controllerauthenticationactionlogin
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 1ms (DB: 1) | 302 Found [http://192.168.1.100/]
+
+
+Processing AuthenticationController#login (for 192.168.1.17 at 2010-01-21 15:41:56) [GET]
+  Session ID: 2ab6c5d579d844a3c3c9705b14cd75d8
+Rendering template within layouts/authentication
+Rendering authentication/login
+Completed in 2ms (View: 1, DB: 35) | 200 OK [http://192.168.1.100/authentication/login]
+
+
+Processing FolderController#list (for 192.168.1.36 at 2010-01-21 15:42:02) [GET]
+  Session ID: 27f80567074caf0c5b27bcb99e98b8d7
+  Parameters: {"id"=>"4"}
+User: divya - Thu Jan 21 15:42:02 +0530 2010 - params: {"action"=>"list", "id"=>"4", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 13ms (View: 7, DB: 3) | 200 OK [http://192.168.1.100/folder/list/4]
+
+
+Processing FolderController#list (for 192.168.1.36 at 2010-01-21 15:42:09) [GET]
+  Session ID: 27f80567074caf0c5b27bcb99e98b8d7
+  Parameters: {"id"=>"1"}
+User: divya - Thu Jan 21 15:42:09 +0530 2010 - params: {"action"=>"list", "id"=>"1", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 17ms (View: 8, DB: 3) | 200 OK [http://192.168.1.100/folder/list/1]
+
+
+Processing FolderController#list (for 192.168.1.36 at 2010-01-21 15:42:10) [GET]
+  Session ID: 27f80567074caf0c5b27bcb99e98b8d7
+  Parameters: {"id"=>"3"}
+User: divya - Thu Jan 21 15:42:10 +0530 2010 - params: {"action"=>"list", "id"=>"3", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 14ms (View: 7, DB: 2) | 200 OK [http://192.168.1.100/folder/list/3]
+
+
+Processing FolderController#list (for 192.168.1.36 at 2010-01-21 15:42:11) [GET]
+  Session ID: 27f80567074caf0c5b27bcb99e98b8d7
+  Parameters: {"id"=>"1"}
+User: divya - Thu Jan 21 15:42:11 +0530 2010 - params: {"action"=>"list", "id"=>"1", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 17ms (View: 7, DB: 4) | 200 OK [http://192.168.1.100/folder/list/1]
+
+
+Processing FolderController#list (for 192.168.1.36 at 2010-01-21 15:42:13) [GET]
+  Session ID: 27f80567074caf0c5b27bcb99e98b8d7
+  Parameters: {"id"=>"5"}
+User: divya - Thu Jan 21 15:42:13 +0530 2010 - params: {"action"=>"list", "id"=>"5", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 13ms (View: 7, DB: 3) | 200 OK [http://192.168.1.100/folder/list/5]
+
+
+Processing FolderController#list (for 192.168.1.36 at 2010-01-21 15:42:15) [GET]
+  Session ID: 27f80567074caf0c5b27bcb99e98b8d7
+  Parameters: {"id"=>"1"}
+User: divya - Thu Jan 21 15:42:15 +0530 2010 - params: {"action"=>"list", "id"=>"1", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 15ms (View: 7, DB: 3) | 200 OK [http://192.168.1.100/folder/list/1]
+
+
+Processing FolderController#list (for 192.168.1.36 at 2010-01-21 15:42:16) [GET]
+  Session ID: 27f80567074caf0c5b27bcb99e98b8d7
+  Parameters: {"id"=>"2"}
+User: divya - Thu Jan 21 15:42:16 +0530 2010 - params: {"action"=>"list", "id"=>"2", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_rhtml_app47views47folder47list46rhtml at /home/demo/library/app/views/folder/list.rhtml:67)
+Completed in 12ms (View: 6, DB: 2) | 200 OK [http://192.168.1.100/folder/list/2]
+
+
+Processing FolderController#list (for 192.168.1.36 at 2010-01-21 15:42:22) [GET]
+  Session ID: 27f80567074caf0c5b27bcb99e98b8d7
+  Parameters: {"id"=>"1"}
+User: divya - Thu Jan 21 15:42:22 +0530 2010 - params: {"action"=>"list", "id"=>"1", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 14ms (View: 7, DB: 3) | 200 OK [http://192.168.1.100/folder/list/1]
+
+
+Processing FolderController#list (for 192.168.1.36 at 2010-01-21 15:42:23) [GET]
+  Session ID: 27f80567074caf0c5b27bcb99e98b8d7
+  Parameters: {"id"=>"6"}
+User: divya - Thu Jan 21 15:42:23 +0530 2010 - params: {"action"=>"list", "id"=>"6", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 11ms (View: 6, DB: 2) | 200 OK [http://192.168.1.100/folder/list/6]
+
+
+Processing FolderController#list (for 192.168.1.36 at 2010-01-21 15:42:24) [GET]
+  Session ID: 27f80567074caf0c5b27bcb99e98b8d7
+  Parameters: {"id"=>"1"}
+User: divya - Thu Jan 21 15:42:24 +0530 2010 - params: {"action"=>"list", "id"=>"1", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 14ms (View: 6, DB: 2) | 200 OK [http://192.168.1.100/folder/list/1]
+
+
+Processing FolderController#list_tags (for 192.168.1.36 at 2010-01-21 15:42:28) [GET]
+  Session ID: 27f80567074caf0c5b27bcb99e98b8d7
+User: divya - Thu Jan 21 15:42:28 +0530 2010 - params: {"action"=>"list_tags", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list_tags
+Completed in 4ms (View: 3, DB: 1) | 200 OK [http://192.168.1.100/folder/list_tags]
+
+
+Processing FolderController#list (for 192.168.1.36 at 2010-01-21 15:42:32) [GET]
+  Session ID: 27f80567074caf0c5b27bcb99e98b8d7
+User: divya - Thu Jan 21 15:42:32 +0530 2010 - params: {"action"=>"list", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 13ms (View: 6, DB: 2) | 200 OK [http://192.168.1.100/folder/list]
+
+
+Processing UserController#edit (for 192.168.1.36 at 2010-01-21 15:42:34) [GET]
+  Session ID: 27f80567074caf0c5b27bcb99e98b8d7
+  Parameters: {"id"=>"9"}
+User: divya - Thu Jan 21 15:42:34 +0530 2010 - params: {"action"=>"edit", "id"=>"9", "controller"=>"user"}
+Rendering template within layouts/user
+Rendering user/edit
+Completed in 5ms (View: 4, DB: 1) | 200 OK [http://192.168.1.100/user/edit/9]
+
+
+Processing AuthenticationController#login (for 192.168.1.17 at 2010-01-21 15:42:48) [POST]
+  Session ID: 2ab6c5d579d844a3c3c9705b14cd75d8
+  Parameters: {"commit"=>"Login", "user"=>{"name"=>"gautam"}, "login"=>{"password"=>"gautam"}}
+Rendering template within layouts/authentication
+Rendering authentication/login
+Completed in 2ms (View: 1, DB: 1) | 200 OK [http://192.168.1.100/authentication/login]
+
+
+Processing UserController#update (for 192.168.1.36 at 2010-01-21 15:42:52) [POST]
+  Session ID: 27f80567074caf0c5b27bcb99e98b8d7
+  Parameters: {"commit"=>"Save", "id"=>"9", "user"=>{"name"=>"divya", "password_confirmation"=>"salian", "password"=>"salian", "email"=>"divya@joshsoftware.com"}}
+User: divya - Thu Jan 21 15:42:52 +0530 2010 - params: {"commit"=>"Save", "action"=>"update", "id"=>"9", "controller"=>"user", "user"=>{"name"=>"divya", "password_confirmation"=>"salian", "password"=>"salian", "email"=>"divya@joshsoftware.com"}}
+Redirected to actioneditid9
+Completed in 52ms (DB: 90) | 302 Found [http://192.168.1.100/user/update/9]
+
+
+Processing UserController#edit (for 192.168.1.36 at 2010-01-21 15:42:52) [GET]
+  Session ID: 27f80567074caf0c5b27bcb99e98b8d7
+  Parameters: {"id"=>"9"}
+User: divya - Thu Jan 21 15:42:52 +0530 2010 - params: {"action"=>"edit", "id"=>"9", "controller"=>"user"}
+Rendering template within layouts/user
+Rendering user/edit
+Completed in 5ms (View: 4, DB: 1) | 200 OK [http://192.168.1.100/user/edit/9]
+
+
+Processing AuthenticationController#login (for 192.168.1.17 at 2010-01-21 15:42:54) [POST]
+  Session ID: 2ab6c5d579d844a3c3c9705b14cd75d8
+  Parameters: {"commit"=>"Login", "user"=>{"name"=>"gautam"}, "login"=>{"password"=>"gautam"}}
+Rendering template within layouts/authentication
+Rendering authentication/login
+Completed in 2ms (View: 1, DB: 1) | 200 OK [http://192.168.1.100/authentication/login]
+
+
+Processing FolderController#list (for 192.168.1.36 at 2010-01-21 15:43:00) [GET]
+  Session ID: 27f80567074caf0c5b27bcb99e98b8d7
+User: divya - Thu Jan 21 15:43:00 +0530 2010 - params: {"action"=>"list", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 14ms (View: 7, DB: 2) | 200 OK [http://192.168.1.100/folder/list]
+
+
+Processing AuthenticationController#logout (for 192.168.1.36 at 2010-01-21 15:43:02) [GET]
+  Session ID: 27f80567074caf0c5b27bcb99e98b8d7
+Redirected to actionlogin
+Completed in 46ms (DB: 75) | 302 Found [http://192.168.1.100/authentication/logout]
+
+
+Processing AuthenticationController#login (for 192.168.1.36 at 2010-01-21 15:43:02) [GET]
+  Session ID: a244b1c7cac3f2f81ecbc0fbf96fcae7
+Rendering template within layouts/authentication
+Rendering authentication/login
+Completed in 2ms (View: 1, DB: 1) | 200 OK [http://192.168.1.100/authentication/login]
+
+
+Processing AuthenticationController#login (for 192.168.1.17 at 2010-01-21 15:43:07) [POST]
+  Session ID: 2ab6c5d579d844a3c3c9705b14cd75d8
+  Parameters: {"commit"=>"Login", "user"=>{"name"=>"gautam"}, "login"=>{"password"=>"gautam"}}
+Rendering template within layouts/authentication
+Rendering authentication/login
+Completed in 2ms (View: 1, DB: 17) | 200 OK [http://192.168.1.100/authentication/login]
+
+
+Processing FolderController#index (for 122.169.8.208 at 2010-01-21 15:43:30) [GET]
+  Session ID: c69785bf86629e90cfbf2ed145e2e711
+Redirected to actionlogincontrollerauthentication
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 2ms (DB: 1) | 302 Found [http://server.joshsoftware.com/]
+
+
+Processing AuthenticationController#login (for 122.169.8.208 at 2010-01-21 15:43:30) [GET]
+  Session ID: 4ffa9844582db1d5a583d85198c75d8e
+Rendering template within layouts/authentication
+Rendering authentication/login
+Completed in 4ms (View: 2, DB: 22) | 200 OK [http://server.joshsoftware.com/authentication/login]
+
+
+Processing FolderController#index (for 192.168.1.19 at 2010-01-21 15:45:55) [GET]
+  Session ID: 949510e690866b3d7cb450f3fee07446
+Redirected to actionlogincontrollerauthentication
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 1ms (DB: 1) | 302 Found [http://192.168.1.100/]
+
+
+Processing AuthenticationController#login (for 192.168.1.19 at 2010-01-21 15:45:55) [GET]
+  Session ID: a82d44ea2cc006f923df86fe147f90c6
+Rendering template within layouts/authentication
+Rendering authentication/login
+Completed in 2ms (View: 1, DB: 39) | 200 OK [http://192.168.1.100/authentication/login]
+
+
+Processing AuthenticationController#login (for 192.168.1.19 at 2010-01-21 15:46:06) [POST]
+  Session ID: a82d44ea2cc006f923df86fe147f90c6
+  Parameters: {"commit"=>"Login", "user"=>{"name"=>"sethu"}, "login"=>{"password"=>"sethu"}}
+Redirected to actionindexcontrollerfolder
+Completed in 4ms (DB: 7) | 302 Found [http://192.168.1.100/authentication/login]
+
+
+Processing FolderController#index (for 192.168.1.19 at 2010-01-21 15:46:06) [GET]
+  Session ID: a82d44ea2cc006f923df86fe147f90c6
+User: sethu - Thu Jan 21 15:46:06 +0530 2010 - params: {"action"=>"index", "controller"=>"folder"}
+Redirected to actionlist
+Completed in 2ms (DB: 45) | 302 Found [http://192.168.1.100/]
+
+
+Processing FolderController#list (for 192.168.1.19 at 2010-01-21 15:46:06) [GET]
+  Session ID: a82d44ea2cc006f923df86fe147f90c6
+User: sethu - Thu Jan 21 15:46:06 +0530 2010 - params: {"action"=>"list", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 22ms (View: 10, DB: 4) | 200 OK [http://192.168.1.100/folder/list]
+
+
+Processing FolderController#list (for 192.168.1.19 at 2010-01-21 15:46:13) [GET]
+  Session ID: a82d44ea2cc006f923df86fe147f90c6
+  Parameters: {"id"=>"4"}
+User: sethu - Thu Jan 21 15:46:13 +0530 2010 - params: {"action"=>"list", "id"=>"4", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 12ms (View: 6, DB: 2) | 200 OK [http://192.168.1.100/folder/list/4]
+
+
+Processing FolderController#list (for 192.168.1.19 at 2010-01-21 15:46:16) [GET]
+  Session ID: a82d44ea2cc006f923df86fe147f90c6
+  Parameters: {"id"=>"1"}
+User: sethu - Thu Jan 21 15:46:16 +0530 2010 - params: {"action"=>"list", "id"=>"1", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 15ms (View: 7, DB: 3) | 200 OK [http://192.168.1.100/folder/list/1]
+
+
+Processing FolderController#list (for 192.168.1.19 at 2010-01-21 15:46:18) [GET]
+  Session ID: a82d44ea2cc006f923df86fe147f90c6
+  Parameters: {"id"=>"3"}
+User: sethu - Thu Jan 21 15:46:18 +0530 2010 - params: {"action"=>"list", "id"=>"3", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 12ms (View: 6, DB: 2) | 200 OK [http://192.168.1.100/folder/list/3]
+
+
+Processing FolderController#list (for 192.168.1.19 at 2010-01-21 15:46:19) [GET]
+  Session ID: a82d44ea2cc006f923df86fe147f90c6
+  Parameters: {"id"=>"1"}
+User: sethu - Thu Jan 21 15:46:19 +0530 2010 - params: {"action"=>"list", "id"=>"1", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 15ms (View: 7, DB: 2) | 200 OK [http://192.168.1.100/folder/list/1]
+
+
+Processing FolderController#list (for 192.168.1.19 at 2010-01-21 15:46:20) [GET]
+  Session ID: a82d44ea2cc006f923df86fe147f90c6
+  Parameters: {"id"=>"5"}
+User: sethu - Thu Jan 21 15:46:20 +0530 2010 - params: {"action"=>"list", "id"=>"5", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 11ms (View: 6, DB: 2) | 200 OK [http://192.168.1.100/folder/list/5]
+
+
+Processing FolderController#list (for 192.168.1.19 at 2010-01-21 15:46:22) [GET]
+  Session ID: a82d44ea2cc006f923df86fe147f90c6
+  Parameters: {"id"=>"1"}
+User: sethu - Thu Jan 21 15:46:22 +0530 2010 - params: {"action"=>"list", "id"=>"1", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 14ms (View: 6, DB: 2) | 200 OK [http://192.168.1.100/folder/list/1]
+
+
+Processing FolderController#list (for 192.168.1.19 at 2010-01-21 15:46:23) [GET]
+  Session ID: a82d44ea2cc006f923df86fe147f90c6
+  Parameters: {"id"=>"2"}
+User: sethu - Thu Jan 21 15:46:23 +0530 2010 - params: {"action"=>"list", "id"=>"2", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 13ms (View: 8, DB: 2) | 200 OK [http://192.168.1.100/folder/list/2]
+
+
+Processing FolderController#list (for 192.168.1.19 at 2010-01-21 15:46:25) [GET]
+  Session ID: a82d44ea2cc006f923df86fe147f90c6
+  Parameters: {"id"=>"1"}
+User: sethu - Thu Jan 21 15:46:25 +0530 2010 - params: {"action"=>"list", "id"=>"1", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 14ms (View: 7, DB: 2) | 200 OK [http://192.168.1.100/folder/list/1]
+
+
+Processing FolderController#list (for 192.168.1.19 at 2010-01-21 15:46:27) [GET]
+  Session ID: a82d44ea2cc006f923df86fe147f90c6
+  Parameters: {"id"=>"6"}
+User: sethu - Thu Jan 21 15:46:27 +0530 2010 - params: {"action"=>"list", "id"=>"6", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 11ms (View: 6, DB: 2) | 200 OK [http://192.168.1.100/folder/list/6]
+
+
+Processing FolderController#list (for 192.168.1.19 at 2010-01-21 15:46:28) [GET]
+  Session ID: a82d44ea2cc006f923df86fe147f90c6
+  Parameters: {"id"=>"1"}
+User: sethu - Thu Jan 21 15:46:28 +0530 2010 - params: {"action"=>"list", "id"=>"1", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 14ms (View: 6, DB: 2) | 200 OK [http://192.168.1.100/folder/list/1]
+
+
+Processing FolderController#list_tags (for 192.168.1.19 at 2010-01-21 15:46:33) [GET]
+  Session ID: a82d44ea2cc006f923df86fe147f90c6
+User: sethu - Thu Jan 21 15:46:33 +0530 2010 - params: {"action"=>"list_tags", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list_tags
+Completed in 5ms (View: 3, DB: 1) | 200 OK [http://192.168.1.100/folder/list_tags]
+
+
+Processing FolderController#list (for 192.168.1.19 at 2010-01-21 15:46:34) [GET]
+  Session ID: a82d44ea2cc006f923df86fe147f90c6
+User: sethu - Thu Jan 21 15:46:34 +0530 2010 - params: {"action"=>"list", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 13ms (View: 6, DB: 2) | 200 OK [http://192.168.1.100/folder/list]
+
+
+Processing FolderController#new (for 192.168.1.19 at 2010-01-21 15:46:36) [GET]
+  Session ID: a82d44ea2cc006f923df86fe147f90c6
+  Parameters: {"id"=>"1"}
+User: sethu - Thu Jan 21 15:46:36 +0530 2010 - params: {"action"=>"new", "id"=>"1", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/new
+Completed in 6ms (View: 3, DB: 1) | 200 OK [http://192.168.1.100/folder/new/1]
+
+
+Processing FolderController#list (for 192.168.1.19 at 2010-01-21 15:46:39) [GET]
+  Session ID: a82d44ea2cc006f923df86fe147f90c6
+  Parameters: {"id"=>"1"}
+User: sethu - Thu Jan 21 15:46:39 +0530 2010 - params: {"action"=>"list", "id"=>"1", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 14ms (View: 6, DB: 2) | 200 OK [http://192.168.1.100/folder/list/1]
+
+
+Processing FolderController#new (for 192.168.1.19 at 2010-01-21 15:46:44) [GET]
+  Session ID: a82d44ea2cc006f923df86fe147f90c6
+  Parameters: {"id"=>"1"}
+User: sethu - Thu Jan 21 15:46:44 +0530 2010 - params: {"action"=>"new", "id"=>"1", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/new
+Completed in 6ms (View: 3, DB: 1) | 200 OK [http://192.168.1.100/folder/new/1]
+
+
+Processing FolderController#create (for 192.168.1.19 at 2010-01-21 15:46:50) [POST]
+  Session ID: a82d44ea2cc006f923df86fe147f90c6
+  Parameters: {"commit"=>"Create", "folder"=>{"name"=>"Others"}, "id"=>"1"}
+User: sethu - Thu Jan 21 15:46:50 +0530 2010 - params: {"commit"=>"Create", "folder"=>{"name"=>"Others"}, "action"=>"create", "id"=>"1", "controller"=>"folder"}
+Redirected to actionlistid1
+Completed in 60ms (DB: 55) | 302 Found [http://192.168.1.100/folder/create/1]
+
+
+Processing FolderController#list (for 192.168.1.19 at 2010-01-21 15:46:50) [GET]
+  Session ID: a82d44ea2cc006f923df86fe147f90c6
+  Parameters: {"id"=>"1"}
+User: sethu - Thu Jan 21 15:46:50 +0530 2010 - params: {"action"=>"list", "id"=>"1", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 17ms (View: 7, DB: 3) | 200 OK [http://192.168.1.100/folder/list/1]
+
+
+Processing FileController#upload (for 192.168.1.19 at 2010-01-21 15:46:53) [GET]
+  Session ID: a82d44ea2cc006f923df86fe147f90c6
+  Parameters: {"id"=>"1"}
+User: sethu - Thu Jan 21 15:46:53 +0530 2010 - params: {"action"=>"upload", "id"=>"1", "controller"=>"file"}
+Rendering template within layouts/file
+Rendering file/upload
+Completed in 9ms (View: 5, DB: 1) | 200 OK [http://192.168.1.100/file/upload/1]
+
+
+Processing FileController#do_the_upload (for 192.168.1.19 at 2010-01-21 15:47:35) [POST]
+  Session ID: a82d44ea2cc006f923df86fe147f90c6
+  Parameters: {"commit"=>"Upload", "folder_id"=>"1", "tag_1"=>"hpc", "file_0"=>#<File:/tmp/CGI20100121-22415-uigxuz-0>, "tag_2"=>"", "file_1"=>"", "tag_3"=>"", "description"=>"High performance Computing"}
+User: sethu - Thu Jan 21 15:47:35 +0530 2010 - params: {"commit"=>"Upload", "tag_1"=>"hpc", "folder_id"=>"1", "tag_2"=>"", "file_0"=>#<File:/tmp/CGI20100121-22415-uigxuz-0>, "action"=>"do_the_upload", "tag_3"=>"", "file_1"=>"", "description"=>"High performance Computing", "controller"=>"file"}
+Redirected to actionlistcontrollerfolderid1
+Completed in 144ms (DB: 133) | 302 Found [http://192.168.1.100/file/do_the_upload?folder_id=1]
+
+
+Processing FolderController#list (for 192.168.1.19 at 2010-01-21 15:47:35) [GET]
+  Session ID: a82d44ea2cc006f923df86fe147f90c6
+  Parameters: {"id"=>"1"}
+User: sethu - Thu Jan 21 15:47:35 +0530 2010 - params: {"action"=>"list", "id"=>"1", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 17ms (View: 8, DB: 3) | 200 OK [http://192.168.1.100/folder/list/1]
+
+
+Processing FileController#download (for 192.168.1.19 at 2010-01-21 15:47:45) [GET]
+  Session ID: a82d44ea2cc006f923df86fe147f90c6
+  Parameters: {"id"=>"2"}
+User: sethu - Thu Jan 21 15:47:45 +0530 2010 - params: {"action"=>"download", "id"=>"2", "controller"=>"file"}
+Completed in 80ms (View: 0, DB: 77) | 200 OK [http://192.168.1.100/file/download/2]
+Streaming file /home/demo/library/uploads/2
+
+
+Processing FileController#upload (for 192.168.1.19 at 2010-01-21 15:48:09) [GET]
+  Session ID: a82d44ea2cc006f923df86fe147f90c6
+  Parameters: {"id"=>"1"}
+User: sethu - Thu Jan 21 15:48:09 +0530 2010 - params: {"action"=>"upload", "id"=>"1", "controller"=>"file"}
+Rendering template within layouts/file
+Rendering file/upload
+Completed in 8ms (View: 5, DB: 1) | 200 OK [http://192.168.1.100/file/upload/1]
+
+
+Processing FolderController#list (for 192.168.1.19 at 2010-01-21 15:48:15) [GET]
+  Session ID: a82d44ea2cc006f923df86fe147f90c6
+  Parameters: {"id"=>"1"}
+User: sethu - Thu Jan 21 15:48:15 +0530 2010 - params: {"action"=>"list", "id"=>"1", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 16ms (View: 8, DB: 3) | 200 OK [http://192.168.1.100/folder/list/1]
+
+
+Processing UserController#edit (for 192.168.1.19 at 2010-01-21 15:48:17) [GET]
+  Session ID: a82d44ea2cc006f923df86fe147f90c6
+  Parameters: {"id"=>"6"}
+User: sethu - Thu Jan 21 15:48:17 +0530 2010 - params: {"action"=>"edit", "id"=>"6", "controller"=>"user"}
+Rendering template within layouts/user
+Rendering user/edit
+Completed in 8ms (View: 5, DB: 1) | 200 OK [http://192.168.1.100/user/edit/6]
+
+
+Processing FolderController#list (for 192.168.1.19 at 2010-01-21 15:48:20) [GET]
+  Session ID: a82d44ea2cc006f923df86fe147f90c6
+User: sethu - Thu Jan 21 15:48:20 +0530 2010 - params: {"action"=>"list", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 15ms (View: 7, DB: 2) | 200 OK [http://192.168.1.100/folder/list]
+
+
+Processing FolderController#list (for 192.168.1.19 at 2010-01-21 15:49:25) [GET]
+  Session ID: a82d44ea2cc006f923df86fe147f90c6
+  Parameters: {"id"=>"7"}
+User: sethu - Thu Jan 21 15:49:25 +0530 2010 - params: {"action"=>"list", "id"=>"7", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 11ms (View: 6, DB: 2) | 200 OK [http://192.168.1.100/folder/list/7]
+
+
+Processing FolderController#list_tags (for 192.168.1.19 at 2010-01-21 15:49:46) [GET]
+  Session ID: a82d44ea2cc006f923df86fe147f90c6
+User: sethu - Thu Jan 21 15:49:46 +0530 2010 - params: {"action"=>"list_tags", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list_tags
+Completed in 5ms (View: 4, DB: 1) | 200 OK [http://192.168.1.100/folder/list_tags]
+
+
+Processing SearchController#tag (for 192.168.1.19 at 2010-01-21 15:49:48) [GET]
+  Session ID: a82d44ea2cc006f923df86fe147f90c6
+  Parameters: {"tag"=>"hpc"}
+User: sethu - Thu Jan 21 15:49:48 +0530 2010 - params: {"tag"=>"hpc", "action"=>"tag", "controller"=>"search"}
+Rendering template within layouts/search
+Rendering search/tag
+Completed in 10ms (View: 5, DB: 2) | 200 OK [http://192.168.1.100/search/tag/hpc]
+
+
+Processing FolderController#list (for 192.168.1.19 at 2010-01-21 15:49:58) [GET]
+  Session ID: a82d44ea2cc006f923df86fe147f90c6
+User: sethu - Thu Jan 21 15:49:58 +0530 2010 - params: {"action"=>"list", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 14ms (View: 7, DB: 2) | 200 OK [http://192.168.1.100/folder/list]
+
+
+Processing FolderController#index (for 192.168.1.11 at 2010-01-21 15:50:22) [GET]
+  Session ID: 6cbc5aae09f9cbe169f8ebb80332c70e
+Redirected to actionlogincontrollerauthentication
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 1ms (DB: 1) | 302 Found [http://192.168.1.100/]
+
+
+Processing AuthenticationController#login (for 192.168.1.11 at 2010-01-21 15:50:22) [GET]
+  Session ID: 29d7027c0ef47ac2a556d32e4c694d35
+Rendering template within layouts/authentication
+Rendering authentication/login
+Completed in 2ms (View: 1, DB: 19) | 200 OK [http://192.168.1.100/authentication/login]
+
+
+Processing AuthenticationController#login (for 192.168.1.11 at 2010-01-21 15:50:32) [POST]
+  Session ID: 29d7027c0ef47ac2a556d32e4c694d35
+  Parameters: {"commit"=>"Login", "user"=>{"name"=>"Hansraj"}, "login"=>{"password"=>"hansraj"}}
+Rendering template within layouts/authentication
+Rendering authentication/login
+Completed in 2ms (View: 1, DB: 30) | 200 OK [http://192.168.1.100/authentication/login]
+
+
+Processing AuthenticationController#login (for 192.168.1.11 at 2010-01-21 15:50:35) [POST]
+  Session ID: 29d7027c0ef47ac2a556d32e4c694d35
+  Parameters: {"commit"=>"Login", "user"=>{"name"=>""}, "login"=>{"password"=>""}}
+Rendering template within layouts/authentication
+Rendering authentication/login
+Completed in 2ms (View: 1, DB: 48) | 200 OK [http://192.168.1.100/authentication/login]
+
+
+Processing AuthenticationController#login (for 192.168.1.11 at 2010-01-21 15:50:39) [POST]
+  Session ID: 29d7027c0ef47ac2a556d32e4c694d35
+  Parameters: {"commit"=>"Login", "user"=>{"name"=>"Hansraj"}, "login"=>{"password"=>""}}
+Rendering template within layouts/authentication
+Rendering authentication/login
+Completed in 2ms (View: 1, DB: 1) | 200 OK [http://192.168.1.100/authentication/login]
+
+
+Processing AuthenticationController#login (for 192.168.1.17 at 2010-01-21 15:51:28) [POST]
+  Session ID: 2ab6c5d579d844a3c3c9705b14cd75d8
+  Parameters: {"commit"=>"Login", "user"=>{"name"=>"josh"}, "login"=>{"password"=>"josh123"}}
+Redirected to actionindexcontrollerfolder
+Completed in 5ms (DB: 2) | 302 Found [http://192.168.1.100/authentication/login]
+
+
+Processing FolderController#index (for 192.168.1.17 at 2010-01-21 15:51:28) [GET]
+  Session ID: 2ab6c5d579d844a3c3c9705b14cd75d8
+User: josh - Thu Jan 21 15:51:28 +0530 2010 - params: {"action"=>"index", "controller"=>"folder"}
+Redirected to actionlist
+Completed in 3ms (DB: 60) | 302 Found [http://192.168.1.100/]
+
+
+Processing FolderController#list (for 192.168.1.17 at 2010-01-21 15:51:28) [GET]
+  Session ID: 2ab6c5d579d844a3c3c9705b14cd75d8
+User: josh - Thu Jan 21 15:51:28 +0530 2010 - params: {"action"=>"list", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 16ms (View: 10, DB: 2) | 200 OK [http://192.168.1.100/folder/list]
+
+
+Processing SearchController#tag (for 192.168.1.17 at 2010-01-21 15:51:31) [GET]
+  Session ID: 2ab6c5d579d844a3c3c9705b14cd75d8
+  Parameters: {"tag"=>"hpc"}
+User: josh - Thu Jan 21 15:51:31 +0530 2010 - params: {"tag"=>"hpc", "action"=>"tag", "controller"=>"search"}
+Rendering template within layouts/search
+Rendering search/tag
+Completed in 9ms (View: 4, DB: 2) | 200 OK [http://192.168.1.100/search/tag/hpc]
+
+
+Processing FolderController#index (for 192.168.1.81 at 2010-01-21 15:51:36) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+User: admin - Thu Jan 21 15:51:36 +0530 2010 - params: {"action"=>"index", "controller"=>"folder"}
+Redirected to actionlist
+Completed in 1ms (DB: 1) | 302 Found [http://server/]
+
+
+Processing FolderController#list (for 192.168.1.81 at 2010-01-21 15:51:36) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+User: admin - Thu Jan 21 15:51:36 +0530 2010 - params: {"action"=>"list", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 28ms (View: 16, DB: 50) | 200 OK [http://server/folder/list]
+
+
+Processing UserController#list (for 192.168.1.81 at 2010-01-21 15:51:39) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+User: admin - Thu Jan 21 15:51:39 +0530 2010 - params: {"action"=>"list", "controller"=>"user"}
+Rendering template within layouts/user
+Rendering user/list
+Completed in 10ms (View: 7, DB: 1) | 200 OK [http://server/user/list]
+
+
+Processing UserController#new (for 192.168.1.81 at 2010-01-21 15:51:40) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+User: admin - Thu Jan 21 15:51:40 +0530 2010 - params: {"action"=>"new", "controller"=>"user"}
+Rendering template within layouts/user
+Rendering user/new
+Completed in 11ms (View: 9, DB: 1) | 200 OK [http://server/user/new]
+
+
+Processing UserController#create (for 192.168.1.81 at 2010-01-21 15:51:56) [POST]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"commit"=>"Create", "belongs_to_group"=>{"1"=>"no", "2"=>"yes"}, "user"=>{"name"=>"sandip", "default_folder_id"=>"1", "password_confirmation"=>"sandip", "password"=>"sandip", "email"=>"sandip@joshsoftware.com"}}
+User: admin - Thu Jan 21 15:51:56 +0530 2010 - params: {"commit"=>"Create", "action"=>"create", "belongs_to_group"=>{"1"=>"no", "2"=>"yes"}, "controller"=>"user", "user"=>{"name"=>"sandip", "password_confirmation"=>"sandip", "default_folder_id"=>"1", "password"=>"sandip", "email"=>"sandip@joshsoftware.com"}}
+Rendering template within layouts/user
+Rendering user/new
+Completed in 85ms (View: 8, DB: 4) | 200 OK [http://server/user/create]
+
+
+Processing UserController#create (for 192.168.1.81 at 2010-01-21 15:52:03) [POST]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"commit"=>"Create", "belongs_to_group"=>{"1"=>"no", "2"=>"no"}, "user"=>{"name"=>"sandip", "password_confirmation"=>"sandip", "password"=>"sandip", "email"=>"san2821@joshsoftware.com"}}
+User: admin - Thu Jan 21 15:52:03 +0530 2010 - params: {"commit"=>"Create", "action"=>"create", "belongs_to_group"=>{"1"=>"no", "2"=>"no"}, "controller"=>"user", "user"=>{"name"=>"sandip", "password_confirmation"=>"sandip", "password"=>"sandip", "email"=>"san2821@joshsoftware.com"}}
+Sent mail to san2821@joshsoftware.com
+Redirected to actionlist
+Completed in 120ms (DB: 51) | 302 Found [http://server/user/create]
+
+
+Processing UserController#list (for 192.168.1.81 at 2010-01-21 15:52:03) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+User: admin - Thu Jan 21 15:52:03 +0530 2010 - params: {"action"=>"list", "controller"=>"user"}
+Rendering template within layouts/user
+Rendering user/list
+Completed in 13ms (View: 9, DB: 35) | 200 OK [http://server/user/list]
+
+
+Processing UserController#edit (for 192.168.1.81 at 2010-01-21 15:52:34) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"id"=>"11"}
+User: admin - Thu Jan 21 15:52:34 +0530 2010 - params: {"action"=>"edit", "id"=>"11", "controller"=>"user"}
+Rendering template within layouts/user
+Rendering user/edit
+Completed in 10ms (View: 8, DB: 2) | 200 OK [http://server/user/edit/11]
+
+
+Processing UserController#update (for 192.168.1.81 at 2010-01-21 15:52:48) [POST]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"commit"=>"Save", "id"=>"11", "belongs_to_group"=>{"1"=>"no", "2"=>"yes"}, "user"=>{"name"=>"sandip", "password_confirmation"=>"sandip", "password"=>"sandip", "email"=>"san2821@gmail.com"}}
+User: admin - Thu Jan 21 15:52:48 +0530 2010 - params: {"commit"=>"Save", "action"=>"update", "id"=>"11", "belongs_to_group"=>{"1"=>"no", "2"=>"yes"}, "controller"=>"user", "user"=>{"name"=>"sandip", "password_confirmation"=>"sandip", "password"=>"sandip", "email"=>"san2821@gmail.com"}}
+Redirected to actionlist
+Completed in 30ms (DB: 62) | 302 Found [http://server/user/update/11]
+
+
+Processing UserController#list (for 192.168.1.81 at 2010-01-21 15:52:48) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+User: admin - Thu Jan 21 15:52:48 +0530 2010 - params: {"action"=>"list", "controller"=>"user"}
+Rendering template within layouts/user
+Rendering user/list
+Completed in 9ms (View: 6, DB: 1) | 200 OK [http://server/user/list]
+
+
+Processing UserController#new (for 192.168.1.81 at 2010-01-21 15:54:05) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+User: admin - Thu Jan 21 15:54:05 +0530 2010 - params: {"action"=>"new", "controller"=>"user"}
+Rendering template within layouts/user
+Rendering user/new
+Completed in 19ms (View: 12, DB: 3) | 200 OK [http://server/user/new]
+
+
+Processing UserController#create (for 192.168.1.81 at 2010-01-21 15:54:27) [POST]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"commit"=>"Create", "belongs_to_group"=>{"1"=>"no", "2"=>"yes"}, "user"=>{"name"=>"satish", "default_folder_id"=>"1", "password_confirmation"=>"satish", "password"=>"satish", "email"=>"satish@joshsoftware.com"}}
+User: admin - Thu Jan 21 15:54:27 +0530 2010 - params: {"commit"=>"Create", "action"=>"create", "belongs_to_group"=>{"1"=>"no", "2"=>"yes"}, "controller"=>"user", "user"=>{"name"=>"satish", "password_confirmation"=>"satish", "default_folder_id"=>"1", "password"=>"satish", "email"=>"satish@joshsoftware.com"}}
+Sent mail to satish@joshsoftware.com
+Redirected to actionlist
+Completed in 123ms (DB: 51) | 302 Found [http://server/user/create]
+
+
+Processing UserController#list (for 192.168.1.81 at 2010-01-21 15:54:28) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+User: admin - Thu Jan 21 15:54:28 +0530 2010 - params: {"action"=>"list", "controller"=>"user"}
+Rendering template within layouts/user
+Rendering user/list
+Completed in 11ms (View: 8, DB: 36) | 200 OK [http://server/user/list]
+
+
+Processing FolderController#index (for 192.168.1.81 at 2010-01-21 15:54:53) [GET]
+  Session ID: fce14d535f2eda90b40e24a2007427b1
+Redirected to actionlogincontrollerauthentication
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 2ms (DB: 44) | 302 Found [http://server.joshsoftware.com/]
+
+
+Processing AuthenticationController#login (for 192.168.1.81 at 2010-01-21 15:54:53) [GET]
+  Session ID: b811798dfe60019169445b993fdb8007
+Rendering template within layouts/authentication
+Rendering authentication/login
+Completed in 4ms (View: 2, DB: 51) | 200 OK [http://server.joshsoftware.com/authentication/login]
+
+
+Processing FolderController#list (for 192.168.1.81 at 2010-01-21 15:55:05) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+User: admin - Thu Jan 21 15:55:05 +0530 2010 - params: {"action"=>"list", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 31ms (View: 19, DB: 4) | 200 OK [http://server/folder/list]
+
+
+Processing FolderController#list (for 192.168.1.81 at 2010-01-21 15:55:16) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"id"=>"7"}
+User: admin - Thu Jan 21 15:55:16 +0530 2010 - params: {"action"=>"list", "id"=>"7", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 97ms (View: 90, DB: 50) | 200 OK [http://server/folder/list/7]
+
+
+Processing FileController#upload (for 192.168.1.81 at 2010-01-21 15:55:23) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"id"=>"7"}
+User: admin - Thu Jan 21 15:55:23 +0530 2010 - params: {"action"=>"upload", "id"=>"7", "controller"=>"file"}
+Rendering template within layouts/file
+Rendering file/upload
+Completed in 11ms (View: 6, DB: 2) | 200 OK [http://server/file/upload/7]
+
+
+Processing UserController#list (for 192.168.1.81 at 2010-01-21 15:55:30) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+User: admin - Thu Jan 21 15:55:30 +0530 2010 - params: {"action"=>"list", "controller"=>"user"}
+Rendering template within layouts/user
+Rendering user/list
+Completed in 9ms (View: 7, DB: 1) | 200 OK [http://server/user/list]
+
+
+Processing UserController#edit (for 192.168.1.81 at 2010-01-21 15:55:32) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"id"=>"6"}
+User: admin - Thu Jan 21 15:55:32 +0530 2010 - params: {"action"=>"edit", "id"=>"6", "controller"=>"user"}
+Rendering template within layouts/user
+Rendering user/edit
+Completed in 10ms (View: 8, DB: 1) | 200 OK [http://server/user/edit/6]
+
+
+Processing UserController#update (for 192.168.1.81 at 2010-01-21 15:55:36) [POST]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"commit"=>"Save", "id"=>"6", "belongs_to_group"=>{"1"=>"yes", "2"=>"yes"}, "user"=>{"name"=>"sethu", "default_folder_id"=>"2", "password_confirmation"=>"", "password"=>"amit", "email"=>"sethu@joshsoftware.com"}}
+User: admin - Thu Jan 21 15:55:36 +0530 2010 - params: {"commit"=>"Save", "action"=>"update", "id"=>"6", "belongs_to_group"=>{"1"=>"yes", "2"=>"yes"}, "controller"=>"user", "user"=>{"name"=>"sethu", "password_confirmation"=>"", "default_folder_id"=>"2", "password"=>"amit", "email"=>"sethu@joshsoftware.com"}}
+Rendering template within layouts/user
+Rendering user/edit
+Completed in 64ms (View: 7, DB: 52) | 200 OK [http://server/user/update/6]
+
+
+Processing UserController#update (for 192.168.1.81 at 2010-01-21 15:55:44) [POST]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+  Parameters: {"commit"=>"Save", "id"=>"6", "belongs_to_group"=>{"1"=>"yes", "2"=>"no"}, "user"=>{"name"=>"sethu", "password_confirmation"=>"sethu", "password"=>"sethu", "email"=>"sethu@joshsoftware.com"}}
+User: admin - Thu Jan 21 15:55:44 +0530 2010 - params: {"commit"=>"Save", "action"=>"update", "id"=>"6", "belongs_to_group"=>{"1"=>"yes", "2"=>"no"}, "controller"=>"user", "user"=>{"name"=>"sethu", "password_confirmation"=>"sethu", "password"=>"sethu", "email"=>"sethu@joshsoftware.com"}}
+Redirected to actionlist
+Completed in 71ms (DB: 67) | 302 Found [http://server/user/update/6]
+
+
+Processing UserController#list (for 192.168.1.81 at 2010-01-21 15:55:45) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+User: admin - Thu Jan 21 15:55:45 +0530 2010 - params: {"action"=>"list", "controller"=>"user"}
+Rendering template within layouts/user
+Rendering user/list
+Completed in 8ms (View: 6, DB: 1) | 200 OK [http://server/user/list]
+
+
+Processing AuthenticationController#logout (for 192.168.1.81 at 2010-01-21 15:55:51) [GET]
+  Session ID: 53c83559f5d8c5a8a3db8b307a60abd3
+Redirected to actionlogin
+Completed in 35ms (DB: 33) | 302 Found [http://server/authentication/logout]
+
+
+Processing AuthenticationController#login (for 192.168.1.81 at 2010-01-21 15:55:51) [GET]
+  Session ID: 618c37e329e7c198d2bbd3835cfef4ff
+Rendering template within layouts/authentication
+Rendering authentication/login
+Completed in 2ms (View: 1, DB: 1) | 200 OK [http://server/authentication/login]
+
+
+Processing AuthenticationController#login (for 192.168.1.81 at 2010-01-21 15:55:56) [POST]
+  Session ID: 618c37e329e7c198d2bbd3835cfef4ff
+  Parameters: {"commit"=>"Login", "user"=>{"name"=>"sethu"}, "login"=>{"password"=>"sethu"}}
+Redirected to actionlistcontrollerfolderid0
+Completed in 2ms (DB: 1) | 302 Found [http://server/authentication/login]
+
+
+Processing FolderController#list (for 192.168.1.81 at 2010-01-21 15:55:56) [GET]
+  Session ID: 618c37e329e7c198d2bbd3835cfef4ff
+  Parameters: {"id"=>"0"}
+User: sethu - Thu Jan 21 15:55:56 +0530 2010 - params: {"action"=>"list", "id"=>"0", "controller"=>"folder"}
+Redirected to actionlistcontrollerfolderid
+Filter chain halted as [:authorize_reading] rendered_or_redirected.
+Completed in 2ms (DB: 48) | 302 Found [http://server/folder/list/0]
+
+
+Processing FolderController#list (for 192.168.1.81 at 2010-01-21 15:55:56) [GET]
+  Session ID: 618c37e329e7c198d2bbd3835cfef4ff
+User: sethu - Thu Jan 21 15:55:56 +0530 2010 - params: {"action"=>"list", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 20ms (View: 12, DB: 3) | 200 OK [http://server/folder/list]
+
+
+Processing FolderController#list (for 192.168.1.81 at 2010-01-21 15:55:59) [GET]
+  Session ID: 618c37e329e7c198d2bbd3835cfef4ff
+  Parameters: {"id"=>"7"}
+User: sethu - Thu Jan 21 15:55:59 +0530 2010 - params: {"action"=>"list", "id"=>"7", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 16ms (View: 10, DB: 23) | 200 OK [http://server/folder/list/7]
+
+
+Processing FolderController#new (for 192.168.1.81 at 2010-01-21 15:56:02) [GET]
+  Session ID: 618c37e329e7c198d2bbd3835cfef4ff
+  Parameters: {"id"=>"7"}
+User: sethu - Thu Jan 21 15:56:02 +0530 2010 - params: {"action"=>"new", "id"=>"7", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/new
+Completed in 7ms (View: 4, DB: 1) | 200 OK [http://server/folder/new/7]
+
+
+Processing FileController#upload (for 192.168.1.81 at 2010-01-21 15:56:04) [GET]
+  Session ID: 618c37e329e7c198d2bbd3835cfef4ff
+  Parameters: {"id"=>"7"}
+User: sethu - Thu Jan 21 15:56:04 +0530 2010 - params: {"action"=>"upload", "id"=>"7", "controller"=>"file"}
+Rendering template within layouts/file
+Rendering file/upload
+Completed in 8ms (View: 5, DB: 2) | 200 OK [http://server/file/upload/7]
+
+
+Processing FileController#do_the_upload (for 192.168.1.81 at 2010-01-21 15:56:18) [POST]
+  Session ID: 618c37e329e7c198d2bbd3835cfef4ff
+  Parameters: {"commit"=>"Upload", "folder_id"=>"7", "tag_1"=>"", "file_0"=>#<File:/tmp/CGI20100121-22583-i8u2in-0>, "tag_2"=>"", "file_1"=>"", "tag_3"=>"", "description"=>"git"}
+User: sethu - Thu Jan 21 15:56:18 +0530 2010 - params: {"commit"=>"Upload", "tag_1"=>"", "folder_id"=>"7", "tag_2"=>"", "file_0"=>#<File:/tmp/CGI20100121-22583-i8u2in-0>, "action"=>"do_the_upload", "tag_3"=>"", "file_1"=>"", "description"=>"git", "controller"=>"file"}
+Redirected to actionlistcontrollerfolderid7
+Completed in 151ms (DB: 139) | 302 Found [http://server/file/do_the_upload?folder_id=7]
+
+
+Processing FolderController#list (for 192.168.1.81 at 2010-01-21 15:56:18) [GET]
+  Session ID: 618c37e329e7c198d2bbd3835cfef4ff
+  Parameters: {"id"=>"7"}
+User: sethu - Thu Jan 21 15:56:18 +0530 2010 - params: {"action"=>"list", "id"=>"7", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 17ms (View: 11, DB: 2) | 200 OK [http://server/folder/list/7]
+
+
+Processing FolderController#list (for 192.168.1.81 at 2010-01-21 15:56:23) [GET]
+  Session ID: 618c37e329e7c198d2bbd3835cfef4ff
+User: sethu - Thu Jan 21 15:56:23 +0530 2010 - params: {"action"=>"list", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 20ms (View: 12, DB: 2) | 200 OK [http://server/folder/list]
+
+
+Processing FolderController#list (for 192.168.1.81 at 2010-01-21 15:56:26) [GET]
+  Session ID: 618c37e329e7c198d2bbd3835cfef4ff
+  Parameters: {"id"=>"6"}
+User: sethu - Thu Jan 21 15:56:26 +0530 2010 - params: {"action"=>"list", "id"=>"6", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 73ms (View: 67, DB: 2) | 200 OK [http://server/folder/list/6]
+
+
+Processing FolderController#list (for 192.168.1.81 at 2010-01-21 15:56:31) [GET]
+  Session ID: 618c37e329e7c198d2bbd3835cfef4ff
+User: sethu - Thu Jan 21 15:56:31 +0530 2010 - params: {"action"=>"list", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 21ms (View: 13, DB: 2) | 200 OK [http://server/folder/list]
+
+
+Processing FileController#destroy (for 192.168.1.81 at 2010-01-21 15:56:34) [GET]
+  Session ID: 618c37e329e7c198d2bbd3835cfef4ff
+  Parameters: {"id"=>"2"}
+User: sethu - Thu Jan 21 15:56:34 +0530 2010 - params: {"action"=>"destroy", "id"=>"2", "controller"=>"file"}
+Redirected to actionlistcontrollerfolderid1
+Completed in 55ms (DB: 50) | 302 Found [http://server/file/destroy/2]
+
+
+Processing FolderController#list (for 192.168.1.81 at 2010-01-21 15:56:34) [GET]
+  Session ID: 618c37e329e7c198d2bbd3835cfef4ff
+  Parameters: {"id"=>"1"}
+User: sethu - Thu Jan 21 15:56:34 +0530 2010 - params: {"action"=>"list", "id"=>"1", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 21ms (View: 12, DB: 3) | 200 OK [http://server/folder/list/1]
+
+
+Processing AuthenticationController#login (for 122.169.8.208 at 2010-01-21 15:56:35) [POST]
+  Session ID: 4ffa9844582db1d5a583d85198c75d8e
+  Parameters: {"commit"=>"Login", "user"=>{"name"=>"satish"}, "login"=>{"password"=>"satish"}}
+Redirected to actionindexcontrollerfolder
+Completed in 1ms (DB: 1) | 302 Found [http://server.joshsoftware.com/authentication/login]
+
+
+Processing FolderController#index (for 122.169.8.208 at 2010-01-21 15:56:36) [GET]
+  Session ID: 4ffa9844582db1d5a583d85198c75d8e
+User: satish - Thu Jan 21 15:56:36 +0530 2010 - params: {"action"=>"index", "controller"=>"folder"}
+Redirected to actionlist
+Completed in 2ms (DB: 57) | 302 Found [http://server.joshsoftware.com/]
+
+
+Processing FolderController#list (for 122.169.8.208 at 2010-01-21 15:56:36) [GET]
+  Session ID: 4ffa9844582db1d5a583d85198c75d8e
+User: satish - Thu Jan 21 15:56:36 +0530 2010 - params: {"action"=>"list", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 15ms (View: 6, DB: 3) | 200 OK [http://server.joshsoftware.com/folder/list]
+
+
+Processing UserController#list (for 192.168.1.81 at 2010-01-21 15:56:36) [GET]
+  Session ID: 618c37e329e7c198d2bbd3835cfef4ff
+User: sethu - Thu Jan 21 15:56:36 +0530 2010 - params: {"action"=>"list", "controller"=>"user"}
+Rendering template within layouts/user
+Rendering user/list
+Completed in 8ms (View: 6, DB: 1) | 200 OK [http://server/user/list]
+
+
+Processing FolderController#list (for 122.169.8.208 at 2010-01-21 15:56:47) [GET]
+  Session ID: 4ffa9844582db1d5a583d85198c75d8e
+  Parameters: {"id"=>"2"}
+User: satish - Thu Jan 21 15:56:47 +0530 2010 - params: {"action"=>"list", "id"=>"2", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 11ms (View: 6, DB: 2) | 200 OK [http://server.joshsoftware.com/folder/list/2]
+
+
+Processing FolderController#list (for 192.168.1.19 at 2010-01-21 15:56:53) [GET]
+  Session ID: a82d44ea2cc006f923df86fe147f90c6
+User: sethu - Thu Jan 21 15:56:53 +0530 2010 - params: {"action"=>"list", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 19ms (View: 11, DB: 2) | 200 OK [http://192.168.1.100/folder/list]
+
+
+Processing FolderController#list (for 192.168.1.19 at 2010-01-21 15:56:55) [GET]
+  Session ID: a82d44ea2cc006f923df86fe147f90c6
+  Parameters: {"id"=>"7"}
+User: sethu - Thu Jan 21 15:56:55 +0530 2010 - params: {"action"=>"list", "id"=>"7", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 16ms (View: 10, DB: 2) | 200 OK [http://192.168.1.100/folder/list/7]
+
+
+Processing FileController#upload (for 192.168.1.19 at 2010-01-21 15:57:01) [GET]
+  Session ID: a82d44ea2cc006f923df86fe147f90c6
+  Parameters: {"id"=>"7"}
+User: sethu - Thu Jan 21 15:57:01 +0530 2010 - params: {"action"=>"upload", "id"=>"7", "controller"=>"file"}
+Rendering template within layouts/file
+Rendering file/upload
+Completed in 7ms (View: 4, DB: 1) | 200 OK [http://192.168.1.100/file/upload/7]
+
+
+Processing FolderController#set_default_folder (for 122.169.8.208 at 2010-01-21 15:57:11) [POST]
+  Session ID: 4ffa9844582db1d5a583d85198c75d8e
+  Parameters: {"id"=>"2"}
+User: satish - Thu Jan 21 15:57:11 +0530 2010 - params: {"action"=>"set_default_folder", "id"=>"2", "controller"=>"folder"}
+Redirected to actionlistid2
+Completed in 55ms (DB: 53) | 302 Found [http://server.joshsoftware.com/folder/set_default_folder/2]
+
+
+Processing FolderController#list (for 122.169.8.208 at 2010-01-21 15:57:11) [GET]
+  Session ID: 4ffa9844582db1d5a583d85198c75d8e
+  Parameters: {"id"=>"2"}
+User: satish - Thu Jan 21 15:57:11 +0530 2010 - params: {"action"=>"list", "id"=>"2", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 12ms (View: 6, DB: 3) | 200 OK [http://server.joshsoftware.com/folder/list/2]
+
+
+Processing FolderController#list (for 122.169.8.208 at 2010-01-21 15:57:17) [GET]
+  Session ID: 4ffa9844582db1d5a583d85198c75d8e
+  Parameters: {"id"=>"1"}
+User: satish - Thu Jan 21 15:57:17 +0530 2010 - params: {"action"=>"list", "id"=>"1", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 109ms (View: 78, DB: 27) | 200 OK [http://server.joshsoftware.com/folder/list/1]
+
+
+Processing FileController#do_the_upload (for 192.168.1.19 at 2010-01-21 15:57:23) [POST]
+  Session ID: a82d44ea2cc006f923df86fe147f90c6
+  Parameters: {"commit"=>"Upload", "folder_id"=>"7", "tag_1"=>"hpc", "file_0"=>#<File:/tmp/CGI20100121-22583-1fclauv-0>, "tag_2"=>"", "file_1"=>"", "tag_3"=>"", "description"=>"High performance Computing"}
+User: sethu - Thu Jan 21 15:57:23 +0530 2010 - params: {"commit"=>"Upload", "tag_1"=>"hpc", "folder_id"=>"7", "tag_2"=>"", "file_0"=>#<File:/tmp/CGI20100121-22583-1fclauv-0>, "action"=>"do_the_upload", "tag_3"=>"", "file_1"=>"", "description"=>"High performance Computing", "controller"=>"file"}
+Redirected to actionlistcontrollerfolderid7
+Completed in 143ms (DB: 192) | 302 Found [http://192.168.1.100/file/do_the_upload?folder_id=7]
+
+
+Processing FolderController#list (for 122.169.8.208 at 2010-01-21 15:57:23) [GET]
+  Session ID: 4ffa9844582db1d5a583d85198c75d8e
+  Parameters: {"id"=>"2"}
+User: satish - Thu Jan 21 15:57:23 +0530 2010 - params: {"action"=>"list", "id"=>"2", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 13ms (View: 7, DB: 2) | 200 OK [http://server.joshsoftware.com/folder/list/2]
+
+
+Processing FolderController#list (for 192.168.1.19 at 2010-01-21 15:57:23) [GET]
+  Session ID: a82d44ea2cc006f923df86fe147f90c6
+  Parameters: {"id"=>"7"}
+User: sethu - Thu Jan 21 15:57:23 +0530 2010 - params: {"action"=>"list", "id"=>"7", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 19ms (View: 13, DB: 2) | 200 OK [http://192.168.1.100/folder/list/7]
+
+
+Processing FileController#upload (for 122.169.8.208 at 2010-01-21 15:57:27) [GET]
+  Session ID: 4ffa9844582db1d5a583d85198c75d8e
+  Parameters: {"id"=>"2"}
+User: satish - Thu Jan 21 15:57:27 +0530 2010 - params: {"action"=>"upload", "id"=>"2", "controller"=>"file"}
+Rendering template within layouts/file
+Rendering file/upload
+Completed in 7ms (View: 4, DB: 1) | 200 OK [http://server.joshsoftware.com/file/upload/2]
+
+
+Processing GroupController#list (for 192.168.1.19 at 2010-01-21 15:57:28) [GET]
+  Session ID: a82d44ea2cc006f923df86fe147f90c6
+User: sethu - Thu Jan 21 15:57:28 +0530 2010 - params: {"action"=>"list", "controller"=>"group"}
+Rendering template within layouts/group
+Rendering group/list
+Completed in 7ms (View: 4, DB: 1) | 200 OK [http://192.168.1.100/group/list]
+
+
+Processing SettingsController#index (for 192.168.1.19 at 2010-01-21 15:57:31) [GET]
+  Session ID: a82d44ea2cc006f923df86fe147f90c6
+User: sethu - Thu Jan 21 15:57:31 +0530 2010 - params: {"action"=>"index", "controller"=>"settings"}
+Rendering template within layouts/settings
+Rendering settings/index
+Completed in 8ms (View: 5, DB: 1) | 200 OK [http://192.168.1.100/settings]
+
+
+Processing FolderController#list (for 192.168.1.19 at 2010-01-21 15:57:38) [GET]
+  Session ID: a82d44ea2cc006f923df86fe147f90c6
+User: sethu - Thu Jan 21 15:57:38 +0530 2010 - params: {"action"=>"list", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 79ms (View: 12, DB: 4) | 200 OK [http://192.168.1.100/folder/list]
+
+
+Processing UserController#new (for 192.168.1.81 at 2010-01-21 15:57:40) [GET]
+  Session ID: 618c37e329e7c198d2bbd3835cfef4ff
+User: sethu - Thu Jan 21 15:57:40 +0530 2010 - params: {"action"=>"new", "controller"=>"user"}
+Rendering template within layouts/user
+Rendering user/new
+Completed in 10ms (View: 8, DB: 1) | 200 OK [http://server/user/new]
+
+
+Processing FileController#upload_multi (for 192.168.1.19 at 2010-01-21 15:57:54) [GET]
+  Session ID: a82d44ea2cc006f923df86fe147f90c6
+  Parameters: {"id"=>"1"}
+User: sethu - Thu Jan 21 15:57:54 +0530 2010 - params: {"action"=>"upload_multi", "id"=>"1", "controller"=>"file"}
+Rendering template within layouts/file
+Rendering file/upload_multi
+Completed in 7ms (View: 5, DB: 1) | 200 OK [http://192.168.1.100/file/upload_multi/1]
+
+
+Processing UserController#create (for 192.168.1.81 at 2010-01-21 15:58:04) [POST]
+  Session ID: 618c37e329e7c198d2bbd3835cfef4ff
+  Parameters: {"commit"=>"Create", "belongs_to_group"=>{"1"=>"no", "2"=>"yes"}, "user"=>{"name"=>"victor", "default_folder_id"=>"2", "password_confirmation"=>"victor", "password"=>"victor", "email"=>"victor@joshsoftware.com"}}
+User: sethu - Thu Jan 21 15:58:04 +0530 2010 - params: {"commit"=>"Create", "action"=>"create", "belongs_to_group"=>{"1"=>"no", "2"=>"yes"}, "controller"=>"user", "user"=>{"name"=>"victor", "password_confirmation"=>"victor", "default_folder_id"=>"2", "password"=>"victor", "email"=>"victor@joshsoftware.com"}}
+Sent mail to victor@joshsoftware.com
+Redirected to actionlist
+Completed in 156ms (DB: 27) | 302 Found [http://server/user/create]
+
+
+Processing UserController#list (for 192.168.1.81 at 2010-01-21 15:58:04) [GET]
+  Session ID: 618c37e329e7c198d2bbd3835cfef4ff
+User: sethu - Thu Jan 21 15:58:04 +0530 2010 - params: {"action"=>"list", "controller"=>"user"}
+Rendering template within layouts/user
+Rendering user/list
+Completed in 11ms (View: 8, DB: 20) | 200 OK [http://server/user/list]
+
+
+Processing FolderController#list (for 192.168.1.19 at 2010-01-21 15:58:06) [GET]
+  Session ID: a82d44ea2cc006f923df86fe147f90c6
+  Parameters: {"id"=>"1"}
+User: sethu - Thu Jan 21 15:58:06 +0530 2010 - params: {"action"=>"list", "id"=>"1", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 23ms (View: 14, DB: 4) | 200 OK [http://192.168.1.100/folder/list/1]
+
+
+Processing UserController#edit (for 192.168.1.81 at 2010-01-21 15:58:15) [GET]
+  Session ID: 618c37e329e7c198d2bbd3835cfef4ff
+  Parameters: {"id"=>"1"}
+User: sethu - Thu Jan 21 15:58:15 +0530 2010 - params: {"action"=>"edit", "id"=>"1", "controller"=>"user"}
+Rendering template within layouts/user
+Rendering user/edit
+Completed in 11ms (View: 9, DB: 1) | 200 OK [http://server/user/edit/1]
+
+
+Processing UserController#update (for 192.168.1.81 at 2010-01-21 15:58:42) [POST]
+  Session ID: 618c37e329e7c198d2bbd3835cfef4ff
+  Parameters: {"commit"=>"Save", "id"=>"1", "belongs_to_group"=>{"1"=>"yes", "2"=>"no"}, "user"=>{"name"=>"admin", "default_folder_id"=>"2", "password_confirmation"=>"josh123", "password"=>"josh123", "email"=>"library@joshsoftware.com"}}
+User: sethu - Thu Jan 21 15:58:42 +0530 2010 - params: {"commit"=>"Save", "action"=>"update", "id"=>"1", "belongs_to_group"=>{"1"=>"yes", "2"=>"no"}, "controller"=>"user", "user"=>{"name"=>"admin", "password_confirmation"=>"josh123", "default_folder_id"=>"2", "password"=>"josh123", "email"=>"library@joshsoftware.com"}}
+Redirected to actionlist
+Completed in 51ms (DB: 112) | 302 Found [http://server/user/update/1]
+
+
+Processing UserController#list (for 192.168.1.81 at 2010-01-21 15:58:42) [GET]
+  Session ID: 618c37e329e7c198d2bbd3835cfef4ff
+User: sethu - Thu Jan 21 15:58:42 +0530 2010 - params: {"action"=>"list", "controller"=>"user"}
+Rendering template within layouts/user
+Rendering user/list
+Completed in 10ms (View: 7, DB: 1) | 200 OK [http://server/user/list]
+
+
+Processing UserController#destroy (for 192.168.1.81 at 2010-01-21 15:58:48) [GET]
+  Session ID: 618c37e329e7c198d2bbd3835cfef4ff
+  Parameters: {"id"=>"11"}
+User: sethu - Thu Jan 21 15:58:48 +0530 2010 - params: {"action"=>"destroy", "id"=>"11", "controller"=>"user"}
+Redirected to actionlist
+Completed in 49ms (DB: 46) | 302 Found [http://server/user/destroy/11]
+
+
+Processing UserController#list (for 192.168.1.81 at 2010-01-21 15:58:48) [GET]
+  Session ID: 618c37e329e7c198d2bbd3835cfef4ff
+User: sethu - Thu Jan 21 15:58:48 +0530 2010 - params: {"action"=>"list", "controller"=>"user"}
+Rendering template within layouts/user
+Rendering user/list
+Completed in 9ms (View: 7, DB: 1) | 200 OK [http://server/user/list]
+
+
+Processing UserController#new (for 192.168.1.81 at 2010-01-21 15:58:50) [GET]
+  Session ID: 618c37e329e7c198d2bbd3835cfef4ff
+User: sethu - Thu Jan 21 15:58:50 +0530 2010 - params: {"action"=>"new", "controller"=>"user"}
+Rendering template within layouts/user
+Rendering user/new
+Completed in 11ms (View: 8, DB: 1) | 200 OK [http://server/user/new]
+
+
+Processing UserController#create (for 192.168.1.81 at 2010-01-21 15:59:05) [POST]
+  Session ID: 618c37e329e7c198d2bbd3835cfef4ff
+  Parameters: {"commit"=>"Create", "belongs_to_group"=>{"1"=>"yes", "2"=>"no"}, "user"=>{"name"=>"sandip", "default_folder_id"=>"1", "password_confirmation"=>"sandip", "password"=>"sandip", "email"=>"sandip@joshsoftware.com"}}
+User: sethu - Thu Jan 21 15:59:05 +0530 2010 - params: {"commit"=>"Create", "action"=>"create", "belongs_to_group"=>{"1"=>"yes", "2"=>"no"}, "controller"=>"user", "user"=>{"name"=>"sandip", "password_confirmation"=>"sandip", "default_folder_id"=>"1", "password"=>"sandip", "email"=>"sandip@joshsoftware.com"}}
+Sent mail to sandip@joshsoftware.com
+Redirected to actionlist
+Completed in 184ms (DB: 53) | 302 Found [http://server/user/create]
+
+
+Processing UserController#list (for 192.168.1.81 at 2010-01-21 15:59:05) [GET]
+  Session ID: 618c37e329e7c198d2bbd3835cfef4ff
+User: sethu - Thu Jan 21 15:59:05 +0530 2010 - params: {"action"=>"list", "controller"=>"user"}
+Rendering template within layouts/user
+Rendering user/list
+Completed in 14ms (View: 10, DB: 2) | 200 OK [http://server/user/list]
+
+
+Processing FolderController#index (for 96.2.187.66 at 2010-01-21 16:00:29) [GET]
+  Session ID: 437165216d727d662c5c3f6f01b7902f
+Redirected to actionlogincontrollerauthentication
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 2ms (DB: 2) | 302 Found [http://server.joshsoftware.com/]
+
+
+Processing AuthenticationController#login (for 96.2.187.66 at 2010-01-21 16:00:30) [GET]
+  Session ID: a8dc86e503359e882268379ee84a0d01
+Rendering template within layouts/authentication
+Rendering authentication/login
+Completed in 2ms (View: 1, DB: 52) | 200 OK [http://server.joshsoftware.com/authentication/login]
+
+
+Processing FolderController#index (for 96.2.187.66 at 2010-01-21 16:01:04) [GET]
+  Session ID: 6a151349854a3f1a08b9d39e06283c96
+Redirected to actionlogincontrollerauthentication
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 2ms (DB: 55) | 302 Found [http://server.joshsoftware.com/]
+
+
+Processing AuthenticationController#login (for 96.2.187.66 at 2010-01-21 16:01:05) [GET]
+  Session ID: 683a53a1c2b79400261a39adf9802d14
+Rendering template within layouts/authentication
+Rendering authentication/login
+Completed in 2ms (View: 1, DB: 35) | 200 OK [http://server.joshsoftware.com/authentication/login]
+
+
+Processing AuthenticationController#login (for 96.2.187.66 at 2010-01-21 16:01:15) [POST]
+  Session ID: 683a53a1c2b79400261a39adf9802d14
+  Parameters: {"commit"=>"Login", "user"=>{"name"=>"victor"}, "login"=>{"password"=>"victor"}}
+Redirected to actionindexcontrollerfolder
+Completed in 2ms (DB: 20) | 302 Found [http://server.joshsoftware.com/authentication/login]
+
+
+Processing FolderController#index (for 96.2.187.66 at 2010-01-21 16:01:16) [GET]
+  Session ID: 683a53a1c2b79400261a39adf9802d14
+User: victor - Thu Jan 21 16:01:16 +0530 2010 - params: {"action"=>"index", "controller"=>"folder"}
+Redirected to actionlist
+Completed in 2ms (DB: 39) | 302 Found [http://server.joshsoftware.com/]
+
+
+Processing FolderController#list (for 96.2.187.66 at 2010-01-21 16:01:17) [GET]
+  Session ID: 683a53a1c2b79400261a39adf9802d14
+User: victor - Thu Jan 21 16:01:17 +0530 2010 - params: {"action"=>"list", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 17ms (View: 8, DB: 3) | 200 OK [http://server.joshsoftware.com/folder/list]
+
+
+Processing FolderController#list (for 96.2.187.66 at 2010-01-21 16:01:27) [GET]
+  Session ID: 683a53a1c2b79400261a39adf9802d14
+  Parameters: {"id"=>"2"}
+User: victor - Thu Jan 21 16:01:27 +0530 2010 - params: {"action"=>"list", "id"=>"2", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 13ms (View: 7, DB: 2) | 200 OK [http://server.joshsoftware.com/folder/list/2]
+
+
+Processing FileController#download (for 96.2.187.66 at 2010-01-21 16:01:36) [GET]
+  Session ID: 683a53a1c2b79400261a39adf9802d14
+  Parameters: {"id"=>"1"}
+User: victor - Thu Jan 21 16:01:36 +0530 2010 - params: {"action"=>"download", "id"=>"1", "controller"=>"file"}
+Completed in 47ms (View: 0, DB: 45) | 200 OK [http://server.joshsoftware.com/file/download/1]
+Streaming file /home/demo/library/uploads/1
+
+
+Processing FileController#upload_multi (for 96.2.187.66 at 2010-01-21 16:03:08) [GET]
+  Session ID: 683a53a1c2b79400261a39adf9802d14
+  Parameters: {"id"=>"2"}
+User: victor - Thu Jan 21 16:03:08 +0530 2010 - params: {"action"=>"upload_multi", "id"=>"2", "controller"=>"file"}
+Rendering template within layouts/file
+Rendering file/upload_multi
+Completed in 7ms (View: 4, DB: 1) | 200 OK [http://server.joshsoftware.com/file/upload_multi/2]
+
+
+Processing FileController#do_the_upload (for 122.169.8.208 at 2010-01-21 16:03:46) [POST]
+  Session ID: 4ffa9844582db1d5a583d85198c75d8e
+  Parameters: {"commit"=>"Upload", "folder_id"=>"2", "tag_1"=>"ruby", "file_0"=>#<File:/tmp/CGI20100121-22583-ykj3yo-0>, "tag_2"=>"", "file_1"=>"", "tag_3"=>"", "description"=>"Beginning Ruby"}
+User: satish - Thu Jan 21 16:03:46 +0530 2010 - params: {"commit"=>"Upload", "tag_1"=>"ruby", "folder_id"=>"2", "tag_2"=>"", "file_0"=>#<File:/tmp/CGI20100121-22583-ykj3yo-0>, "action"=>"do_the_upload", "tag_3"=>"", "file_1"=>"", "description"=>"Beginning Ruby", "controller"=>"file"}
+Redirected to actionlistcontrollerfolderid2
+Completed in 553ms (DB: 392) | 302 Found [http://server.joshsoftware.com/file/do_the_upload?folder_id=2]
+
+
+Processing FolderController#list (for 122.169.8.208 at 2010-01-21 16:03:47) [GET]
+  Session ID: 4ffa9844582db1d5a583d85198c75d8e
+  Parameters: {"id"=>"2"}
+User: satish - Thu Jan 21 16:03:47 +0530 2010 - params: {"action"=>"list", "id"=>"2", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 14ms (View: 7, DB: 2) | 200 OK [http://server.joshsoftware.com/folder/list/2]
+
+
+Processing FileController#do_the_upload_multi (for 96.2.187.66 at 2010-01-21 16:05:32) [POST]
+  Session ID: 10244a23410b223f6b5ec79e709d163d
+  Parameters: {"Filename"=>"RubyforRails.zip", "folder"=>"/file/upload_multi/uploads", "id"=>"2", "Upload"=>"Submit Query", "user_id"=>"13", "Filedata"=>#<File:/tmp/CGI20100121-22583-1uw7ce-0>}
+User: victor - Thu Jan 21 16:05:32 +0530 2010 - params: {"Filename"=>"RubyforRails.zip", "folder"=>"/file/upload_multi/uploads", "action"=>"do_the_upload_multi", "Upload"=>"Submit Query", "id"=>"2", "user_id"=>"13", "controller"=>"file", "Filedata"=>#<File:/tmp/CGI20100121-22583-1uw7ce-0>}
+Completed in 268ms (View: 0, DB: 203) | 200 OK [http://server.joshsoftware.com/file/do_the_upload_multi/2]
+
+
+Processing FileController#do_the_upload_multi (for 96.2.187.66 at 2010-01-21 16:06:26) [POST]
+  Session ID: e038809d6d8e29df9ae1e32af3e556e8
+  Parameters: {"Filename"=>"RubyinPractice.zip", "folder"=>"/file/upload_multi/uploads", "id"=>"2", "Upload"=>"Submit Query", "user_id"=>"13", "Filedata"=>#<File:/tmp/CGI20100121-22583-ckzxbh-0>}
+User: victor - Thu Jan 21 16:06:26 +0530 2010 - params: {"Filename"=>"RubyinPractice.zip", "folder"=>"/file/upload_multi/uploads", "action"=>"do_the_upload_multi", "Upload"=>"Submit Query", "id"=>"2", "user_id"=>"13", "controller"=>"file", "Filedata"=>#<File:/tmp/CGI20100121-22583-ckzxbh-0>}
+Completed in 148ms (View: 0, DB: 131) | 200 OK [http://server.joshsoftware.com/file/do_the_upload_multi/2]
+
+
+Processing FileController#upload (for 122.169.8.208 at 2010-01-21 16:19:02) [GET]
+  Session ID: 4ffa9844582db1d5a583d85198c75d8e
+  Parameters: {"id"=>"2"}
+User: satish - Thu Jan 21 16:19:02 +0530 2010 - params: {"action"=>"upload", "id"=>"2", "controller"=>"file"}
+Rendering template within layouts/file
+Rendering file/upload
+Completed in 8ms (View: 5, DB: 2) | 200 OK [http://server.joshsoftware.com/file/upload/2]
+
+
+Processing FileController#do_the_upload (for 122.169.8.208 at 2010-01-21 16:20:54) [POST]
+  Session ID: 4ffa9844582db1d5a583d85198c75d8e
+  Parameters: {"commit"=>"Upload", "folder_id"=>"2", "tag_1"=>"ruby", "file_0"=>#<File:/tmp/CGI20100121-22583-1j69jjb-0>, "tag_2"=>"", "file_1"=>"", "tag_3"=>"", "description"=>"Everyday Scripting with Ruby"}
+User: satish - Thu Jan 21 16:20:54 +0530 2010 - params: {"commit"=>"Upload", "tag_1"=>"ruby", "folder_id"=>"2", "tag_2"=>"", "file_0"=>#<File:/tmp/CGI20100121-22583-1j69jjb-0>, "action"=>"do_the_upload", "tag_3"=>"", "file_1"=>"", "description"=>"Everyday Scripting with Ruby", "controller"=>"file"}
+Redirected to actionlistcontrollerfolderid2
+Completed in 195ms (DB: 156) | 302 Found [http://server.joshsoftware.com/file/do_the_upload?folder_id=2]
+
+
+Processing FolderController#list (for 122.169.8.208 at 2010-01-21 16:20:54) [GET]
+  Session ID: 4ffa9844582db1d5a583d85198c75d8e
+  Parameters: {"id"=>"2"}
+User: satish - Thu Jan 21 16:20:54 +0530 2010 - params: {"action"=>"list", "id"=>"2", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 16ms (View: 9, DB: 2) | 200 OK [http://server.joshsoftware.com/folder/list/2]
+
+
+Processing FileController#upload (for 122.169.8.208 at 2010-01-21 16:31:41) [GET]
+  Session ID: 4ffa9844582db1d5a583d85198c75d8e
+  Parameters: {"id"=>"2"}
+User: satish - Thu Jan 21 16:31:41 +0530 2010 - params: {"action"=>"upload", "id"=>"2", "controller"=>"file"}
+Rendering template within layouts/file
+Rendering file/upload
+Completed in 9ms (View: 5, DB: 2) | 200 OK [http://server.joshsoftware.com/file/upload/2]
+
+
+Processing FileController#do_the_upload (for 122.169.8.208 at 2010-01-21 16:34:03) [POST]
+  Session ID: 4ffa9844582db1d5a583d85198c75d8e
+  Parameters: {"commit"=>"Upload", "folder_id"=>"2", "tag_1"=>"ruby", "file_0"=>#<File:/tmp/CGI20100121-22583-1qi97d3-0>, "tag_2"=>"", "file_1"=>"", "tag_3"=>"", "description"=>"Refactoring Ruby"}
+User: satish - Thu Jan 21 16:34:03 +0530 2010 - params: {"commit"=>"Upload", "tag_1"=>"ruby", "folder_id"=>"2", "tag_2"=>"", "file_0"=>#<File:/tmp/CGI20100121-22583-1qi97d3-0>, "action"=>"do_the_upload", "tag_3"=>"", "file_1"=>"", "description"=>"Refactoring Ruby", "controller"=>"file"}
+Redirected to actionlistcontrollerfolderid2
+Completed in 218ms (DB: 162) | 302 Found [http://server.joshsoftware.com/file/do_the_upload?folder_id=2]
+
+
+Processing FolderController#list (for 122.169.8.208 at 2010-01-21 16:34:04) [GET]
+  Session ID: 4ffa9844582db1d5a583d85198c75d8e
+  Parameters: {"id"=>"2"}
+User: satish - Thu Jan 21 16:34:04 +0530 2010 - params: {"action"=>"list", "id"=>"2", "controller"=>"folder"}
+Rendering template within layouts/folder
+Rendering folder/list
+Completed in 17ms (View: 10, DB: 3) | 200 OK [http://server.joshsoftware.com/folder/list/2]
+
+
+Processing FileController#upload (for 122.169.8.208 at 2010-01-21 16:41:24) [GET]
+  Session ID: 4ffa9844582db1d5a583d85198c75d8e
+  Parameters: {"id"=>"2"}
+User: satish - Thu Jan 21 16:41:24 +0530 2010 - params: {"action"=>"upload", "id"=>"2", "controller"=>"file"}
+Rendering template within layouts/file
+Rendering file/upload
+Completed in 7ms (View: 5, DB: 1) | 200 OK [http://server.joshsoftware.com/file/upload/2]

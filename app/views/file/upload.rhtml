@@ -1,0 +1,33 @@
+<p class="title">    Upload file to <%= @folder.name %></p>
+
+
+
+<% form_tag({:action => 'do_the_upload', :folder_id => controller.folder_id}, {:multipart => true}) do %>
+    <%= myfile_to_file(error_messages_for('myfile')) %>
+    <% max_uploadable_files = 10 %>
+    <label for="myfile_name">Select up to <%= max_uploadable_files %> files to upload:</label><br/>
+    <%#= file_field 'myfile', 'myfile' %><br />
+    <input id="my_file_element" type="file" name="file_0" >
+    <div id="files_list"></div>
+
+    <script>
+	<!-- Create an instance of the multiSelector class, pass it the output target and the max number of files -->
+	var multi_selector = new MultiSelector( document.getElementById( 'files_list' ), <%= max_uploadable_files %>  );
+	<!-- Pass in the file element -->
+	multi_selector.addElement( document.getElementById( 'my_file_element' ) );
+    </script>
+
+    <br />
+	<label for="myfile_description">Description(Optional)</label><br/>
+	<input name="description" type=text><br/><br/>
+    <label for="myfile_tags">Add Tags(Optional)</label><br/>
+	<input name="tag_1" type=text>Tag 1<br>
+	<input name="tag_2" type=text>Tag 2<br>
+	<input name="tag_3" type=text>Tag 3<br>
+	<br />
+    <%= submit_tag 'Upload' %>
+<% end %>
+
+
+
+<%= link_to 'Back', :controller => 'folder', :action => 'list', :id => @folder.id %>

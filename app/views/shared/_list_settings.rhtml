@@ -1,0 +1,28 @@
+<div class="title">
+	<%= title %> Settings
+</div>
+
+<br>
+<table width="100%" cellpadding=0 cellspacing=0  class="setting_table">
+ <% for setting in settings %>
+ <% @class = cycle("row_a", "row_b") %>
+ <tr class="<%= @class %>">
+  <td align=left>
+  	<h3><%= setting.title %></h3>
+	<i><%= setting.description %></i>
+  </td>
+  <td align=right valign=middle style="width:200px">
+   <% if setting.item_type == "string" %> 
+    <input type=text name="setting[<%= setting.name %>]" value="<%= setting.value %>" class="setting_item_string" id="setting_<%= setting.id %>" onfocus = "focus_input('setting_<%= setting.id %>')" onblur = "blur_input('setting_<%= setting.id %>')">
+   <% elsif setting.item_type == "bool" %>
+	On<input type="radio" value="1"  name="setting[<%= setting.name %>]" <% if setting.value == "1"  %>CHECKED<% end %>>
+	&nbsp;Off<input type="radio" value="0"  name="setting[<%= setting.name %>]" <% if setting.value == "0" %>CHECKED<% end %>>
+	<br><br>
+   <% else %> 
+    <%= "Unknown setting type: #{setting.item_type}" %> 
+   <% end %>
+  </td>
+ </tr>
+
+ <% end %>
+</table>

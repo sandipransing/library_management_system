@@ -1,0 +1,10 @@
+<% if @folder %>
+	<% unless @folder.id.blank? or not @logged_in_user.can_create(@folder.id) %>
+	    <img src="/images/icons/new_folder.png" class="icon"> <%= link_to 'Create folder', { :controller => 'folder', :action => 'new', :id => @folder.id } %><br />
+	    <div class="actionLinkSpacer"></div>
+		<img src="/images/icons/upload.png" class="icon"> <%= link_to 'Upload file', { :controller => 'file', :action => 'upload', :id => @folder.id } %>
+	    <div class="actionLinkSpacer"></div>
+		<img src="/images/icons/mass_upload.png" class="icon"> <%= link_to 'Mass File Upload', { :controller => 'file', :action => 'upload_multi', :id => @folder.id } %>
+	    <div class="actionLinkSpacer"></div>	
+	<% end %>
+<% end %>

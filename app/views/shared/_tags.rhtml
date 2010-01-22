@@ -1,0 +1,8 @@
+<% @tags = MyfileTag.find(:all, :select => "name, count(name)", :group => "name", :limit => 1000) %>
+<% if @tags.size > 0 %>
+	<p class="title_no_margin">Tags</p>
+	<% for tag in @tags %>
+		<a href="/search/tag/<%= tag.name %>" class="tag_link"><%= h tag.name %> (<%= tag["count(name)"] %>)</a>
+		<br>
+	<% end %>
+<% end %>

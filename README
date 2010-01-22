@@ -1,0 +1,45 @@
+Hi! Welcome to the Readme for BXR. 
+
+BXR is an open source, ruby on rails file management system. It is based off of
+Boxroom, another ruby on rails application. BXR allows you to create folders, 
+users, and groups, and assign permissions, so you can secure different folder 
+and files. You can also search for files and folders, either by keyword, or by 
+file content. Organization of files is easy! Besides being able to upload files 
+to different folders, you can also add specific tags/labels to each file. 
+
+Features 
+  - Easy-To-Use User Interface
+  - Create Users, Groups, and Folders
+  - Assign Group Priveleges for File/Folder Protection
+  - Tag/Label Files for better organization
+  - Ferret Support for File Content Indexing & Searching
+
+Installing 
+  - Read the file INSTALL for more details. It's pretty easy!
+
+Requirements
+  - If you would like to use Ferret for file content searching and indexing,
+    you must install the gems: 
+	ferret
+	acts_as_ferret
+    Ferret indexing is disabled by default. To turn on Ferret indexing, open
+    config/environment.rb and change the line:
+	FERRET_ENABLED = false
+		    to
+	FERRET_ENABLED = true
+    That's it!
+
+    
+How to use BXR
+  - After installing BXR, just visit the application in your web browser, and log 
+    in with the default username and password(see INSTALL for more info). The rest 
+    is pretty self-explanatory!
+
+Enjoy BXR! Visit our site: http://www.hulihanapplications.com to let us know
+about anything you're curious about or if you see any bugs/problems! We're constantly
+trying to update BXR to make it the best open source file management system ever. We 
+can'tdo that if we don't know what everyone wants, so if you see a feature you'd like, 
+let us know, that's what we're here for!
+
+
+

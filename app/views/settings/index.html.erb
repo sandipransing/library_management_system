@@ -1,0 +1,13 @@
+
+<% form_tag ({:action => "update_settings", :controller => "settings"}) do %>
+	 <% public_settings = Setting.find(:all, :conditions => ["setting_type = ?", "Public"]) %>
+	 <%= render :partial => "/shared/list_settings", :locals => {:settings => public_settings, :title => "Public"}%>
+	 <br><br>
+	 <% public_settings = Setting.find(:all, :conditions => ["setting_type = ?", "System"]) %>
+	 <%= render :partial => "/shared/list_settings", :locals => {:settings => public_settings, :title => "System"}%>
+	 <br>
+
+	 <div align=center><%= submit_tag "Update Settings" %></div>
+
+<% end %>
+

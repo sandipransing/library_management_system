@@ -1,0 +1,18 @@
+<% form_tag( { :controller => 'search', :action => 'show_results' }, { :style => 'display:inline;' } ) do %>
+		 <% if get_setting_bool("use_ferret") %>
+		 <table style="display:inline;color:white;font-size:10px;padding:0px;margin:0px" cellpadding=0 cellspacing=0>
+		 	<tr>
+		 		<td align=right style="color:white;font-size:10px;">File Name</td>
+	 			<td style="color:white;font-size:10px;"><input name="search_type" value="filename" type=radio CHECKED></td>
+		 		<td align=right style="color:white;font-size:10px;">File Content</td>
+	 			<td style="color:white;font-size:10px;"><input name="search_type" value="content" type=radio></td>
+		 	</tr>
+		 </table>
+		 <% else %><%# If ferret is disabled, allow only filename search%>
+		 	<input name="search_type" value="filename" type="hidden">
+		 <% end %>
+		    <%= text_field 'search', 'query', { :class => 'searchField', :value => @search_query, :size => nil } %>
+		    <%= submit_tag 'Find!', { :class => 'searchBtn' } %>
+<% end %>
+
+

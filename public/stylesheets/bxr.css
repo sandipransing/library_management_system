@@ -1,0 +1,454 @@
+/* BoxRoom CSS */
+body
+{
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+}
+
+body, p, ol, ul, td
+{
+    font-family: Verdana, sans-serif;
+    font-size: 9pt;
+}
+
+table
+{
+    border-collapse: collapse;
+}
+
+th
+{
+    text-align: left;
+}
+
+td, th
+{
+    padding: 5px;
+}
+
+input
+{
+    padding: 4px;
+    font-size: 11pt;
+    *height: 28px;
+}
+
+.fieldWithErrors
+{
+    display: inline;
+}
+
+.fieldWithErrors input, .fieldWithErrors textarea
+{
+    background-color: #f2afaf;
+}
+
+#ErrorExplanation
+{
+    width: 400px;
+    padding: 7px;
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+    background-color: #BBBBBB;
+}
+
+#ErrorExplanation h2
+{
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    background-color: #c00;
+    color: #fff;
+}
+
+#ErrorExplanation p
+{
+    color: #333;
+    margin-bottom: 0;
+    padding: 5px;
+}
+
+#ErrorExplanation ul li
+{
+    list-style: square;
+}
+
+#top
+{
+    position: absolute;
+    width: 100%;
+    height: 114px;
+    *height: 116px;
+    top: 0px;
+    background-color: #00274D;
+    border-bottom: 0px solid #BD3039;
+}
+
+#middle
+{
+    position: absolute;
+	padding:0px;
+    width: 100%;
+    top: 116px;
+    bottom: 30px;
+    overflow: auto;
+    background-color: #EDEDED;
+    background-image: url(/images/bgs/middle_bg.png);
+    background-position: 0px 0px;
+    background-repeat: repeat-y;
+}
+
+#bottom
+{
+    position: absolute;
+    width: 100%;
+    height: 32px;
+    *height: 40px;
+    bottom: 0px;
+    background-color: #001831;
+    border-top: 2px solid #BD3039;
+}
+
+.actionLinks
+{
+    float: left;
+    padding: 10px 15px 12px 15px;
+    line-height: 24px;
+}
+
+.actionLinks A:visited, .actionLinks A:link{	font-size:14px;    color: #004382;    font-weight: bold;	text-decoration:none;}
+.actionLinks A:hover{	font-size:14px;    color: black;    font-weight: bold;	text-decoration:none;}
+.actionLinkSpacer{border-bottom:1px solid #cccccc;margin:5px 0px 5px 0px;width:155px}
+
+a.tag_link:visited, a.tag_link:link{	font-size:10px;    color: #004382;    font-weight: bold;	text-decoration:none;}
+a.tag_link:hover{	font-size:10px;    color: black;    font-weight: bold;	text-decoration:none;}
+
+.title
+{
+    font-family: sans-serif;
+    font-size: 16pt;
+    font-weight: bold;
+    text-transform:uppercase;
+    letter-spacing: +1px;
+    display: block;
+}
+.title_no_margin
+{
+    font-family: sans-serif;
+    font-size: 16pt;
+    font-weight: bold;
+    text-transform:uppercase;
+    display: block;
+	margin:0px;
+}
+.title A
+{
+    color: #004382;
+}
+
+.content
+{
+    margin-left: 195px;
+    padding: 15px;
+}
+
+.content A
+{
+    color: #004382;
+}
+
+.header
+{
+    width: 100%;
+    height: 83px;
+    background-image: url(/images/logo.png);
+    background-position: 0px 0px;
+    background-repeat: no-repeat;;;
+}
+
+.search
+{
+    float: right;
+    padding: 15px 15px 0px 15px;
+}
+
+input.searchField
+{
+    width: 155px;
+    padding: 3px;
+    font-size: 11pt;
+}
+
+.userSettings
+{
+    float: right;
+    padding: 9px;
+    font-family: Verdana, sans-serif;
+    font-size: 8pt;
+    line-height: 19px;
+}
+
+.userSettings A
+{
+    color: #FFFFFF;
+}
+
+.textWithRadioButtons
+{
+    font-family: Verdana, sans-serif;
+    font-size: 8pt;
+    line-height: 19px;
+    color: #FFFFFF;
+}
+
+.topNavigation
+{
+    width: 100%;
+    height: 32px;
+    *height: 34px;
+    background-color: #001831;
+    border-top: 0px solid #BD3039;
+}
+
+.links
+{
+    height: 25px;
+    *height: 32px;
+    overflow: hidden;
+    padding: 8px 0px 0px 10px;
+    *padding-bottom: 13px;
+    background:url(/images/bgs/links_bg.png) repeat-x;
+    font-family: Arial, sans-serif;
+    font-size: 8pt;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: +1px;
+    text-transform:uppercase;
+}
+
+.links a:visited, .links a:link
+{
+    padding: 8px 13px 20px 13px;
+    color: #FFFFFF;
+	text-decoration:none;
+}
+
+.links a:hover
+{
+	text-decoration:underline;
+}
+
+.activeLink
+{
+	
+    background:url(/images/bgs/links_selected_bg.png) repeat-x;
+	border-right:0px solid #321014;
+	border-left:0px solid #321014;	
+}
+
+.footer
+{
+    padding: 5px 5px 0px 5px ;
+    font-family: Verdana, sans-serif;
+    font-size: 8pt;
+    color: #FFFFFF;
+}
+
+.footer A
+{
+    color: #FFFFFF;
+}
+
+th
+{
+    font-family: sans-serif;
+    font-size: 12pt;
+    font-weight: bold;
+    letter-spacing: +1px;
+}
+
+.grid A
+{
+    color: #000000;
+}
+
+.grid A:Hover
+{
+    color: #7F272E;
+}
+
+A.noBackground:Hover
+{
+    background: none;
+}
+
+#error
+{
+    width: 400px;
+    padding: 7px;
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+    color: #FFFFFF;
+    background-color: #ff0000;
+    font-weight: bold;
+}
+
+#confirmation
+{
+    width: 400px;
+    padding: 7px;
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+    color: #FFFFFF;
+    background-color: #008000;
+    font-weight: bold;
+}
+
+#buttons
+{
+    position: relative;
+    padding: 15px 15px 15px 0px;
+}
+
+img
+{
+    border: 0px;
+}
+
+.even
+{
+    background-color: #EDEDED;
+}
+
+.odd
+{
+    background-color: #D9D9D9;
+}
+
+.rights
+{
+    width: 70px;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 12pt;
+    font-weight: bold;
+    letter-spacing: +1px;
+}
+
+.small
+{
+    font-family: Verdana, sans-serif;
+    font-size: 7pt;
+    font-weight: normal;
+}
+
+#progress-bar {
+  width:500px;
+  height:25px;
+  margin:15px;
+  border:solid 1px #000;
+  position:relative;
+}
+
+#progress-bar #status-bar {
+  display:block;
+  height:25px;
+  width:0;
+  background-color:#00f;
+  border-right:solid 1px #000;
+  position:absolute;
+  top:0; left:0;
+}
+
+#progress-bar #status-text {
+  display:block;
+  padding: 0 15px;
+  line-height:25px;
+  position:absolute;
+  top:0; left:0;
+}
+
+#initial-status {
+    padding: 15px;
+    line-height: 25px;
+}
+
+.highlight {
+    background-color: Yellow;
+}
+
+.preview
+{
+    background-color: #DDDDDD;
+    padding: 20px;
+    border: 2px solid #AAAAAA;
+}
+
+.smallResult
+{
+    font-size: 10px;
+    padding: 8px 10px 15px 15px;
+}
+
+div#files_list div{}/* multiple uploaded files box */
+div#files_list input{padding:1px}/* multiple uploaded files delete button */
+
+/* BXR CSS */
+
+h1, h2, h3, h4, h5, h6{margin:0px;}
+.headerContent{}
+b.optional{color:green}
+
+img.icon{vertical-align:middle;border:0px;}
+
+.row_a{border-bottom:1px dotted black}
+.row_b{border-bottom:1px dotted black}
+
+
+/* Flash Messages(Success and Failure Boxes) */
+.flash_notice{} /* This is the div that contains all flash messages. */
+.flash_success{color:#106F00;border:2px solid #1C8F08;background-color:#BBFFAF;padding:5px;text-align:left;}
+.flash_failure{color:#AF0000;border:2px solid #AF0000;background-color:#F3B3B3;padding:5px;text-align:left;}
+.folder_indent{padding-left:5px;}
+
+/* Uploadify CSS */
+.uploadifyQueueItem {
+	font: 11px Verdana, Geneva, sans-serif;
+	border: 2px solid #E5E5E5;
+	background-color: #F5F5F5;
+	margin-top: 5px;
+	padding: 10px;
+	width: 350px;
+}
+.uploadifyError {
+	border: 2px solid #FBCBBC !important;
+	background-color: #FDE5DD !important;
+}
+.uploadifyQueueItem .cancel {
+	float: right;
+}
+.uploadifyProgress {
+	background-color: #FFFFFF;
+	border-top: 1px solid #808080;
+	border-left: 1px solid #808080;
+	border-right: 1px solid #C5C5C5;
+	border-bottom: 1px solid #C5C5C5;
+	margin-top: 10px;
+	width: 100%;
+}
+.uploadifyProgressBar {
+	background-color: #0099FF;
+	width: 1px;
+	height: 3px;
+}
+#fileQueueBox
+{
+	font: 11px Verdana, Geneva, sans-serif;
+	border: 2px solid #E5E5E5;
+	background-color: #F5F5F5;
+	padding: 10px;
+	width: 374px;
+}

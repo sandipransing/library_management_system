@@ -1,0 +1,64 @@
+<%= name_to_username(error_messages_for('user')) %>
+
+<!--[form:user]-->
+<table>
+	<tr>
+		<td style="width:300px;" valign=top>
+			<label for="user_name">Username</label><br/>
+			<%= text_field 'user', 'name', :style => 'width:220px;' %><br />
+			<br />
+			
+			<label for="user_email">E-mail address</label><br/>
+			<%= text_field 'user', 'email', :style => 'width:220px;' %><br />
+			<br />
+			
+			<label for="user_password"><% unless controller.action_name == 'new' %>New p<% else %>P<% end %>assword</label><br/>
+			<%= password_field 'user', 'password', :style => 'width:220px;' %><br />
+			<br />
+			
+			<label for="user_password_confirmation">Confirm <% unless controller.action_name == 'new' %>new<% end %> password</label><br/>
+			<%= password_field 'user', 'password_confirmation', :style => 'width:220px;' %><br />
+			<br />
+			
+			<% if @logged_in_user.is_admin? %>
+			Member of these groups<br>
+			<table>
+
+			    <% for group in Group.find(:all) %>
+				 <tr>				
+			        <% if @user.groups.find_by_id(group.id) %>
+			            <% checked = 'checked' %>
+			        <% else %>
+			            <% checked = '' %>
+			        <% end %>
+			
+			        <% if @user and @user.is_the_administrator? and group.is_the_administrators_group? %>
+			        <td style="color:#818181;"><%= check_box('belongs_to_group', group.id, {:checked => checked, :disabled => true}, 'yes', 'no') %> <%= h(group.name) %></td>
+			        <% else %>
+			        <td><%= check_box('belongs_to_group', group.id, {:checked => checked}, 'yes', 'no') %> <%= h(group.name) %></td>
+			        <% end %>
+   			     </tr>					
+			    <% end %>
+
+			</table>
+			<br />
+			<% end %>			
+		</td>
+		<td style="width:400px" valign=top>
+			<% if @logged_in_user.is_admin? %>
+				<h3>Select Default Folder <b class="optional">(optional)</b></h3>
+				<i>When the user logs in, they will go directly to this folder.</i>
+				<% root_folder = Folder.find_by_is_root(true) %>
+				<% if params[:action] == "new" %>
+					<% id_to_check = root_folder.id %>
+				<% elsif params[:action] == "edit" %>
+					<% id_to_check = @user.default_folder_id %>			
+				<% end %>
+				<%= root_folder.print(:make_radio_button => true, :id_to_check => id_to_check, :input_name => "user[default_folder_id]")%>
+			<% end %>
+		</td>	
+	</tr>
+</table>
+
+
+<!--[eoform:user]-->

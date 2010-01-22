@@ -1,0 +1,44 @@
+<p class="title">Edit file</p>
+
+<% form_tag :action => 'update', :id => @myfile do %>
+    <%= myfile_to_file(error_messages_for('myfile')) %>
+    <label for="myfile_filename">Name:</label><br />
+    <%= text_field 'myfile', 'filename'  %><br />
+    <br />
+	<label for="myfile_description">Decription:</label><br />
+    <%= text_field 'myfile', 'description'  %><br />
+    <%= submit_tag 'Update' %>
+<% end %>
+
+<br>
+
+<p class="title">Add a Tag</p>
+
+<% form_tag :action => 'create_tag', :id => @myfile do %>
+    <label for="myfile_filename">Name:</label>
+	 <input name="tag" type="text">
+	 <input name="myfile_id" type="hidden" value="<%= @myfile.id %>">
+    <%= submit_tag 'Add Tag' %>
+<% end %>
+
+<br>
+
+<% if @myfile.myfile_tags.size > 0 %>
+<p class="title"><%= @myfile.myfile_tags.size %> tags </p>
+<div id="list" style="position:relative;">
+	<div>
+	    <table class="grid">
+	  		<% for tag in @myfile.myfile_tags %>
+		        <tr class="<%= cycle('even', 'odd') %>">
+		            <td><a class ="tag_link" href="/search/tag/<%= tag.name %>"><%= tag.name %></a></td>
+					<td><%= link_to image_tag('delete.png'), { :controller => 'file', :action => 'destroy_tag', :id => tag.id}, { :title => 'Delete this tag', :confirm => 'Are you sure?' } %></td>
+				</tr>
+			<% end %>
+		</table>
+	</div>
+</div>
+<% end %>
+
+<br>
+
+<%= link_to 'Back', :controller => 'folder', :action => 'list', :id => controller.folder_id %>

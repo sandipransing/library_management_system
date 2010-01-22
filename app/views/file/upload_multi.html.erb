@@ -1,0 +1,58 @@
+<p class="title">Mass File Upload to <%= @folder.name %></p>
+
+<table>
+	<tr>
+		<td valign=top style="width:185px;">
+			<input type="file" name="files" id="files" /><br>
+			<a href="javascript:$('#files').uploadifyUpload();"><img class="button" src="/images/buttons/upload.png"></a>
+			<a href="javascript:jQuery('#files').uploadifyClearQueue()"><img class="button" src="/images/buttons/cancel_all.png"></a>		
+		</td>
+		<td valign=top>
+			<div id="fileQueueBox">
+				Click on the <b>Browse</b> button to your left to get started.
+				<div id="fileQueue"></div>		
+				
+		</td>
+	</tr>
+</table>
+
+
+
+<script type="text/javascript">
+$(document).ready(function() {
+	$("#files").uploadify({
+		'uploader'       : '/flash/uploadify.swf',
+		'script'         : '/file/do_the_upload_multi/<%= @folder.id %>',
+		'cancelImg'      : '/images/icons/cancel.png',
+		'folder'         : 'uploads',
+		'queueID'        : 'fileQueue',
+		'auto'           : false,
+		'multi'          : true,
+		'buttonImg'      : '/images/buttons/browse.png',	
+		'wmode'          : 'transparent',
+		'width'          : 180,			
+		'height'		 : 41,
+		'scriptData'	 : { 'user_id' : '<%= @logged_in_user.id %>'}, // custom data to send to script
+        'onError'		 : function (event, queueID ,fileObj, errorObj) {
+				            var msg;
+				            if (errorObj.info == 404) {
+				               alert('Could not find upload script. Use a relative path.');
+				               msg = 'Could not find upload script.';
+				            } else if (errorObj.type === "HTTP")
+				               msg = errorObj.type+": "+errorObj.info;
+				            else if (errorObj.type ==="File Size")
+				               msg = fileObj.name+'<br>'+errorObj.type+' Limit: '+Math.round(errorObj.sizeLimit/1024)+'KB';
+				            else
+				               msg = errorObj.type+": "+errorObj.info;
+				            alert(msg);
+				            $("#fileUpload" + queueID).fadeOut(250, function() { $("#fileUpload" + queueID).remove()});
+				            return false;
+				            }
+
+	});
+});
+<%# see http://www.uploadify.com/documentation/ for more options! %>
+</script>
+
+<br>
+<%= link_to "Back to #{h @folder.name}", :controller => 'folder', :action => 'list', :id => @folder.id %>
