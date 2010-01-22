@@ -15,7 +15,7 @@ development:
   adapter: mysql
   database: library
   username: root
-  password: abcd
+  password:
 
 # Warning: The database defined as 'test' will be erased and
 # re-generated from your development database when you run 'rake'.
@@ -31,4 +31,4 @@ production:
   adapter: mysql
   database: library
   username: root
-  password: abcd
+  password:
